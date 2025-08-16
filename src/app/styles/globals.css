@@ -1,5 +1,6 @@
 @import "tailwindcss";
 
+/* Typography utility classes */
 :root {
   --background: var(--color-Arambo-Background);
   --foreground: #171717;
@@ -59,6 +60,100 @@
   --span-14-1-4-size: 14px;
   --span-14-1-4-line-height: 1.4;
   --span-14-1-4-weight: 400;
+  /* Font families */
+  /* Font families */
+  --font-helvetica: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-arial: Arial, Helvetica, sans-serif;
+
+  /* Default choice (you can switch this later easily) */
+  --font-family-sans: var(--font-helvetica);
+
+  /* Display - 110px, medium */
+  --display-110-medium-size: 110px;
+  --display-110-medium-weight: 500;
+  --display-110-medium-line-height: 120px;
+
+  /* Headings */
+  --h1-size: 56px;
+  --h1-weight: 500;
+  --h2-size: 44px;
+  --h2-weight: 500;
+  --h3-size: 32px;
+  --h3-weight: 500;
+  --h4-size: 24px;
+  --h4-weight: 500;
+  --h5-size: 20px;
+  --h5-weight: 400;
+  /* Body Fonts */
+  --body-xl-size: 20px;
+  --body-xl-line-height: 1.5;
+  --body-xl-weight: 400;
+
+  --body-lg-size: 18px;
+  --body-lg-line-height: 1.5;
+  --body-lg-weight: 400;
+
+  --body-lg-uppercase-size: 18px;
+  --body-lg-uppercase-line-height: 18px;
+  --body-lg-uppercase-weight: 1.5;
+
+  --body-base-size: 16px;
+  --body-base-line-height: 1.5;
+  --body-base-weight: 400;
+
+  --body-base-itallic-size: 16px;
+  --body-base-itallic-line-height: 1.5;
+  --body-base-itallic-weight: 500;
+  /* Span Fonts (Naming Issue: )*/
+  --span-18-1-32-size: 18px;
+  --span-18-1-32-line-height: 1.32;
+  --span-18-1-32-weight: 400;
+
+  --span-18-1-4-size: 18px;
+  --span-18-1-4-line-height: 1.4;
+  --span-18-1-4-weight: 400;
+
+  --span-14-1-4-size: 14px;
+  --span-14-1-4-line-height: 1.4;
+  --span-14-1-4-weight: 400;
+}
+
+.display-110-medium {
+  font-size: var(--display-110-medium-size);
+  font-weight: var(--display-110-medium-weight);
+  line-height: var(--display-110-medium-line-height);
+  font-family: var(--font-family-sans);
+}
+
+/* Headings */
+h1 {
+  font-size: var(--h1-size);
+  font-weight: var(--h1-weight);
+  font-family: var(--font-family-sans);
+}
+
+h2 {
+  font-size: var(--h2-size);
+  font-weight: var(--h2-weight);
+  font-family: var(--font-family-sans);
+}
+
+h3 {
+  font-size: var(--h3-size);
+  font-weight: var(--h3-weight);
+  font-family: var(--font-family-sans);
+}
+
+h4 {
+  font-size: var(--h4-size);
+  font-weight: var(--h4-weight);
+  font-family: var(--font-family-sans);
+}
+
+h5 {
+  font-size: var(--h5-size);
+  font-weight: var(--h5-weight);
+  font-family: var(--font-family-sans);
 }
 
 @theme {
