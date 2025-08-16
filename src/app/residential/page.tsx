@@ -5,7 +5,49 @@ import Card from "@/app/residential/card";
 import "../styles/globals.css";
 // Replicate  https://www.arambo.co/comercial
 const ResidentialPage = () => {
-    const cards = [{}];
+    const cards = [
+        {
+            img: "/residential1.jpg",
+            price: "1,200",
+            location: "Downtown, Cityville",
+            bed: 2,
+            bath: 1,
+            area: "1,050 sqft",
+            status: "Rent",
+            tag: "New Listing"
+        },
+        {
+            img: "/residential2.jpg",
+            price: "850",
+            location: "Uptown, Cityville",
+            bed: 1,
+            bath: 1,
+            area: "720 sqft",
+            status: "Rent",
+            tag: "Popular"
+        },
+        {
+            img: "/residential3.jpg",
+            price: "450,000",
+            location: "Greenfield Suburbs",
+            bed: 3,
+            bath: 2,
+            area: "1,500 sqft",
+            status: "Buy",
+            tag: "Featured"
+        },
+        {
+            img: "/residential4.jpg",
+            price: "320,000",
+            location: "Lakeside District",
+            bed: 2,
+            bath: 2,
+            area: "1,200 sqft",
+            status: "Buy",
+            tag: "New Listing"
+        }
+    ];
+
     return (
         <div>
             <section className="px-4 w-full">
@@ -20,19 +62,28 @@ const ResidentialPage = () => {
                             className="flex-1 pl-3 bg-transparent text-white placeholder-white/70 outline-none"
                         />
                     </div>
-                    <div className="absolute -bottom-10 flex w-full md:w-2/3 justify-center space-x-4 p-4">
+                    <div className="absolute -bottom-15 flex w-full md:w-2/3 justify-center space-x-4 p-4">
                         <button className="bg-white rounded-2xl w-full text-black flex justify-between items-center body-lg font-medium py-8 px-6"><Home size={20} /><span>RENT </span><ArrowRight size={18} /></button>
                         <button className="bg-blue-800 rounded-2xl w-full text-white flex justify-left items-center space-x-4 body-lg font-medium py-8 px-6"><Home size={20} /> <span>BUY</span></button>
                     </div>
                 </div>
             </section>
-            <section>
-                <div className="grid md:grid-cols-[35%_65%] grid-cols-1">
+            <section className="mt-20">
+                <div className="grid md:grid-cols-[35%_65%] grid-cols-1 max-w-7xl">
                     <div className="filter"></div>
-                    <div className="cards">
+                    <div className="cards grid grid-cols-2">
                         {cards.map((card, index) => (
                             <div key={index} className="p-4">
-                                <Card img={ } price={ } location={ } bed={ } area={ } bath={ } status={ } tag={ } />
+                                <Card
+                                    img={card.img}
+                                    price={card.price}
+                                    location={card.location}
+                                    bed={card.bed}
+                                    bath={card.bath}
+                                    area={card.area}
+                                    status={card.status}
+                                    tag={card.tag}
+                                />
                             </div>
                         ))}
                     </div>
