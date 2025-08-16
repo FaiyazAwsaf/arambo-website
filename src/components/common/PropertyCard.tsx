@@ -1,0 +1,1 @@
+//replicate property card
