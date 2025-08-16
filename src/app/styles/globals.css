@@ -1,0 +1,21 @@
+@import "tailwindcss";
+
+:root {
+  --background: var(--color-Arambo-Background);
+  --foreground: #171717;
+}
+
+@theme {
+  --color-Arambo-Accent: #1946bb;
+  --color-Arambo-White: #ffffff;
+  --color-Arambo-Black: #0a0a0a;
+  --color-Arambo-Background: #f6f7f9;
+  --color-Arambo-Text: #6f7176;
+  --color-Arambo-Border: #ecedee;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
