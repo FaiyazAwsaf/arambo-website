@@ -1,6 +1,7 @@
 import ActionButton from "@/components/ActionButton";
 import { PropertyCard } from "@/components/PropertyCard";
 import { PropertyFilter } from "@/components/PropertyFIlter";
+import ServiceCards from "@/components/ServiceCards";
 import { Home, Search } from "lucide-react";
 
 const property = {
@@ -51,7 +52,7 @@ const CommercialPage = () => {
 
           <div className="relative z-10 font-sans flex flex-col items-center gap-2 justify-center h-full text-center px-6">
             <h1 className="text-[56px]  font-semibold text-white">
-              Commercial
+              Commercial Properties
             </h1>
             <p className=" text-[17px] text-lg text-white/80">
               Sort by location to find the best lists
@@ -88,7 +89,7 @@ const CommercialPage = () => {
           </div>
         </div>
       </section>
-      <section className="h-screen mt-20">
+      <section className="min-h-screen my-20">
         <div className="min-h-screen bg-gray-50 p-6">
           <div className="max-w-7xl mx-auto">
             <div className="flex gap-6">
@@ -103,7 +104,7 @@ const CommercialPage = () => {
                   {properties.map((property) => (
                     <PropertyCard key={property.id} property={property} />
                   ))}
-                  
+
                   {/* properties 2 just to show the not verified design */}
                   {properties2.map((property) => (
                     <PropertyCard key={property.id} property={property} />
@@ -113,6 +114,9 @@ const CommercialPage = () => {
             </div>
           </div>
         </div>
+      </section>
+      <section className="py-20 w-full bg-white">
+        <ServiceCards />
       </section>
     </>
   );
