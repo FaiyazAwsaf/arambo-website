@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Home, Building2, ChevronDown } from "lucide-react";
@@ -35,6 +35,7 @@ const navigation = [
 export default function Header() {
   const pathname = usePathname();
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const hideTimeout = useRef<NodeJS.Timeout | null>(null);
 
   return (
     <header className="sticky top-0 z-50 bg-white shadow-sm border-b border-gray-100">
@@ -49,9 +50,11 @@ export default function Header() {
               href="/"
               className="flex items-center space-x-2 text-xl font-medium text-gray-900 hover:text-blue-600 transition-colors"
             >
-              <div className="flex h-8 w-8 items-center justify-center"></div>
-              <span className="text-blue-600 font-semibold">arambo</span>
-              <span className="text-xs text-gray-400 font-normal">Beta</span>
+              <img
+                src="/header/Frame.svg"
+                alt="Arambo Logo"
+                className="h-8 w-auto"
+              />
             </Link>
           </div>
 
@@ -66,16 +69,26 @@ export default function Header() {
                 <div
                   key={item.name}
                   className="relative"
-                  onMouseEnter={() =>
-                    hasDropdown && setActiveDropdown(item.name)
-                  }
-                  onMouseLeave={() => hasDropdown && setActiveDropdown(null)}
+                  onMouseEnter={() => {
+                    if (hasDropdown) {
+                      if (hideTimeout.current)
+                        clearTimeout(hideTimeout.current);
+                      setActiveDropdown(item.name);
+                    }
+                  }}
+                  onMouseLeave={() => {
+                    if (hasDropdown) {
+                      hideTimeout.current = setTimeout(() => {
+                        setActiveDropdown(null);
+                      }, 200); // Short delay to allow moving into dropdown
+                    }
+                  }}
                 >
                   <Link
                     href={item.href}
                     className={`flex items-center space-x-1 px-4 py-2 text-sm font-medium transition-colors rounded-md ${
                       isActive
-                        ? "text-blue-600 bg-blue-50"
+                        ? "body-base text-Arambo-Accent"
                         : "body-base text-Arambo-Text"
                     }`}
                   >
@@ -83,8 +96,25 @@ export default function Header() {
                   </Link>
 
                   {/* Dropdown Menu */}
-                  {hasDropdown && activeDropdown === item.name && (
-                    <div className="absolute top-full left-0 mt-1 w-48  bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-50">
+                  {hasDropdown && (
+                    <div
+                      className={`absolute top-full left-0 mt-1 w-48 bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-50 transition-all duration-500 ease-in-out
+                        ${
+                          activeDropdown === item.name
+                            ? "opacity-100 translate-y-0 pointer-events-auto"
+                            : "opacity-0 -translate-y-2 pointer-events-none"
+                        }`}
+                      onMouseEnter={() => {
+                        if (hideTimeout.current)
+                          clearTimeout(hideTimeout.current);
+                        setActiveDropdown(item.name);
+                      }}
+                      onMouseLeave={() => {
+                        hideTimeout.current = setTimeout(() => {
+                          setActiveDropdown(null);
+                        }, 200);
+                      }}
+                    >
                       {item.dropdown?.map((dropdownItem) => (
                         <Link
                           key={dropdownItem.name}
