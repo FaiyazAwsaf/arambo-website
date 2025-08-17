@@ -116,30 +116,41 @@ export default function Header() {
                       }}
                     >
                       <div className="max-w-7xl mx-auto grid grid-cols-3 gap-8 px-8">
-                        {/* First column: 4 rows, 2 columns grid */}
+                        {/* First column: 4 rows, 2 columns grid, dynamic from navigation */}
                         <div className="col-span-1 grid grid-rows-4 grid-cols-2 gap-2">
-                          {/* Row 1 */}
-                          <div className="row-span-1 col-span-1 flex items-center font-medium text-gray-700">
-                            Buy
-                          </div>
-                          <div className="row-span-1 col-span-1"></div>
-                          {/* Row 2 */}
-                          <div className="row-span-1 col-span-1 flex items-center font-medium text-gray-700">
-                            Rent
-                          </div>
-                          <div className="row-span-1 col-span-1"></div>
-                          {/* Row 3 */}
-                          <div className="row-span-1 col-span-1 flex items-center font-medium text-gray-700">
-                            For Woman
-                          </div>
-                          <div className="row-span-1 col-span-1 flex items-center font-medium text-gray-700">
-                            For Bachelor
-                          </div>
-                          {/* Row 4 */}
-                          <div className="row-span-1 col-span-1"></div>
-                          <div className="row-span-1 col-span-1 flex items-center font-medium text-gray-700">
-                            For Family
-                          </div>
+                          {item.dropdown && item.dropdown.length > 0 && (
+                            <>
+                              {/* Row 1 */}
+                              <div className="row-span-1 col-span-1 flex items-center body-base text-Arambo-Text">
+                                <Link href={item.dropdown[0].href}>
+                                  {item.dropdown[0].name}
+                                </Link>
+                              </div>
+                              <div className="row-span-1 col-span-1"></div>
+                              {/* Row 2 */}
+                              <div className="row-span-1 col-span-1 flex items-center body-base text-Arambo-Text">
+                                <Link href={item.dropdown[1].href}>
+                                  {item.dropdown[1].name}
+                                </Link>
+                              </div>
+                              <div className="row-span-1 col-span-1 flex items-center body-base text-Arambo-Text">
+                                <Link href={item.dropdown[2].href}>
+                                  {item.dropdown[2].name}
+                                </Link>
+                              </div>
+                              {/* Row 3 */}
+                              <div className="row-span-1 col-span-1 flex items-center body-base text-Arambo-Text">
+                                <Link href={item.dropdown[3].href}>
+                                  {item.dropdown[3].name}
+                                </Link>
+                              </div>
+                              <div className="row-span-1 col-span-1 flex items-center body-base text-Arambo-Text">
+                                <Link href={item.dropdown[4].href}>
+                                  {item.dropdown[4].name}
+                                </Link>
+                              </div>
+                            </>
+                          )}
                         </div>
                         {/* Second column: empty */}
                         <div className="col-span-1"></div>
