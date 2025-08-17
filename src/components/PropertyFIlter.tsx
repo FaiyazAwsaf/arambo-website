@@ -3,187 +3,162 @@
 import type React from "react";
 import { useState } from "react";
 import { Search } from "lucide-react";
+import { Slider } from "@mui/material";
+import FormSelect from "./FormSelect";
 
 export function PropertyFilter() {
   const [priceRange, setPriceRange] = useState([12000, 32000]);
-  const [searchValue, setSearchValue] = useState("");
+  const [value, setValue] = useState<number[]>([10000, 32000]);
+  const [minValue, setMinValue] = useState<number>(value[0]);
+  const [maxValue, setMaxValue] = useState<number>(value[1]);
 
-  const handleSliderChange = (
-    e: React.ChangeEvent<HTMLInputElement>,
-    index: number
-  ) => {
-    const newRange = [...priceRange];
-    newRange[index] = Number.parseInt(e.target.value);
-    setPriceRange(newRange);
+  // const handleSliderChange = (
+  //   e: React.ChangeEvent<HTMLInputElement>,
+  //   index: number
+  // ) => {
+  //   const newRange = [...priceRange];
+  //   newRange[index] = Number.parseInt(e.target.value);
+  //   if (Array.isArray(newRange)) {
+  //        setPriceRange(newRange);
+  // };
+
+//   const handleInputChange = (value: string, index: number) => {
+//     const numValue = Number.parseInt(value.replace(/,/g, "")) || 0;
+//     const newRange = [...priceRange];
+//     newRange[index] = numValue;
+//     setPriceRange(newRange);
+//   };
+
+  const handleSliderChange = (event: Event, newValue: number | number[]) => {
+    if (Array.isArray(newValue)) {
+      setValue(newValue);
+    }
   };
-
-  const handleInputChange = (value: string, index: number) => {
-    const numValue = Number.parseInt(value.replace(/,/g, "")) || 0;
-    const newRange = [...priceRange];
-    newRange[index] = numValue;
-    setPriceRange(newRange);
-  };
-
   return (
-    <div className="bg-white rounded-lg p-6 shadow-sm border border-gray-200">
-      <div className="mb-8">
-        <h3 className="text-lg font-semibold text-gray-900 mb-4">
-          Search by location
-        </h3>
-        <div className="relative">
-          <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-4 w-4" />
+    <div className="bg-white rounded-lg p-6 text-Arambo-Black shadow-sm border border-gray-200">
+      <p className="font-semibold text-lg mb-4">Search by Location</p>
+      <div className="bg-Arambo-Background rounded-lg flex items-center w-full max-w-md p-4">
+        <Search className="text-Arambo-Black" size={20} />
+        <input
+          type="text"
+          placeholder="Search by location..."
+          className="flex-1 pl-2 bg-transparent text-Arambo-Black placeholder-Arambo-Text outline-none"
+        />
+      </div>
+
+      <hr className="text-Arambo-Border my-4" />
+
+      {/* Filter by Rent */}
+      <div className="flex flex-col space-y-4">
+        <p className="font-semibold text-lg mb-4">Filter by rent</p>
+        <div className="flex justify-between">
           <input
             type="text"
-            placeholder="Enter Keyword..."
-            value={searchValue}
-            onChange={(e) => setSearchValue(e.target.value)}
-            className="w-full pl-10 pr-4 py-3 border border-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-[#1946BB] focus:border-[#1946BB] text-sm"
+            placeholder="Min"
+            value={minValue}
+            onChange={(e) => setMinValue(Number(e.target.value))}
+            className="w-20 py-2 px-4 rounded-lg bg-Arambo-Background text-Arambo-Black placeholder-Arambo-Text"
+          />
+          <input
+            type="text"
+            placeholder="Max"
+            value={maxValue}
+            onChange={(e) => setMaxValue(Number(e.target.value))}
+            className="w-20 py-2 px-4 rounded-lg bg-Arambo-Background text-Arambo-Black placeholder-Arambo-Text"
           />
         </div>
+
+        {/* Slider */}
+        <Slider
+          getAriaLabel={() => "Price range"}
+          value={value}
+          onChange={handleSliderChange}
+          valueLabelDisplay="off"
+          min={0}
+          max={32000}
+          step={1}
+          className="text-Arambo-Accent"
+        />
+
+        <hr className="text-Arambo-Background my-4" />
       </div>
-
-      <div className="mb-8">
-        <h3 className="text-lg font-semibold text-gray-900 mb-4">
-          Filter by rent
-        </h3>
-        <div className="space-y-4">
-          <div className="flex justify-between gap-2 w-full">
-            <input
-              type="text"
-              value={priceRange[0].toLocaleString()}
-              onChange={(e) => handleInputChange(e.target.value, 0)}
-              className="w-[48%] px-3 py-3 bg-gray-100 border-0 rounded-lg text-center font-medium text-gray-700 focus:outline-none focus:ring-2 focus:ring-[#1946BB] text-sm"
-            />
-            <input
-              type="text"
-              value={priceRange[1].toLocaleString()}
-              onChange={(e) => handleInputChange(e.target.value, 1)}
-              className="w-[48%] px-3 py-3 bg-gray-100 border-0 rounded-lg text-center font-medium text-gray-700 focus:outline-none focus:ring-2 focus:ring-[#1946BB] text-sm"
-            />
-          </div>
-
-          <div className="relative mt-6">
-            <div className="h-2 bg-gray-200 rounded-full relative">
-              <div
-                className="h-2 bg-[#1946BB] rounded-full absolute"
-                style={{
-                  left: `${((priceRange[0] - 5000) / 45000) * 100}%`,
-                  width: `${((priceRange[1] - priceRange[0]) / 45000) * 100}%`,
-                }}
-              />
-              {/* Left handle */}
-              <div
-                className="absolute w-5 h-5 bg-[#1946BB] rounded-full border-2 border-white shadow-md -top-1.5 transform -translate-x-1/2 cursor-pointer"
-                style={{ left: `${((priceRange[0] - 5000) / 45000) * 100}%` }}
-              />
-              {/* Right handle */}
-              <div
-                className="absolute w-5 h-5 bg-[#1946BB] rounded-full border-2 border-white shadow-md -top-1.5 transform -translate-x-1/2 cursor-pointer"
-                style={{ left: `${((priceRange[1] - 5000) / 45000) * 100}%` }}
-              />
-            </div>
-            <input
-              type="range"
-              min="5000"
-              max="50000"
-              step="1000"
-              value={priceRange[0]}
-              onChange={(e) => handleSliderChange(e, 0)}
-              className="absolute top-0 w-full h-2 opacity-0 cursor-pointer"
-            />
-            <input
-              type="range"
-              min="5000"
-              max="50000"
-              step="1000"
-              value={priceRange[1]}
-              onChange={(e) => handleSliderChange(e, 1)}
-              className="absolute top-0 w-full h-2 opacity-0 cursor-pointer"
-            />
-          </div>
-        </div>
-      </div>
-
       <div>
-        <h3 className="text-lg font-semibold text-gray-900 mb-6">Filters</h3>
-        <div className="space-y-6">
+        <p className="font-semibold text-lg mb-4">Filter by rent</p>
+        <div className="space-y-5">
           {/* Property Type & Area */}
           <div className="grid grid-cols-2 gap-4">
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">
-                Property Type
-              </label>
-              <select className="w-full px-3 py-2 border border-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-[#1946BB] focus:border-[#1946BB] text-sm bg-white">
-                <option value="">Any</option>
-                <option value="apartment">Apartment</option>
-                <option value="house">House</option>
-                <option value="villa">Villa</option>
-              </select>
-            </div>
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">
-                Area
-              </label>
-              <select className="w-full px-3 py-2 border border-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-[#1946BB] focus:border-[#1946BB] text-sm bg-white">
-                <option value="">Any</option>
-                <option value="gulshan">Gulshan</option>
-                <option value="banani">Banani</option>
-                <option value="dhanmondi">Dhanmondi</option>
-              </select>
-            </div>
+            <FormSelect
+              label="Property Type"
+              name="propertyType"
+              options={[
+                { value: "", label: "Any" },
+                { value: "apartment", label: "Apartment" },
+                { value: "house", label: "House" },
+                { value: "villa", label: "Villa" },
+              ]}
+            />
+
+            <FormSelect
+              label="Area"
+              name="area"
+              options={[
+                { value: "", label: "Any" },
+                { value: "gulshan", label: "Gulshan" },
+                { value: "banani", label: "Banani" },
+                { value: "dhanmondi", label: "Dhanmondi" },
+              ]}
+            />
           </div>
 
           {/* Beds & Bathroom */}
           <div className="grid grid-cols-2 gap-4">
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">
-                Beds
-              </label>
-              <select className="w-full px-3 py-2 border border-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-[#1946BB] focus:border-[#1946BB] text-sm bg-white">
-                <option value="">Any</option>
-                <option value="1">1 Bed</option>
-                <option value="2">2 Beds</option>
-                <option value="3">3 Beds</option>
-                <option value="4">4+ Beds</option>
-              </select>
-            </div>
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">
-                Bathroom
-              </label>
-              <select className="w-full px-3 py-2 border border-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-[#1946BB] focus:border-[#1946BB] text-sm bg-white">
-                <option value="">Any</option>
-                <option value="1">1 Bath</option>
-                <option value="2">2 Baths</option>
-                <option value="3">3+ Baths</option>
-              </select>
-            </div>
+            <FormSelect
+              label="Beds"
+              name="beds"
+              options={[
+                { value: "", label: "Any" },
+                { value: "1", label: "1 Bed" },
+                { value: "2", label: "2 Beds" },
+                { value: "3", label: "3 Beds" },
+                { value: "4", label: "4+ Beds" },
+              ]}
+            />
+
+            <FormSelect
+              label="Bathroom"
+              name="bathroom"
+              options={[
+                { value: "", label: "Any" },
+                { value: "1", label: "1 Bath" },
+                { value: "2", label: "2 Baths" },
+                { value: "3", label: "3+ Baths" },
+              ]}
+            />
           </div>
 
-          {/* Apt. Type & Bathroom (second row) */}
+          {/* Apt. Type & Bathroom */}
           <div className="grid grid-cols-2 gap-4">
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">
-                Apt. Type
-              </label>
-              <select className="w-full px-3 py-2 border border-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-[#1946BB] focus:border-[#1946BB] text-sm bg-white">
-                <option value="">Any</option>
-                <option value="studio">Studio</option>
-                <option value="duplex">Duplex</option>
-                <option value="penthouse">Penthouse</option>
-              </select>
-            </div>
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">
-                Bathroom
-              </label>
-              <select className="w-full px-3 py-2 border border-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-[#1946BB] focus:border-[#1946BB] text-sm bg-white">
-                <option value="">Any</option>
-                <option value="1">1 Bath</option>
-                <option value="2">2 Baths</option>
-                <option value="3">3+ Baths</option>
-              </select>
-            </div>
+            <FormSelect
+              label="Apt. Type"
+              name="aptType"
+              options={[
+                { value: "", label: "Any" },
+                { value: "studio", label: "Studio" },
+                { value: "duplex", label: "Duplex" },
+                { value: "penthouse", label: "Penthouse" },
+              ]}
+            />
+
+            <FormSelect
+              label="Bathroom"
+              name="bathroom2"
+              options={[
+                { value: "", label: "Any" },
+                { value: "1", label: "1 Bath" },
+                { value: "2", label: "2 Baths" },
+                { value: "3", label: "3+ Baths" },
+              ]}
+            />
           </div>
         </div>
       </div>

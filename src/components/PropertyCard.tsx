@@ -1,4 +1,5 @@
-import { Check, MapPin, Bed, Bath, Square } from "lucide-react";
+import { Check, MapPin, Bed, Bath, Square, CircleCheckBig } from "lucide-react";
+import Link from "next/link";
 
 interface Property {
   id: number;
@@ -19,67 +20,74 @@ interface PropertyCardProps {
 
 export function PropertyCard({ property }: PropertyCardProps) {
   return (
-    <div className="bg-white rounded-lg overflow-hidden shadow-sm border border-gray-200 hover:shadow-md transition-shadow">
-      <div className="relative">
+    <Link
+      href={"/property-details"}
+      className="bg-white rounded-lg overflow-hidden shadow-sm border border-gray-200 hover:shadow-md transition-shadow group"
+    >
+      <div className="relative overflow-hidden transition-transform">
         <img
           src={
             property.image ||
             "/placeholder.svg?height=302&width=396&query=modern apartment interior"
           }
           alt="Property"
-          className="w-full aspect-[396/302] object-cover"
+          className="w-full  group-hover:scale-105 transition-all aspect-[396/302] object-cover"
         />
 
         {/* For Sale Badge */}
         {property.forSale && (
-          <div className="absolute top-3 right-3 bg-white text-gray-700 px-3 py-1 rounded-full text-sm font-medium border border-gray-200">
+          <div className="absolute top-3 right-3 bg-Arambo-White text-Arambo-Accent px-3.5 py-1.5 rounded-full text-sm font-medium border border-gray-200">
             For Sale
           </div>
         )}
 
         {property.isVerified && (
           <div className="absolute bottom-0 left-0 right-0">
-            <div className="bg-[#1946BB] text-white px-3 py-2 text-sm font-medium flex items-center justify-center gap-1">
-              <Check className="w-3 h-3" />
-              Verified By Avenbo
+            <div className="bg-[#1946BB] text-white font-medium px-3 py-2 text-sm flex items-center justify-start gap-1.5">
+              <img src={"/commercial/verified.svg"} />
+              Verified By Arambo
             </div>
           </div>
         )}
       </div>
 
-      <div className="p-4">
+      <div className="p-3">
         {/* Price and Type */}
-        <div className="flex justify-between items-start mb-3">
-          <div className="text-2xl font-bold text-[#1946BB]">
-            {property.price}
+        <div className="mb-4">
+          <div className="flex justify-between items-start mb-3">
+            <div className="text-2xl font-bold text-Arambo-Accent">
+              {property.price}
+            </div>
+            <div className="text-sm border border-Arambo-Border rounded-full text-Arambo-Text bg-gray-50 px-3 py-1">
+              {property.type}
+            </div>
           </div>
-          <div className="text-sm text-gray-500 bg-gray-50 px-2 py-1 rounded">
-            {property.type}
-          </div>
-        </div>
 
-        {/* Location */}
-        <div className="flex items-center gap-2 mb-4">
-          <MapPin className="h-4 w-4 text-[#1946BB]" />
-          <span className="text-gray-600 text-sm">{property.location}</span>
+          {/* Location */}
+          <div className="flex items-center gap-1.5 mb-4">
+            <img src="/commercial/location.svg" alt="" />
+            <span className="text-Arambo-Text text-base">
+              {property.location}
+            </span>
+          </div>
         </div>
 
         {/* Property Details */}
-        <div className="flex items-center justify-between text-sm text-gray-600">
+        <div className="flex items-center text-sm font-medium p-3 bg-Arambo-Background rounded-xl text-Arambo-Black justify-between text-sm">
           <div className="flex items-center gap-1">
-            <Bed className="h-4 w-4" />
-            <span>{property.beds} Beds</span>
+            <img src="/commercial/bed.svg" alt="" />
+            <span >{property.beds} Beds</span>
           </div>
           <div className="flex items-center gap-1">
-            <Bath className="h-4 w-4" />
+            <img src="/commercial/bath.svg" alt="" />
             <span>{property.baths} Baths</span>
           </div>
           <div className="flex items-center gap-1">
-            <Square className="h-4 w-4" />
+            <img src="/commercial/sqft.svg" alt="" />
             <span>{property.sqft} sqft</span>
           </div>
         </div>
       </div>
-    </div>
+    </Link>
   );
 }
