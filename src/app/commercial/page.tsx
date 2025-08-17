@@ -89,6 +89,7 @@ const CommercialPage = () => {
           </div>
         </div>
       </section>
+      
       <section className="min-h-screen my-20">
         <div className="min-h-screen bg-gray-50 p-6">
           <div className="max-w-7xl mx-auto">
@@ -104,7 +105,7 @@ const CommercialPage = () => {
                   {properties.map((property) => (
                     <PropertyCard key={property.id} property={property} />
                   ))}
-
+                  
                   {/* properties 2 just to show the not verified design */}
                   {properties2.map((property) => (
                     <PropertyCard key={property.id} property={property} />
@@ -115,9 +116,11 @@ const CommercialPage = () => {
           </div>
         </div>
       </section>
+      
       <section className="py-20 w-full bg-white">
         <ServiceCards />
       </section>
+
     </>
   );
 };
