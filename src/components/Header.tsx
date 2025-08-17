@@ -80,7 +80,7 @@ export default function Header() {
                     if (hasDropdown) {
                       hideTimeout.current = setTimeout(() => {
                         setActiveDropdown(null);
-                      }, 200); // Short delay to allow moving into dropdown
+                      }, 200);
                     }
                   }}
                 >
@@ -98,7 +98,7 @@ export default function Header() {
                   {/* Dropdown Menu */}
                   {hasDropdown && (
                     <div
-                      className={`absolute top-full left-0 mt-1 w-48 bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-50 transition-all duration-500 ease-in-out
+                      className={`fixed right-0 left-0 mt-1 top-[80px] w-screen bg-Arambo-White rounded-lg shadow-lg border border-gray-200 py-8 z-50 transition-all duration-500 ease-in-out
                         ${
                           activeDropdown === item.name
                             ? "opacity-100 translate-y-0 pointer-events-auto"
@@ -115,15 +115,43 @@ export default function Header() {
                         }, 200);
                       }}
                     >
-                      {item.dropdown?.map((dropdownItem) => (
-                        <Link
-                          key={dropdownItem.name}
-                          href={dropdownItem.href}
-                          className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-gray-900 transition-colors"
-                        >
-                          {dropdownItem.name}
-                        </Link>
-                      ))}
+                      <div className="max-w-7xl mx-auto grid grid-cols-3 gap-8 px-8">
+                        {/* First column: 4 rows, 2 columns grid */}
+                        <div className="col-span-1 grid grid-rows-4 grid-cols-2 gap-2">
+                          {/* Row 1 */}
+                          <div className="row-span-1 col-span-1 flex items-center font-medium text-gray-700">
+                            Buy
+                          </div>
+                          <div className="row-span-1 col-span-1"></div>
+                          {/* Row 2 */}
+                          <div className="row-span-1 col-span-1 flex items-center font-medium text-gray-700">
+                            Rent
+                          </div>
+                          <div className="row-span-1 col-span-1"></div>
+                          {/* Row 3 */}
+                          <div className="row-span-1 col-span-1 flex items-center font-medium text-gray-700">
+                            For Woman
+                          </div>
+                          <div className="row-span-1 col-span-1 flex items-center font-medium text-gray-700">
+                            For Bachelor
+                          </div>
+                          {/* Row 4 */}
+                          <div className="row-span-1 col-span-1"></div>
+                          <div className="row-span-1 col-span-1 flex items-center font-medium text-gray-700">
+                            For Family
+                          </div>
+                        </div>
+                        {/* Second column: empty */}
+                        <div className="col-span-1"></div>
+                        {/* Third column: placeholder image */}
+                        <div className="col-span-1 flex items-center justify-end">
+                          <img
+                            src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=400&h=160&fit=crop&crop=center"
+                            alt="Placeholder"
+                            className="w-80 h-32 object-cover rounded-lg border border-gray-100"
+                          />
+                        </div>
+                      </div>
                     </div>
                   )}
                 </div>
