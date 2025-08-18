@@ -27,21 +27,21 @@ const page = () => {
             </div>
           </div>
           <div className='absolute -bottom-15 Cards w-[1200px] grid md:grid-cols-4 grid-cols-2 space-x-5'>
-            <div className='bg-Arambo-White px-6 py-8 text-Arambo-Black rounded-lg'>
-              <div>icon</div>
-              <h6>text</h6>
+            <div className='bg-Arambo-White px-6 py-8 space-y-5 text-Arambo-Black rounded-lg'>
+              <img src="/houseIcon.svg" alt="" />
+              <h6 className=' text-lg'>Elegant modern designs</h6>
             </div>
-            <div className='bg-Arambo-White px-6 py-8 text-Arambo-Black rounded-lg'>
-              <div>icon</div>
-              <h6>text</h6>
+            <div className='bg-Arambo-White px-6 py-8 space-y-5 text-Arambo-Black rounded-lg'>
+              <img src="/verifiedIcon.svg" alt="" />
+              <h6 className=' text-lg'>Verified listings</h6>
             </div>
-            <div className='bg-Arambo-White px-6 py-8 text-Arambo-Black rounded-lg'>
-              <div>icon</div>
-              <h6>text</h6>
+            <div className='bg-Arambo-White px-6 py-8 space-y-5 text-Arambo-Black rounded-lg'>
+              <img src="/buildingIcon.svg" alt="" />
+              <h6 className='text-lg'>Commercial & residential</h6>
             </div>
-            <div className='bg-Arambo-White px-6 py-8 text-Arambo-Black rounded-lg'>
-              <div>icon</div>
-              <h6>text</h6>
+            <div className='bg-Arambo-White px-6 py-8 space-y-5 text-Arambo-Black rounded-lg'>
+              <img src="/percentIcon.svg" alt="" />
+              <h6 className=' text-lg'>Easy listing & selling process</h6>
             </div>
           </div>
           <div>
@@ -153,7 +153,6 @@ const page = () => {
             <div className='h-[157px] rounded-2xl p-6 bg-Arambo-White w-full'
               style={{ backgroundImage: `url('/AramboSupports.png')`, backgroundPosition: 'center', backgroundSize: 'cover' }}
             >
-
             </div>
           </div>
         </div>
