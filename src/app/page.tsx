@@ -1,5 +1,6 @@
 import { Home, Search } from 'lucide-react'
 import building from "/building.png"
+import AutoScrollCarousel from '@/components/AutoScrollCarousel'
 // import banner from "@/app/"
 const page = () => {
   return (
@@ -47,15 +48,7 @@ const page = () => {
 
       <section className="my-25 flex justify-center">
         <div className="md:w-[1200px] overflow-hidden">
-          <div className="flex space-x-28 animate-scroll">
-            <img src="/Image.png" alt="" />
-            <img src="/Image-1.png" alt="" />
-            <img src="/Image-2.png" alt="" />
-            <img src="/Image-3.png" alt="" />
-            <img src="/Image-4.png" alt="" />
-            <img src="/Image-5.png" alt="" />
-            <img src="/Image-6.png" alt="" />
-          </div>
+          <AutoScrollCarousel />
         </div>
       </section>
       <section>
