@@ -1,10 +1,11 @@
 import { Home, Search } from 'lucide-react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCircleArrowRight, faChevronRight, faCircleCheck } from '@fortawesome/free-solid-svg-icons'
-import building from "/building.png"
-import AutoScrollCarousel from '@/components/AutoScrollCarousel'
-import Toggle from '@/components/Toggle'
-import CarouselCard from '@/components/CarouselCard'
+import building from "/homepageAssets/building.png"
+import AutoScrollCarousel from '@/components/homepageComponents/AutoScrollCarousel'
+import Toggle from '@/components/homepageComponents/Toggle'
+import CarouselCard from '@/components/homepageComponents/CarouselCard'
+import NewsCarousel from '@/components/homepageComponents/NewsCarousel'
 // import banner from "@/app/"
 const page = () => {
 
@@ -29,36 +30,36 @@ const page = () => {
           </div>
           <div className='absolute -bottom-15 Cards w-[1200px] grid md:grid-cols-4 grid-cols-2 space-x-5'>
             <div className='bg-Arambo-White px-6 py-8 space-y-5 text-Arambo-Black rounded-lg'>
-              <img src="/houseIcon.svg" alt="" />
+              <img src="/homepageAssets/houseIcon.svg" alt="" />
               <h6 className=' text-lg'>Elegant modern designs</h6>
             </div>
             <div className='bg-Arambo-White px-6 py-8 space-y-5 text-Arambo-Black rounded-lg'>
-              <img src="/verifiedIcon.svg" alt="" />
+              <img src="/homepageAssets/verifiedIcon.svg" alt="" />
               <h6 className=' text-lg'>Verified listings</h6>
             </div>
             <div className='bg-Arambo-White px-6 py-8 space-y-5 text-Arambo-Black rounded-lg'>
-              <img src="/buildingIcon.svg" alt="" />
+              <img src="/homepageAssets/buildingIcon.svg" alt="" />
               <h6 className='text-lg'>Commercial & residential</h6>
             </div>
             <div className='bg-Arambo-White px-6 py-8 space-y-5 text-Arambo-Black rounded-lg'>
-              <img src="/percentIcon.svg" alt="" />
+              <img src="/homepageAssets/percentIcon.svg" alt="" />
               <h6 className=' text-lg'>Easy listing & selling process</h6>
             </div>
           </div>
           <div>
-            {/* <img className='absolute -top-10 -left-10' src="/building.png" alt="" /> */}
+            {/* <img className='absolute -top-10 -left-10' src="/homepageAssets/building.png" alt="" /> */}
           </div>
         </div>
       </section >
 
-      <section className="my-25 flex justify-center">
+      <section className="pt-32 flex justify-center">
         <div className="md:w-[1200px] overflow-hidden">
           <AutoScrollCarousel />
         </div>
       </section>
-      <section className='py-15'>
+      <section className='py-24'>
         <div className='relative grid md:grid-cols-[40%_60%] grid-cols-1    '>
-          <div className='md:h-[640px] rounded-2xl flex justify-center items-end py-7  ' style={{ backgroundImage: `url(/building_2.png)`, backgroundPosition: 'center', backgroundSize: 'cover' }}>
+          <div className='md:h-[640px] rounded-2xl flex justify-center items-end py-7  ' style={{ backgroundImage: `url(/homepageAssets/building_2.png)`, backgroundPosition: 'center', backgroundSize: 'cover' }}>
             <button className='w-2/3 flex justify-center items-center rounded-full space-x-4 py-4 px-8 bg-Arambo-White text-Arambo-Black'><span>Learn More</span> <FontAwesomeIcon icon={faCircleArrowRight} className='text-Arambo-Accent' /></button>
           </div>
           <div className='w-full flex flex-col justify-center items-center space-y-12'>
@@ -71,7 +72,7 @@ const page = () => {
             </div>
             <div className="cubes flex space-x-5 w-[70%]">
               <div className='h-[152px] w-[183px] flex flex-col justify-between rounded-2xl text-Arambo-White p-5'
-                style={{ backgroundImage: `url(/elegant_properties.png)`, backgroundPosition: 'center', backgroundSize: 'cover', backgroundColor: `rgba(0,0,0,0.5)`, backgroundBlendMode: 'overlay' }}
+                style={{ backgroundImage: `url(/homepageAssets/elegant_properties.png)`, backgroundPosition: 'center', backgroundSize: 'cover', backgroundColor: `rgba(0,0,0,0.5)`, backgroundBlendMode: 'overlay' }}
               >
                 <h2 className='h2'>50+</h2>
                 <div className='grid grid-cols-2'><div></div><p className=''>Elegant Properties</p></div>
@@ -103,21 +104,21 @@ const page = () => {
             <div className='w-full space-y-2'>
               {/* Rectangle Cards: */}
               <div className='py-8 px-6 space-x-5 flex bg-[#1946BB14] rounded-2xl'>
-                <div className='text-Arambo-Accent'><img src="/ListingIcon.png" alt="" /></div>
+                <div className='text-Arambo-Accent'><img src="/homepageAssets/ListingIcon.png" alt="" /></div>
                 <div className='space-y-2'>
                   <h5 className='h5'>Browse Listings</h5>
                   <p className='text-Arambo-Text'>Browse curated, verified apartments in your desired location.</p>
                 </div>
               </div>
               <div className='py-8 px-6 space-x-5 flex bg-[#1946BB14] rounded-2xl'>
-                <div className='text-Arambo-Accent'><img src="/ListingIcon.png" alt="" /></div>
+                <div className='text-Arambo-Accent'><img src="/homepageAssets/ListingIcon.png" alt="" /></div>
                 <div className='space-y-2'>
                   <h5 className='h5'>Get Expert Support</h5>
                   <p className='text-Arambo-Text'>Our agents help with everything from price checks to paperwork.</p>
                 </div>
               </div>
               <div className='py-8 px-6 space-x-5 flex bg-[#1946BB14] rounded-2xl'>
-                <div className='text-Arambo-Accent'><img src="/ListingIcon.png" alt="" /></div>
+                <div className='text-Arambo-Accent'><img src="/homepageAssets/ListingIcon.png" alt="" /></div>
                 <div className='space-y-2'>
                   <h5 className='h5'>Book a Visit</h5>
                   <p className='text-Arambo-Text'>Schedule a tour with one click—online or in person.</p>
@@ -125,7 +126,7 @@ const page = () => {
               </div>
               <div className='py-8 px-6 space-x-5 flex bg-[#1946BB14] rounded-2xl'>
                 <div className='text-Arambo-Accent'>
-                  <img src="/ListingIcon.png" alt="" />
+                  <img src="/homepageAssets/ListingIcon.png" alt="" />
                 </div>
                 <div className='space-y-2'>
                   <h5 className='h5'>Close with Confidence</h5>
@@ -152,9 +153,9 @@ const page = () => {
       <section className='py-24 flex justify-center'>
         <div className=' grid md:grid-cols-2 space-x-18 md:w-[1200px] items-center'>
           <div className='h-[539px] p-4 flex items-end rounded-xl'
-            style={{ backgroundImage: `url('/hands.png')`, backgroundPosition: 'center', backgroundSize: 'cover' }}>
+            style={{ backgroundImage: `url('/homepageAssets/hands.png')`, backgroundPosition: 'center', backgroundSize: 'cover' }}>
             <div className='h-[157px] rounded-2xl p-6 bg-Arambo-White w-full'
-              style={{ backgroundImage: `url('/AramboSupports.png')`, backgroundPosition: 'center', backgroundSize: 'cover' }}
+              style={{ backgroundImage: `url('/homepageAssets/AramboSupports.png')`, backgroundPosition: 'center', backgroundSize: 'cover' }}
             >
             </div>
           </div>
@@ -185,10 +186,10 @@ const page = () => {
           </div>
 
           <div className='grid md:grid-cols-2 grid-cols-1 space-x-5'>
-            <div className='h-[384px]' style={{ backgroundImage: `url("/Legal_1.png")`, backgroundPosition: 'center', backgroundSize: 'cover' }}></div>
+            <div className='h-[384px]' style={{ backgroundImage: `url("/homepageAssets/Legal_1.png")`, backgroundPosition: 'center', backgroundSize: 'cover' }}></div>
             <div className='grid grid-rows-2 space-y-5'>
-              <div><img src="/Legal_2.png" alt="" /></div>
-              <div><img src="/Legal_3.png" alt="" /></div>
+              <div><img src="/homepageAssets/Legal_2.png" alt="" /></div>
+              <div><img src="/homepageAssets/Legal_3.png" alt="" /></div>
             </div>
           </div>
         </div>
@@ -232,21 +233,21 @@ const page = () => {
             </div>
             <div className='flex md:flex-row flex-col justify-center space-x-4 '>
               <div className='rounded-xl bg-Arambo-White py-8 px-6 space-y-8'>
-                <div><img src="/HouseIcon2.svg" alt="Icon" /></div>
+                <div><img src="/homepageAssets/HouseIcon2.svg" alt="Icon" /></div>
                 <div className='space-y-3 mt-7'>
                   <h5 className='h5'>Submit property details</h5>
                   <p className="p-base text-Arambo-Text">Fill out a quick form with your property’s location, size, type, and condition.</p>
                 </div>
               </div>
               <div className='rounded-xl bg-Arambo-White py-8 px-6 space-y-8'>
-                <div><img src="/VerifiedIcon2.svg" alt="Icon" /></div>
+                <div><img src="/homepageAssets/VerifiedIcon2.svg" alt="Icon" /></div>
                 <div className='space-y-3 mt-7'>
                   <h5 className='h5'>Submit property details</h5>
                   <p className="p-base text-Arambo-Text">Fill out a quick form with your property’s location, size, type, and condition.</p>
                 </div>
               </div>
               <div className='rounded-xl bg-Arambo-White py-8 px-6 space-y-8'>
-                <div><img src="/CheckBoardIcon.svg" alt="Icon" /></div>
+                <div><img src="/homepageAssets/CheckBoardIcon.svg" alt="Icon" /></div>
                 <div className='space-y-3 mt-7'>
                   <h5 className='h5'>Submit property details</h5>
                   <p className="p-base text-Arambo-Text">Fill out a quick form with your property’s location, size, type, and condition.</p>
@@ -254,6 +255,15 @@ const page = () => {
               </div>
             </div>
           </div>
+        </div>
+      </section>
+      <section className='py-24 flex justify-center bg-Arambo-White'>
+        <div className='rounded-2xl md:w-[1200px] space-y-15'>
+          <div className='flex justify-between'>
+            <h2 className='h2 w-[518px]'>As Seen in The Daily Star, Prothom Alo & More</h2>
+            <p className='p-base w-[487px] text-Arambo-Text'>Our work has been recognized by Bangladesh’s top news outlets and media channels. We’re proud to be shaping the future of property with trust, transparency, and national impact.  </p>
+          </div>
+          <div><NewsCarousel /></div>
         </div>
       </section>
     </div >
