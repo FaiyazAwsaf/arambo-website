@@ -2,10 +2,9 @@ import React from 'react';
 import TruckCard from '@/components/TruckCard';
 
 const BookAtruck = () => {
-  // Define an array of truck data
   const trucksData = [
     {
-      id: 't101', // Unique ID for key prop
+      id: 't101', 
       title: "9 ft 1.5ton (Open)",
       imageSrc: "/trucks/Truck1.png", 
       details: "Toyota Towerenco, Toyota Dyna, Mahindra Big Bolero. Mini Pickup - Ideal for 1RK/Studio"
@@ -41,7 +40,7 @@ const BookAtruck = () => {
          <h1 className="text-center h1 mb-8">Book A Truck</h1>
       </div>
 
-      <div>
+      <div className="max-w-3xl mx-auto mb-8">
         <h2 className="h2 mb-4">Choose a Trucks</h2>
         <p>
           If you have any confusions about truck size, you can book either option & then our team will reach out to for final confirmation

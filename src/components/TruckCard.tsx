@@ -11,7 +11,7 @@ interface TruckCardProps {
 const TruckCard: React.FC<TruckCardProps> = ({ title, imageSrc, details }) => {
   return (
     <div className="flex flex-col md:flex-row items-center bg-white rounded-2xl shadow-md border border-gray-200
-                    max-w-full md:max-w-[789px] p-8 md:px-8 md:py-11 mb-4 gap-8">
+                    max-w-full md:max-w-3xl p-8 md:px-8 md:py-11 mb-4 gap-8">
       {/* Text Content */}
       <div className="flex-1 text-center md:text-left">
         <h3 className="text-xl font-semibold text-gray-800 mb-2">{title}</h3>
