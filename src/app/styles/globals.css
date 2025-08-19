@@ -10,55 +10,6 @@
 
   /* Default choice (you can switch this later easily) */
   --font-family-sans: var(--font-helvetica);
-
-  /* Display - 110px, medium */
-  --display-110-medium-size: 110px;
-  --display-110-medium-weight: 500;
-  --display-110-medium-line-height: 120px;
-
-  /* Headings */
-  --h1-size: 56px;
-  --h1-weight: 500;
-  --h2-size: 44px;
-  --h2-weight: 500;
-  --h3-size: 32px;
-  --h3-weight: 500;
-  --h4-size: 24px;
-  --h4-weight: 500;
-  --h5-size: 20px;
-  --h5-weight: 400;
-  /* Body Fonts */
-  --body-xl-size: 20px;
-  --body-xl-line-height: 1.5;
-  --body-xl-weight: 400;
-
-  --body-lg-size: 18px;
-  --body-lg-line-height: 1.5;
-  --body-lg-weight: 400;
-
-  --body-lg-uppercase-size: 18px;
-  --body-lg-uppercase-line-height: 18px;
-  --body-lg-uppercase-weight: 1.5;
-
-  --body-base-size: 16px;
-  --body-base-line-height: 1.5;
-  --body-base-weight: 500;
-
-  --body-base-itallic-size: 16px;
-  --body-base-itallic-line-height: 1.5;
-  --body-base-itallic-weight: 500;
-  /* Span Fonts (Naming Issue: )*/
-  --span-18-1-32-size: 18px;
-  --span-18-1-32-line-height: 1.32;
-  --span-18-1-32-weight: 400;
-
-  --span-18-1-4-size: 18px;
-  --span-18-1-4-line-height: 1.4;
-  --span-18-1-4-weight: 400;
-
-  --span-14-1-4-size: 14px;
-  --span-14-1-4-line-height: 1.4;
-  --span-14-1-4-weight: 400;
 }
 
 @theme {
@@ -83,88 +34,130 @@
   font-family: var(--font-family-sans);
 }
 
-/* Headings */
+/* Heading classes */
 .h1 {
-  font-size: var(--h1-size);
-  font-weight: var(--h1-weight);
-  font-family: var(--font-family-sans);
+  font-size: 56px;
+  font-weight: 500;
+  line-height: normal;
 }
 
 .h2 {
-  font-size: var(--h2-size);
-  font-weight: var(--h2-weight);
-  font-family: var(--font-family-sans);
+  font-size: 44px;
+  font-weight: 500;
+  line-height: normal;
 }
 
 .h3 {
-  font-size: var(--h3-size);
-  font-weight: var(--h3-weight);
-  font-family: var(--font-family-sans);
+  font-size: 32px;
+  font-weight: 500;
+  line-height: normal;
 }
 
 .h4 {
-  font-size: var(--h4-size);
-  font-weight: var(--h4-weight);
-  font-family: var(--font-family-sans);
+  font-size: 24px;
+  font-weight: 500;
+  line-height: normal;
 }
 
 .h5 {
-  font-size: var(--h5-size);
-  font-weight: var(--h5-weight);
-  font-family: var(--font-family-sans);
+  font-size: 20px;
+  font-weight: 600;
+  line-height: normal;
 }
 
-.body-xl {
-  font-size: var(--body-xl-size);
-  font-weight: var(--body-xl-weight);
-  line-height: var(--body-xl-line-height);
-  font-family: var(--font-family-sans);
-}
-.body-lg {
-  font-size: var(--body-lg-size);
-  font-weight: var(--body-lg-weight);
-  line-height: var(--body-lg-line-height);
-  font-family: var(--font-family-sans);
-}
-.body-lg-uppercase {
-  font-size: var(--body-lg-uppercase-size);
-  font-weight: var(--body-lg-uppercase-weight);
-  line-height: var(--body-lg-uppercase-line-height);
-  font-family: var(--font-family-sans);
-  text-transform: uppercase;
-}
-.body-base {
-  font-size: var(--body-base-size);
-  font-weight: var(--body-base-weight);
-  line-height: var(--body-base-line-height);
-  font-family: var(--font-family-sans);
-}
-.body-base-italic {
-  font-size: var(--body-base-italic-size);
-  font-weight: var(--body-base-italic-weight);
-  line-height: var(--body-base-italic-line-height);
-  font-family: var(--font-family-sans);
-  font-style: italic;
+.h6 {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: normal;
 }
 
-/* Span */
-.span-18-1-32 {
-  font-size: var(--span-18-1-32-size);
-  font-weight: var(--span-18-1-32-weight);
-  line-height: var(--span-18-1-32-line-height);
-  font-family: var(--font-family-sans);
-}
-.span-18-1-4 {
-  font-size: var(--span-18-1-4-size);
-  font-weight: var(--span-18-1-4-weight);
-  line-height: var(--span-18-1-4-line-height);
-  font-family: var(--font-family-sans);
+/* Paragraph classes */
+.p-xl {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.5;
 }
 
-.span-14-1-4 {
-  font-size: var(--span-14-1-4-size);
-  font-weight: var(--span-14-1-4-weight);
-  line-height: var(--span-14-1-4-line-height);
-  font-family: var(--font-family-sans);
+.p-lg {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.5;
 }
 
+.p-base {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.p-md {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+/* Label classes */
+.label-18 {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.32;
+}
+
+.label-16 {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.feature {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.32;
+}
+
+/* Button and NavLink classes */
+.button-label {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.nav-link {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.24;
+}
+
+/* Caption classes */
+.caption-12 {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.caption-14 {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+/* Homepage scroll animation */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.scroll-wrapper {
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.scroll-content {
+  display: inline-flex;
+  will-change: transform;
+  animation: scroll 20s linear infinite;
+}
