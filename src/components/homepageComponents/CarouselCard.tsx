@@ -6,7 +6,7 @@ import DynamicCard from './DynamicCard'
 
 const CarouselCard = () => {
     const [currentIndex, setCurrentIndex] = useState(0);
-    const srcArray = ["/Office.jpg", "/Indoors.png", "/Trucks.png"];
+    const srcArray = ["/homepageAssets/Office.jpg", "/homepageAssets/Indoors.png", "/homepageAssets/Trucks.png"];
 
     useEffect(() => {
         const intervalId = setInterval(() => {
