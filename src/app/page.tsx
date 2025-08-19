@@ -1,6 +1,6 @@
 import { Home, Search } from 'lucide-react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCircleArrowRight, faChevronRight } from '@fortawesome/free-solid-svg-icons'
+import { faCircleArrowRight, faChevronRight, faCircleCheck } from '@fortawesome/free-solid-svg-icons'
 import building from "/building.png"
 import AutoScrollCarousel from '@/components/AutoScrollCarousel'
 import Toggle from '@/components/Toggle'
@@ -18,7 +18,7 @@ const page = () => {
         >
           <div className='md:w-[1200px] md:grid grid-cols-[60%_40%]'>
             <div className='space-y-6'>
-              <h1 style={{ lineHeight: "108%" }} className=''>Find Your Next Space—Modern, Elegant, Effortless.</h1>
+              <h1 style={{ lineHeight: "108%" }} className='h1 text bg-gradient-to-r from-white to-[#AFE4FF] inline-block text-transparent bg-clip-text'>Find Your Next Space—Modern, Elegant, Effortless.</h1>
               <p className='body-xl text-[#AFE4FF]'>From stylish apartments to premium commercial spaces in Dhaka—explore, buy, or list with confidence.</p>
               <div className='flex space-x-6'>
                 <button className='bg-Arambo-White  text-Arambo-Black rounded-lg px-10 py-4'>Get offers to Sell</button>
@@ -72,15 +72,15 @@ const page = () => {
               <div className='h-[152px] w-[183px] flex flex-col justify-between rounded-2xl text-Arambo-White p-5'
                 style={{ backgroundImage: `url(/elegant_properties.png)`, backgroundPosition: 'center', backgroundSize: 'cover', backgroundColor: `rgba(0,0,0,0.5)`, backgroundBlendMode: 'overlay' }}
               >
-                <h2>50+</h2>
+                <h2 className='h2'>50+</h2>
                 <div className='grid grid-cols-2'><div></div><p className=''>Elegant Properties</p></div>
               </div>
               <div className='h-[152px] w-[183px] flex flex-col justify-between rounded-2xl text-Arambo-Accent bg-[#DCEDF9] p-5' >
-                <h2>200+</h2>
+                <h2 className='h2'>200+</h2>
                 <div className='flex justify-between items-end '><p className=''>Residential Properties</p><div>< FontAwesomeIcon icon={faCircleArrowRight} /></div></div>
               </div>
               <div className='h-[152px] w-[183px] flex flex-col justify-between rounded-2xl text-Arambo-White bg-Arambo-Black p-5' >
-                <h2 className=''>200+</h2>
+                <h2 className='h2'>100+</h2>
                 <div className='flex justify-between items-end '><p className='text-Arambo-Text'>Commercial Properties</p><div>< FontAwesomeIcon icon={faCircleArrowRight} /></div></div>
               </div>
             </div>
@@ -104,28 +104,30 @@ const page = () => {
               <div className='py-8 px-6 space-x-5 flex bg-[#1946BB14] rounded-2xl'>
                 <div className='text-Arambo-Accent'><img src="/ListingIcon.png" alt="" /></div>
                 <div className='space-y-2'>
-                  <h5>Browse Listings</h5>
+                  <h5 className='h5'>Browse Listings</h5>
                   <p className='text-Arambo-Text'>Browse curated, verified apartments in your desired location.</p>
                 </div>
               </div>
               <div className='py-8 px-6 space-x-5 flex bg-[#1946BB14] rounded-2xl'>
                 <div className='text-Arambo-Accent'><img src="/ListingIcon.png" alt="" /></div>
                 <div className='space-y-2'>
-                  <h5>Get Expert Support</h5>
+                  <h5 className='h5'>Get Expert Support</h5>
                   <p className='text-Arambo-Text'>Our agents help with everything from price checks to paperwork.</p>
                 </div>
               </div>
               <div className='py-8 px-6 space-x-5 flex bg-[#1946BB14] rounded-2xl'>
                 <div className='text-Arambo-Accent'><img src="/ListingIcon.png" alt="" /></div>
                 <div className='space-y-2'>
-                  <h5>Book a Visit</h5>
+                  <h5 className='h5'>Book a Visit</h5>
                   <p className='text-Arambo-Text'>Schedule a tour with one click—online or in person.</p>
                 </div>
               </div>
               <div className='py-8 px-6 space-x-5 flex bg-[#1946BB14] rounded-2xl'>
-                <div className='text-Arambo-Accent'><img src="/ListingIcon.png" alt="" /></div>
+                <div className='text-Arambo-Accent'>
+                  <img src="/ListingIcon.png" alt="" />
+                </div>
                 <div className='space-y-2'>
-                  <h5>Close with Confidence</h5>
+                  <h5 className='h5'>Close with Confidence</h5>
                   <p className='text-Arambo-Text'>Transparent process, no hidden fees.</p>
                 </div>
               </div>
@@ -147,13 +149,67 @@ const page = () => {
         </div>
       </section>
       <section className='py-24 flex justify-center'>
-        <div className=' grid md:grid-cols-2 grid-cols-1 space-x-18 md:w-[1200px]'>
+        <div className=' grid md:grid-cols-2 space-x-18 md:w-[1200px] items-center'>
           <div className='h-[539px] p-4 flex items-end rounded-xl'
             style={{ backgroundImage: `url('/hands.png')`, backgroundPosition: 'center', backgroundSize: 'cover' }}>
             <div className='h-[157px] rounded-2xl p-6 bg-Arambo-White w-full'
               style={{ backgroundImage: `url('/AramboSupports.png')`, backgroundPosition: 'center', backgroundSize: 'cover' }}
             >
             </div>
+          </div>
+          <div className='space-y-6'>
+            <h2 className='h2'>Screen Tenants with Confidence</h2>
+            <p className='p-base text-Arambo-Text'>Get peace of mind before handing over the keys. We verify ID, background history, and income so you can rent with full confidence.</p>
+            <div>
+              <ul className='space-y-3' >
+                <li className='label-16'><FontAwesomeIcon className='text-Arambo-Accent p-lg' icon={faCircleCheck} />  National ID & background checks</li>
+                <li className='label-16'><FontAwesomeIcon className='text-Arambo-Accent p-lg' icon={faCircleCheck} />  Rental history reports</li>
+                <li className='label-16'><FontAwesomeIcon className='text-Arambo-Accent p-lg' icon={faCircleCheck} />  Income verification </li>
+                <li className='label-16'><FontAwesomeIcon className='text-Arambo-Accent p-lg' icon={faCircleCheck} />  Fast turnaround (24–48 hours)</li>
+                <li className='label-16'><FontAwesomeIcon className='text-Arambo-Accent p-lg' icon={faCircleCheck} />  Private & secure handling</li>
+              </ul>
+            </div>
+            <button className='mt-5 py-4 px-10 text-Arambo-White bg-Arambo-Accent rounded-lg'>Verify a Tenant Now</button>
+          </div>
+        </div>
+      </section>
+      <section className='py-24 flex justify-center bg-Arambo-White'>
+        <div className=' grid md:grid-cols-[46%_54%] space-x-5 p-11 md:w-[1200px] items-center align-middle bg-Arambo-Background rounded-3xl'>
+          <div className='flex flex-col items-start justify-center space-y-5 '>
+            <div className="h2">
+              Expert Legal Support When You Need It
+            </div>
+            <div className="p-base text-Arambo-Text">With Arambo’s Advocate on Call, you get access to verified legal professionals who can review contracts, handle documentation, and guide you through every legal step of your real estate journey.</div>
+            <button className='mt-7 py-4 px-10 text-Arambo-White bg-Arambo-Accent rounded-lg'>Talk to an Advocate</button>
+          </div>
+
+          <div className='grid md:grid-cols-2 grid-cols-1 space-x-5'>
+            <div className='h-[384px]' style={{ backgroundImage: `url("/Legal_1.png")`, backgroundPosition: 'center', backgroundSize: 'cover' }}></div>
+            <div className='grid grid-rows-2 space-y-5'>
+              <div><img src="/Legal_2.png" alt="" /></div>
+              <div><img src="/Legal_3.png" alt="" /></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className='py-24 flex justify-center bg-Arambo-White'>
+        <div className=' grid md:grid-cols-2 space-x-5 md:w-[1200px] items-stretch align-middle rounded-3xl'>
+          <div className='flex flex-col items-start justify-center space-y-5 w-[75%]'>
+            <div className="h2">
+              Hyper Filtered Listings
+            </div >
+            <div className="p-base text-Arambo-Text">Find your ideal apartment by applying filters for bachelors, women, and families, plus options for furnished or non-furnished units.</div>
+            <div className='flex flex-wrap gap-6'>
+              <button className={`py-3 px-6 ${`text-Arambo-White bg-Arambo-Accent`} rounded-full`}>Family</button>
+              <button className={`py-3 px-6 ${`text-Arambo-Black bg-Arambo-Background`} rounded-full`}>Bachelor</button>
+              <button className={`py-3 px-6 ${`text-Arambo-Black bg-Arambo-Background`} rounded-full`}>Women</button>
+              <button className={`py-3 px-6 ${`text-Arambo-Black bg-Arambo-Background`} rounded-full`}>Furnished</button>
+              <button className={`py-3 px-6 ${`text-Arambo-White bg-Arambo-Accent`} rounded-full`}>Non-furnished</button>
+            </div>
+          </div>
+
+          <div className=''>
+            Cards Carousal
           </div>
         </div>
       </section>
