@@ -160,10 +160,3 @@ h5 {
   line-height: var(--span-18-1-4-line-height);
   font-family: var(--font-family-sans);
 }
-
-.span-14-1-4 {
-  font-size: var(--span-14-1-4-size);
-  font-weight: var(--span-14-1-4-weight);
-  line-height: var(--span-14-1-4-line-height);
-  font-family: var(--font-family-sans);
-}

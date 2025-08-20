@@ -71,11 +71,9 @@ const PropertySingleSwiper = () => {
         breakpoints={{
           640: {
             slidesPerView: 2,
-            spaceBetween: 40,
           },
           1024: {
             slidesPerView: 2,
-            spaceBetween: 50,
           },
         }}
         className="property-carousel"
