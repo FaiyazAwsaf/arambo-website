@@ -47,16 +47,18 @@ const BookAtruck = () => {
         </p>
       </div>
       
-      <div className="flex flex-col items-center">
-        {trucksData.map((truck) => (
-          <TruckCard
-            key={truck.id}
-            title={truck.title}
-            imageSrc={truck.imageSrc}
-            details={truck.details}
-          />
-        ))}
-      </div>
+      <a href="/form/page.tsx">
+        <div className="flex flex-col items-center">
+          {trucksData.map((truck) => (
+            <TruckCard
+              key={truck.id}
+              title={truck.title}
+              imageSrc={truck.imageSrc}
+              details={truck.details}
+            />
+          ))}
+        </div>
+      </a>
     </div>
   );
 };
