@@ -7,7 +7,9 @@ import axios from "axios"
 const Form = () => {
     const [formData, setFormData] = useState({})
 
-    const handleChange = (e) => {
+    const handleChange = (
+        e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>
+    ) => {
         const { name, value } = e.target
         setFormData((prev) => ({
             ...prev,
@@ -15,7 +17,7 @@ const Form = () => {
         }))
     }
 
-    const handleSubmit = async (e) => {
+    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         try {
             console.log("Submitting:", formData)
