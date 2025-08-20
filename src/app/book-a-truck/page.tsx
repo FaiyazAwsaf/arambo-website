@@ -47,7 +47,7 @@ const BookAtruck = () => {
         </p>
       </div>
       
-      <a href="/form/page.tsx">
+      <a href="/book-a-truck/form">
         <div className="flex flex-col items-center">
           {trucksData.map((truck) => (
             <TruckCard
