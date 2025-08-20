@@ -40,7 +40,7 @@ const properties2 = Array.from({ length: 3 }, (_, i) => ({
 }));
 
 // Replicate  https://www.arambo.co/comercial
-const CommercialPage = () => {
+const ResidentialPage = () => {
   return (
     <>
       <section className="w-full px-3">
@@ -121,5 +121,4 @@ const CommercialPage = () => {
     </>
   );
 };
-
-export default CommercialPage;
+export default ResidentialPage;
