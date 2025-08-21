@@ -7,6 +7,7 @@ import Toggle from '@/components/homepageComponents/Toggle'
 import CarouselCard from '@/components/homepageComponents/CarouselCard'
 import NewsCarousel from '@/components/homepageComponents/NewsCarousel'
 import KnowYourProperty from '@/components/homepageComponents/KnowYourProperty'
+
 // import banner from "@/app/"
 const page = () => {
 
