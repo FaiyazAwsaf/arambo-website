@@ -2,6 +2,9 @@ import "./styles/globals.css";
 import { Inter } from "next/font/google";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import "@fortawesome/fontawesome-svg-core/styles.css";
+import { config } from "@fortawesome/fontawesome-svg-core";
+config.autoAddCss = false; // Disable automatic CSS injection
 
 const inter = Inter({ subsets: ["latin"] });
 
