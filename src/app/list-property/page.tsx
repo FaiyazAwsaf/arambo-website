@@ -11,7 +11,7 @@ const page = () => {
             </div>
             <div className="py-20 bg-Arambo-Background flex justify-center items-center ">
                 <div className="bg-Arambo-White max-w-3xl w-full border border-Arambo-Border p-8 rounded-3xl">
-                    <div className="space-y-28 flex flex-col">
+                    <div className="space-y-14 flex flex-col">
                         <div className="py-4 justify-center items-center flex flex-col text-center">
                             <h2 className="h2">What would you like to do?</h2>
                             <p className="label-18 max-w-md">Choose how you want to get started — rent or sell in just a click.</p>
