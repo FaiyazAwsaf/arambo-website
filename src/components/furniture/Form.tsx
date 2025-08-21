@@ -44,7 +44,7 @@ const Form = () => {
             </div>
             <div className="contact space-y-6">
                 <h4 className="h4">Contact Information</h4>
-                <div className="grid grid-cols-2 md:grid-rows-2 gap-5">
+                <div className="grid md:grid-cols-2 md:grid-rows-2 grid-rows-3 grid-cols-1 gap-5">
                     <div className='space-y-3'>
                         <label className='label-18' htmlFor="name">Name*</label><br />
                         <input

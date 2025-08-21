@@ -1,4 +1,3 @@
-import React from 'react'
 import FurnitureCard from '@/components/furniture/FurnitureCard'
 const page = () => {
     return (
