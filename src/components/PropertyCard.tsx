@@ -1,4 +1,3 @@
-import { Check, MapPin, Bed, Bath, Square, CircleCheckBig } from "lucide-react";
 import Link from "next/link";
 
 interface Property {
@@ -21,7 +20,7 @@ interface PropertyCardProps {
 export function PropertyCard({ property }: PropertyCardProps) {
   return (
     <Link
-      href={"/property-details"}
+      href={"/property-single"}
       className="bg-white rounded-lg overflow-hidden shadow-sm border border-gray-200 hover:shadow-md transition-shadow group"
     >
       <div className="relative overflow-hidden transition-transform">
@@ -76,7 +75,7 @@ export function PropertyCard({ property }: PropertyCardProps) {
         <div className="flex items-center text-sm font-medium p-3 bg-Arambo-Background rounded-xl text-Arambo-Black justify-between text-sm">
           <div className="flex items-center gap-1">
             <img src="/commercial/bed.svg" alt="" />
-            <span >{property.beds} Beds</span>
+            <span>{property.beds} Beds</span>
           </div>
           <div className="flex items-center gap-1">
             <img src="/commercial/bath.svg" alt="" />
