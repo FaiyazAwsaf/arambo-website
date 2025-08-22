@@ -13,7 +13,7 @@ import NewsCarousel from "@/components/homepageComponents/NewsCarousel";
 import KnowYourProperty from "@/components/homepageComponents/KnowYourProperty";
 
 // import banner from "@/app/"
-const page = () => {
+const page = async () => {
   return (
     <div>
       <section className="px-3 w-full">

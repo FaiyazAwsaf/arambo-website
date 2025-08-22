@@ -4,40 +4,49 @@ import Logo from "@/components/Logo";
 
 export default function Loading() {
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-gradient-to-br from-slate-100 via-white to-blue-50">
-      <div className="text-center px-6">
-        {/* Logo (accessible) */}
-        <div className="flex items-center justify-center" aria-label="Arambo">
-          <Logo aria-hidden />
-          <span className="sr-only">Arambo</span>
+    <div className="fixed z-50 inset-0 bg-gradient-to-br from-slate-50 to-white flex items-center justify-center">
+      <div className="text-center space-y-8 px-8">
+        {/* Logo */}
+        <div className="flex justify-center">
+          <Logo />
         </div>
 
-        {/* Copy */}
-        <div className="mt-8 space-y-3">
-          <h2 className="text-2xl font-semibold text-slate-700">
-            Your Dream Home Awaits
-          </h2>
-          <p className="mx-auto max-w-lg text-base leading-relaxed text-slate-600">
-            Connecting you with premium real estate opportunities
-          </p>
-        </div>
+        {/* Loading Animation */}
+        <div className="space-y-6">
+          {/* Main Spinner */}
+          <div className="flex justify-center">
+            <div className="relative">
+              <div className="w-16 h-16 border-4 border-slate-200 border-t-blue-600 rounded-full animate-spin"></div>
+              <div className="absolute inset-2 w-12 h-12 border-4 border-transparent border-r-blue-400 rounded-full animate-spin animate-reverse"></div>
+            </div>
+          </div>
 
-        <div
-          className="relative mt-10 inline-block"
-          role="status"
-          aria-live="polite"
-          aria-busy="true"
-          data-testid="loading-spinner"
-        >
-          {/* Spinner */}
-          <div className="mx-auto h-16 w-16 rounded-full border-4 border-slate-200 border-t-Arambo-Accent motion-safe:animate-spin sm:h-20 sm:w-20 shadow-sm"></div>
-          {/* Pulsing ring */}
-          <div className="pointer-events-none absolute inset-0 h-16 w-16 rounded-full border-4 border-transparent border-r-blue-400 motion-safe:animate-pulse sm:h-20 sm:w-20"></div>
-          <span className="sr-only">Loading…</span>
-        </div>
+          {/* Loading Text */}
+          <div className="mt-8 space-y-3">
+            <h2 className="text-2xl font-semibold text-slate-700">
+              Your Dream Home Awaits
+            </h2>
+            <p className="mx-auto max-w-lg text-base leading-relaxed text-slate-600">
+              Connecting you with premium real estate opportunities
+            </p>
+          </div>
 
-        {/* Loading message */}
-        <p className="mt-4 text-sm text-slate-500">Loading your experience…</p>
+          {/* Loading Dots */}
+          <div className="flex justify-center space-x-2">
+            <div
+              className="w-2 h-2 bg-blue-600 rounded-full animate-bounce"
+              style={{ animationDelay: "0ms" }}
+            ></div>
+            <div
+              className="w-2 h-2 bg-blue-600 rounded-full animate-bounce"
+              style={{ animationDelay: "150ms" }}
+            ></div>
+            <div
+              className="w-2 h-2 bg-blue-600 rounded-full animate-bounce"
+              style={{ animationDelay: "300ms" }}
+            ></div>
+          </div>
+        </div>
       </div>
     </div>
   );
