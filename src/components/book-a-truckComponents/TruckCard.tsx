@@ -1,6 +1,6 @@
-'use client';
+"use client";
 
-import React from 'react';
+import React from "react";
 
 interface TruckCardProps {
   title: string;
@@ -10,8 +10,10 @@ interface TruckCardProps {
 
 const TruckCard: React.FC<TruckCardProps> = ({ title, imageSrc, details }) => {
   return (
-    <div className="flex flex-col md:flex-row items-center bg-white rounded-2xl shadow-md border border-gray-200
-                    max-w-full md:max-w-3xl p-8 md:px-8 md:py-11 mb-4 gap-8">
+    <div
+      className="flex flex-col md:flex-row items-center bg-white rounded-2xl shadow-md border border-gray-200
+                    max-w-full md:max-w-3xl p-8 md:px-8 md:py-11 mb-4 gap-8"
+    >
       {/* Text Content */}
       <div className="flex-1 text-center md:text-left">
         <h3 className="text-xl font-semibold text-gray-800 mb-2">{title}</h3>
@@ -27,7 +29,11 @@ const TruckCard: React.FC<TruckCardProps> = ({ title, imageSrc, details }) => {
           src={imageSrc}
           alt={title}
           className="rounded-lg object-cover w-full h-auto max-w-xs md:max-w-none"
-          onError={(e) => { e.target.onerror = null; e.target.src="https://placehold.co/400x250/E0E0E0/333333?text=Image+Not+Found"; }}
+          onError={(e) => {
+            e.target.onerror = null;
+            e.target.src =
+              "https://placehold.co/400x250/E0E0E0/333333?text=Image+Not+Found";
+          }}
         />
       </div>
     </div>
