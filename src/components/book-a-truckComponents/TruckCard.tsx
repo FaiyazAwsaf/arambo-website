@@ -30,8 +30,9 @@ const TruckCard: React.FC<TruckCardProps> = ({ title, imageSrc, details }) => {
           alt={title}
           className="rounded-lg object-cover w-full h-auto max-w-xs md:max-w-none"
           onError={(e) => {
-            e.target.onerror = null;
-            e.target.src =
+            const target = e.target as HTMLImageElement;
+            target.onerror = null;
+            target.src =
               "https://placehold.co/400x250/E0E0E0/333333?text=Image+Not+Found";
           }}
         />
