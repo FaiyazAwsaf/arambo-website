@@ -1,38 +1,3 @@
-"use client";
-
-import { useRouter } from "next/navigation";
-
-const trucks = [
-  { id: "1", name: "Small Truck", description: "Ideal for small moves." },
-  { id: "2", name: "Medium Truck", description: "Perfect for medium loads." },
-  { id: "3", name: "Large Truck", description: "Best for big jobs." },
-];
-
-export default function BookATruckPage() {
-  const router = useRouter();
-
-  return (
-    <div className="max-w-xl mx-auto py-10">
-      <h1 className="text-2xl font-bold mb-6">Select a Truck</h1>
-      <ul className="space-y-4">
-        {trucks.map((truck) => (
-          <li key={truck.id} className="border rounded p-4 flex flex-col gap-2">
-            <div className="font-semibold">{truck.name}</div>
-            <div className="text-gray-500 text-sm">{truck.description}</div>
-            <button
-              className="mt-2 px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
-              onClick={() =>
-                router.push(`/book-a-truck/form?truckId=${truck.id}`)
-              }
-            >
-              Book this truck
-            </button>
-          </li>
-        ))}
-      </ul>
-    </div>
-  );
-}
 import React from "react";
 import TruckCard from "@/components/book-a-truckComponents/TruckCard";
 
