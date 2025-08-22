@@ -17,7 +17,7 @@ const ActionButton = ({
 }: ActionButtonProps) => {
   return (
     <button
-      className={`rounded-3xl max-w-[400px] w-full flex justify-between items-center body-lg font-medium py-8 px-6 cursor-pointer ${color} ${
+      className={`rounded-3xl max-w-[400px] w-full flex justify-between items-center body-lg label-16 py-8 px-6 cursor-pointer ${color} ${
         isActive
           ? "bg-Arambo-Accent text-Arambo-White"
           : "bg-Arambo-White text-Arambo-Black"
