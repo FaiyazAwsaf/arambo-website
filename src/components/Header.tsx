@@ -4,6 +4,8 @@ import { useState, useRef } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Home, Building2, ChevronDown } from "lucide-react";
+import Logo from "./Logo";
+import Image from "next/image";
 
 const navigation = [
   { name: "Home", href: "/" },
@@ -46,16 +48,7 @@ export default function Header() {
         <div className="flex h-20 items-center justify-between">
           {/* Logo */}
           <div className="flex items-center">
-            <Link
-              href="/"
-              className="flex items-center space-x-2 text-xl font-medium text-gray-900 hover:text-blue-600 transition-colors"
-            >
-              <img
-                src="/header/Frame.svg"
-                alt="Arambo Logo"
-                className="h-8 w-auto"
-              />
-            </Link>
+            <Logo />
           </div>
 
           {/* Desktop Navigation */}
@@ -156,10 +149,12 @@ export default function Header() {
                         <div className="col-span-1"></div>
                         {/* Third column: placeholder image */}
                         <div className="col-span-1 flex items-center justify-end">
-                          <img
+                          <Image
                             src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=400&h=160&fit=crop&crop=center"
                             alt="Placeholder"
                             className="w-80 h-32 object-cover rounded-lg border border-gray-100"
+                            height={400}
+                            width={400}
                           />
                         </div>
                       </div>
