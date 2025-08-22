@@ -13,9 +13,7 @@ import NewsCarousel from "@/components/homepageComponents/NewsCarousel";
 import KnowYourProperty from "@/components/homepageComponents/KnowYourProperty";
 
 // import banner from "@/app/"
-const page = async () => {
-  //  fixed 20seconds promise
-  throw new Error("Intentional Error for Testing");
+const page = () => {
   return (
     <div>
       <section className="px-3 w-full">
