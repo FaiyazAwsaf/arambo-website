@@ -96,9 +96,9 @@ const Footer: React.FC = () => {
                     {section.title}
                   </h4>
                   <ul className="flex flex-col gap-2 label-16 text-Arambo-Text">
-                    {section.links.map((link) => (
+                    {section.links.map((link, idx) => (
                       <Link
-                        key={link.href}
+                        key={idx}
                         href={link.href}
                         className="text-gray-700"
                       >

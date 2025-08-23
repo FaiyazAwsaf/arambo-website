@@ -7,19 +7,25 @@ import Link from "next/link";
 
 const PropertySinglePage = () => (
   <>
-    <section className="w-full py-8">
+    <section className="w-full py-4 sm:py-6 lg:py-8">
       <PropertySingleSwiper />
     </section>
-    <section className="mt-10 max-w-[1280px] mx-auto">
-      <div className="flex items-center justify-between mb-12">
-        <div className="flex gap-3 w-full">
+
+    <section className="mt-6 sm:mt-8 lg:mt-10 max-w-[1400px] mx-auto px-3 sm:px-4 lg:px-6">
+      {/* Property Heading Section */}
+      <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-8 sm:mb-10 lg:mb-12">
+        <div className="flex flex-col lg:flex-row gap-3 lg:gap-3 w-full">
           <div className="flex-1 flex flex-col gap-3">
-            <div className="flex gap-5">
+            <div className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-5">
               <div className="flex items-center gap-2">
-                <img src="/commercial/location.svg" alt="" />
+                <img
+                  src="/commercial/location.svg"
+                  alt=""
+                  className="w-4 h-4 flex-shrink-0"
+                />
                 <p className="p-base text-Arambo-Text">Gulshan 2, Dhaka</p>
               </div>
-              <div className="py-2.5 px-4 rounded-full bg-Arambo-Accent/10 text-Arambo-Accent caption-14">
+              <div className="py-2 sm:py-2.5 px-3 sm:px-4 rounded-full bg-Arambo-Accent/10 text-Arambo-Accent caption-14 w-fit">
                 For Sale
               </div>
             </div>
@@ -29,39 +35,47 @@ const PropertySinglePage = () => (
               Dhaka 1205
             </p>
           </div>
-          <div className="flex flex-col gap-2 items-end">
-            <div className="flex items-center  gap-3 mb-3">
+          <div className="flex flex-row lg:flex-col gap-4 lg:gap-2 items-center lg:items-end justify-between lg:justify-start">
+            <div className="flex items-center gap-3 lg:mb-3 order-2 lg:order-1">
               <button>
                 <img
-                  className="rounded-full p-2 bg-Arambo-White"
+                  className="rounded-full p-2 bg-Arambo-White w-10 h-10 sm:w-12 sm:h-12"
                   src="/property-single/heart.svg"
                   alt=""
                 />
               </button>
               <button className="cursor-pointer flex py-2 px-3 rounded-full bg-Arambo-White gap-2.5">
-                <img src="/property-single/share.svg" alt="" />
+                <img
+                  src="/property-single/share.svg"
+                  alt=""
+                  className="w-4 h-4"
+                />
                 <p className="text-sm text-Arambo-Black font-semibold">Share</p>
               </button>
             </div>
-            <p className="caption-12 text-Arambo-Text">Best price at</p>
-            <h3 className="text-Arambo-Accent h3">৳48,000,000</h3>
+            <div className="flex flex-col items-start lg:items-end order-1 lg:order-2">
+              <p className="caption-12 text-Arambo-Text">Best price at</p>
+              <h3 className="text-Arambo-Accent h3">৳48,000,000</h3>
+            </div>
           </div>
         </div>
-        <div></div>
       </div>
-      <div className="flex gap-12 items-start justify-between">
-        <div className="flex-1 flex flex-col gap-12">
-          <div className="lg:col-span-2 grid sm:grid-cols-2 gap-6">
+
+      {/* Main Content + Agent Card */}
+      <div className=" gap-8 sm:gap-10 lg:gap-12 grid items-start grid-cols-1 xl:grid-cols-3">
+        {/* Left Content */}
+        <div className="flex-1 lg:col-span-2 flex flex-col gap-8 sm:gap-10 lg:gap-12 w-full">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-2 gap-4 sm:gap-6">
             {/* Area */}
-            <div className="flex flex-col gap-3">
+            <div className="flex flex-col gap-2 sm:gap-3">
               <span className="text-xs text-gray-500 uppercase">Area</span>
-              <div className="flex gap-2.5 items-center">
+              <div className="flex gap-2 sm:gap-2.5 items-center">
                 <img
-                  className="p-3 bg-Arambo-White rounded-lg"
+                  className="p-2 sm:p-3 bg-Arambo-White rounded-lg flex-shrink-0"
                   src="/property-single/area.svg"
                   alt=""
                 />
-                <select className=" text-Arambo-Accent font-semibold text-xl border border-Arambo-Border rounded-md px-1 py-2 w-fit">
+                <select className="text-Arambo-Accent font-semibold text-lg sm:text-xl border border-Arambo-Border rounded-md px-1 py-1 sm:py-2 w-full min-w-0">
                   <option value="2500">2500 sqft</option>
                   <option value="2000">2000 sqft</option>
                   <option value="1800">1800 sqft</option>
@@ -104,9 +118,11 @@ const PropertySinglePage = () => (
               content="2022"
             />
           </div>
+
+          {/* Overview */}
           <div>
-            <h4 className="mb-4 h4 text-Arambo-Black">Overview</h4>
-            <p className="p-base text-Arambo-Text mb-4">
+            <h4 className="mb-3 sm:mb-4 h4 text-Arambo-Black">Overview</h4>
+            <p className="p-base text-Arambo-Text mb-3 sm:mb-4">
               A studio apartment in strategic location in Malang. Located nearby
               Univ Muhammadiyah Malang, Univ Negeri Matang and Univ Brawijaya,
               this is perfect for students and academics. This is in the main
@@ -121,16 +137,15 @@ const PropertySinglePage = () => (
             </p>
           </div>
 
-          {/* Amenities Section */}
-          <div className="">
-            <h4 className="mb-4 h4 text-Arambo-Black">Amenities</h4>
-
-            <div className="flex justify-between gap-2.5">
+          {/* Amenities */}
+          <div>
+            <h4 className="mb-3 sm:mb-4 h4 text-Arambo-Black">Amenities</h4>
+            <div className="flex flex-col sm:flex-row justify-between gap-4 sm:gap-2.5">
               <div className="flex-1">
-                <div className="flex flex-col gap-4">
+                <div className="flex flex-col gap-3 sm:gap-4">
                   <div>
-                    <h3 className="label-16">Community rooms</h3>
-                    <ul className="space-y-2 list-disc list-inside label-16">
+                    <h3 className="label-16 mb-2">Community rooms</h3>
+                    <ul className="space-y-1 sm:space-y-2 list-disc list-inside label-16">
                       <li>Clubhouse</li>
                       <li>Fitness center</li>
                       <li>Game room</li>
@@ -140,8 +155,8 @@ const PropertySinglePage = () => (
                     </ul>
                   </div>
                   <div>
-                    <h3 className="label-16">Outdoor common areas</h3>
-                    <ul className="space-y-2 list-disc list-inside label-16">
+                    <h3 className="label-16 mb-2">Outdoor common areas</h3>
+                    <ul className="space-y-1 sm:space-y-2 list-disc list-inside label-16">
                       <li>Garden</li>
                       <li>Lawn</li>
                       <li>Patio</li>
@@ -150,17 +165,17 @@ const PropertySinglePage = () => (
                 </div>
               </div>
               <div className="flex-1">
-                <div className="flex flex-col gap-4">
+                <div className="flex flex-col gap-3 sm:gap-4">
                   <div>
                     <div>
-                      <h3 className="label-16">Security</h3>
-                      <ul className="space-y-2 list-disc list-inside label-16">
+                      <h3 className="label-16 mb-2">Security</h3>
+                      <ul className="space-y-1 sm:space-y-2 list-disc list-inside label-16">
                         <li>Controlled access</li>
                       </ul>
                     </div>
                     <div className="mt-2">
-                      <h3 className=" label-16">Services & facilities</h3>
-                      <ul className="space-y-2 list-disc list-inside label-16">
+                      <h3 className="label-16 mb-2">Services & facilities</h3>
+                      <ul className="space-y-1 sm:space-y-2 list-disc list-inside label-16">
                         <li>24 hour maintenance</li>
                         <li>Elevator</li>
                         <li>Online rent payment</li>
@@ -169,8 +184,8 @@ const PropertySinglePage = () => (
                     </div>
                   </div>
                   <div>
-                    <h3 className=" label-16">View Description</h3>
-                    <ul className="space-y-2 list-disc list-inside label-16">
+                    <h3 className="label-16 mb-2">View Description</h3>
+                    <ul className="space-y-1 sm:space-y-2 list-disc list-inside label-16">
                       <li>Wooded</li>
                     </ul>
                   </div>
@@ -179,11 +194,11 @@ const PropertySinglePage = () => (
             </div>
           </div>
 
-          {/* Location Section */}
+          {/* Location */}
           <div>
             <div className="flex justify-between items-center text-sm font-medium cursor-pointer">
-              <h4 className="mb-4 text-Arambo-Black h4">Location</h4>
-              <button className="underline text-Arambo-Accent">
+              <h4 className="mb-3 sm:mb-4 text-Arambo-Black h4">Location</h4>
+              <button className="underline text-Arambo-Accent text-sm">
                 View on maps
               </button>
             </div>
@@ -191,7 +206,8 @@ const PropertySinglePage = () => (
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3956.0875236505557!2d112.6158192147785!3d-7.983908594264203!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd6282fd3b3d0a3%3A0x304ac6b4e0db8c2!2sMalang%2C%20East%20Java%2C%20Indonesia!5e0!3m2!1sen!2sid!4v1692268899304!5m2!1sen!2sid"
                 width="100%"
-                height="380"
+                height="300"
+                className="sm:h-[380px]"
                 style={{ border: 0 }}
                 allowFullScreen
                 loading="lazy"
@@ -199,23 +215,33 @@ const PropertySinglePage = () => (
               ></iframe>
             </div>
           </div>
+
+          {/* Estimate History */}
           <div>
-            <h4 className="mb-4 text-Arambo-Black h4">Estimate History</h4>
+            <h4 className="mb-3 sm:mb-4 text-Arambo-Black h4">
+              Estimate History
+            </h4>
             <EstimateHistory />
           </div>
+
+          {/* Valuation Factor */}
           <div>
-            <h4 className="mb-4 text-Arambo-Black h4">Valuation Factor</h4>
+            <h4 className="mb-3 sm:mb-4 text-Arambo-Black h4">
+              Valuation Factor
+            </h4>
             <NeighbourhoodAmenities />
           </div>
         </div>
-        <div className="w-[384px] flex-shrink-0">
-          <div className="bg-Arambo-White rounded-xl shadow border p-6 flex flex-col justify-between">
+
+        {/* Right Agent Card */}
+        <div className="w-full mx-auto max-w-[500px] lg:flex-shrink-0">
+          <div className="bg-Arambo-White rounded-xl shadow border p-4 sm:p-6 flex flex-col justify-between h-full lg:sticky lg:top-8">
             {/* Agent Profile */}
             <div className="flex items-center gap-3 mb-4">
               <img
                 src="/property-single/agent.png"
                 alt="Agent"
-                className="w-12 h-12 rounded-full object-cover object-top"
+                className="w-10 h-10 sm:w-12 sm:h-12 rounded-full object-cover object-top"
               />
               <div>
                 <h4 className="font-semibold h4 text-gray-900">Zama Fox</h4>
@@ -237,11 +263,11 @@ const PropertySinglePage = () => (
             </div>
 
             {/* Actions */}
-            <div className="flex gap-3">
-              <button className="bg-Arambo-Accent text-white px-4 py-2 rounded-md font-medium hover:bg-blue-700 transition">
+            <div className="flex flex-col sm:flex-row gap-3 mt-auto">
+              <button className="bg-Arambo-Accent text-white max-w-[172px] px-4 py-2 rounded-md font-medium hover:bg-blue-700 transition flex-1">
                 Book a Free Visit
               </button>
-              <button className="bg-gray-100 text-gray-800 px-4 py-2 rounded-md font-medium hover:bg-gray-200 transition">
+              <button className="bg-gray-100 text-gray-800 px-4 py-2 rounded-md font-medium hover:bg-gray-200 transition flex-1 sm:flex-initial">
                 View
               </button>
             </div>
@@ -249,18 +275,20 @@ const PropertySinglePage = () => (
         </div>
       </div>
     </section>
-    <section className="mt-20 py-28  bg-Arambo-White">
-      <div className="max-w-[1280px] mx-auto">
-        <div className="flex items-center justify-between">
+
+    {/* Similar Properties */}
+    <section className="mt-12 sm:mt-16 lg:mt-20 py-16 sm:py-20  lg:py-28 bg-Arambo-White">
+      <div className="max-w-[1400px] mx-auto px-3 sm:px-4 lg:px-6">
+        <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 sm:gap-6">
           <h2 className="h2">View Similar Properties</h2>
           <Link
             href={"/residential"}
-            className="py-4 px-10 bg-Arambo-Accent text-white rounded-lg"
+            className="py-3 sm:py-4 px-6 sm:px-10 bg-Arambo-Accent text-white rounded-lg text-sm sm:text-base"
           >
             Explore Properties
           </Link>
         </div>
-        <div className="grid grid-cols-3 mt-12 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 mt-8 sm:mt-10 lg:mt-12 gap-4 sm:gap-6">
           {Array.from({ length: 3 }, (_, index) => (
             <PropertyCard
               key={index}
