@@ -44,17 +44,12 @@ export default function Header() {
         aria-label="Main navigation"
       >
         <div className="flex h-20 items-center justify-between">
-          {/* Logo */}
           <div className="flex items-center">
             <Link
               href="/"
               className="flex items-center space-x-2 text-xl font-medium text-gray-900 hover:text-blue-600 transition-colors"
             >
-              <img
-                src="/header/Frame.svg"
-                alt="Arambo Logo"
-                className="h-8 w-auto"
-              />
+              <img src="/Logo.svg" alt="Arambo Logo" className="h-8 w-auto" />
             </Link>
           </div>
 
@@ -116,18 +111,15 @@ export default function Header() {
                       }}
                     >
                       <div className="max-w-7xl mx-auto grid grid-cols-3 gap-8 px-8">
-                        {/* First column: 4 rows, 2 columns grid, dynamic from navigation */}
                         <div className="col-span-1 grid grid-rows-4 grid-cols-2 gap-2">
                           {item.dropdown && item.dropdown.length > 0 && (
                             <>
-                              {/* Row 1 */}
                               <div className="row-span-1 col-span-1 flex items-center body-base text-Arambo-Text">
                                 <Link href={item.dropdown[0].href}>
                                   {item.dropdown[0].name}
                                 </Link>
                               </div>
                               <div className="row-span-1 col-span-1"></div>
-                              {/* Row 2 */}
                               <div className="row-span-1 col-span-1 flex items-center body-base text-Arambo-Text">
                                 <Link href={item.dropdown[1].href}>
                                   {item.dropdown[1].name}
@@ -138,7 +130,6 @@ export default function Header() {
                                   {item.dropdown[2].name}
                                 </Link>
                               </div>
-                              {/* Row 3 */}
                               <div className="row-span-1 col-span-1 flex items-center body-base text-Arambo-Text">
                                 <Link href={item.dropdown[3].href}>
                                   {item.dropdown[3].name}
@@ -152,9 +143,7 @@ export default function Header() {
                             </>
                           )}
                         </div>
-                        {/* Second column: empty */}
                         <div className="col-span-1"></div>
-                        {/* Third column: placeholder image */}
                         <div className="col-span-1 flex items-center justify-end">
                           <img
                             src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=400&h=160&fit=crop&crop=center"
