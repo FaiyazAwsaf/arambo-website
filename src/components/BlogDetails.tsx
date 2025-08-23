@@ -38,7 +38,15 @@ const BlogDetails = ({
           <p className="text-Arambo-Text text-base font-medium">{timeago}</p>
           <Link
             className="text-Arambo-Accent text-base font-medium"
-            href={href}
+            href={`/blog/${
+              typeof href === "string" && href.startsWith("/blog/") ? "" : ""
+            }${
+              typeof href === "string" && href.startsWith("/blog/") ? "" : ""
+            }${
+              (typeof href === "string" && href !== undefined ? href : "") || ""
+            }`}
+            as={typeof href === "number" ? `/blog/${href}` : undefined}
+            passHref
           >
             Read More
           </Link>
