@@ -96,13 +96,12 @@ const page = () => {
           </div>
           <div className="w-full flex flex-col justify-center items-center space-y-12">
             <div className="space-y-6 w-[70%] ">
-              <p className="span-14-1-4 px-2 py-1 rounded-full border-[0.5px] inline-block">
+              <p className="caption-14 px-2 py-1 rounded-full border-[0.5px] inline-block">
                 About Arambo
               </p>
-              <h3 className="">
-                <span className="">At Arambo we believe that</span>
+              <h3 className="h3 text-Arambo-Black">
+                <span>At Arambo we believe that</span>
                 <span className="text-Arambo-Text">
-                  {" "}
                   great spaces deserve great support. That’s why our team of
                   experienced real estate professionals is here to guide
                   you—whether you’re buying, selling, or just exploring your
@@ -392,63 +391,6 @@ const page = () => {
       </section>
       <section className="space-y-12 py-24 flex justify-center bg-Arambo-White">
         <KnowYourProperty />
-        <div className="bg-Arambo-Background rounded-2xl md:w-[1200px] flex justify-center">
-          <div className="md:w-[1112px] py-8 px-5 space-y-16 flex flex-col justify-center">
-            <div className="grid md:grid-cols-2 grid-cols-1">
-              <div>
-                <h2 className="h2 pr-3">Know Your Property’s True Worth</h2>
-              </div>
-              <div className="space-y-8">
-                <p className="p-base text-Arambo-Text">
-                  You get access to verified legal professionals who can review
-                  contracts, handle documentation, and guide you through every
-                  legal step of your real estate journey.
-                </p>
-                <button className="px-10 py-4 bg-Arambo-Accent text-Arambo-White button-label rounded-lg">
-                  Know property worth
-                </button>
-              </div>
-            </div>
-            <div className="flex md:flex-row flex-col justify-center space-x-4 ">
-              <div className="rounded-xl bg-Arambo-White py-8 px-6 space-y-8">
-                <div>
-                  <img src="/homepageAssets/HouseIcon2.svg" alt="Icon" />
-                </div>
-                <div className="space-y-3 mt-7">
-                  <h5 className="h5">Submit property details</h5>
-                  <p className="p-base text-Arambo-Text">
-                    Fill out a quick form with your property’s location, size,
-                    type, and condition.
-                  </p>
-                </div>
-              </div>
-              <div className="rounded-xl bg-Arambo-White py-8 px-6 space-y-8">
-                <div>
-                  <img src="/homepageAssets/VerifiedIcon2.svg" alt="Icon" />
-                </div>
-                <div className="space-y-3 mt-7">
-                  <h5 className="h5">Submit property details</h5>
-                  <p className="p-base text-Arambo-Text">
-                    Fill out a quick form with your property’s location, size,
-                    type, and condition.
-                  </p>
-                </div>
-              </div>
-              <div className="rounded-xl bg-Arambo-White py-8 px-6 space-y-8">
-                <div>
-                  <img src="/homepageAssets/CheckBoardIcon.svg" alt="Icon" />
-                </div>
-                <div className="space-y-3 mt-7">
-                  <h5 className="h5">Submit property details</h5>
-                  <p className="p-base text-Arambo-Text">
-                    Fill out a quick form with your property’s location, size,
-                    type, and condition.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
       </section>
       <section className="py-24 flex justify-center bg-Arambo-White">
         <div className="rounded-2xl md:w-[1200px] space-y-15">
