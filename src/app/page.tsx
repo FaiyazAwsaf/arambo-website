@@ -1,11 +1,8 @@
-import { Home, Search } from "lucide-react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faCircleArrowRight,
-  faChevronRight,
   faCircleCheck,
 } from "@fortawesome/free-solid-svg-icons";
-import building from "/homepageAssets/building.png";
 import AutoScrollCarousel from "@/components/homepageComponents/AutoScrollCarousel";
 import Toggle from "@/components/homepageComponents/Toggle";
 import CarouselCard from "@/components/homepageComponents/CarouselCard";
@@ -127,7 +124,7 @@ const page = () => {
                   <p className="">Elegant Properties</p>
                 </div>
               </div>
-              <div className="h-[152px] w-[183px] w-full flex flex-col justify-between rounded-2xl text-Arambo-Accent bg-[#DCEDF9] p-5">
+              <div className="h-[152px] md:w-[183px] w-full flex flex-col justify-between rounded-2xl text-Arambo-Accent bg-[#DCEDF9] p-5">
                 <h2 className="h2">200+</h2>
                 <div className="flex justify-between items-end ">
                   <p className="">Residential Properties</p>
@@ -145,7 +142,7 @@ const page = () => {
                   </div>
                 </div>
               </div>
-              <div className="h-[152px] w-[183px] w-full flex flex-col justify-between rounded-2xl text-Arambo-White bg-Arambo-Black p-5">
+              <div className="h-[152px] md:w-[183px] w-full flex flex-col justify-between rounded-2xl text-Arambo-White bg-Arambo-Black p-5">
                 <h2 className="h2">100+</h2>
                 <div className="flex justify-between items-end ">
                   <p className="text-Arambo-Text">Commercial Properties</p>
