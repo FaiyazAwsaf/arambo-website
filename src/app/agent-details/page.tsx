@@ -22,10 +22,10 @@ const page = () => {
         { col1: "Gulshan 2, Dhaka", col2: "12/11/2015", col3: "৳52,000,000", show: true },
     ];
     return (
-        <div className="space-y-24 my-24 bg-Arambo-Background flex flex-col items-center">
-            <section className="px-4 max-w-[1200px] flex md:flex-row flex-col md:space-x-12 space-x-0 md:space-y-0 space-y-12">
+        <div className="px-4 space-y-24 my-24 bg-Arambo-Background flex flex-col items-center">
+            <section className=" max-w-[1200px] w-full flex md:flex-row flex-col md:space-x-12 space-x-0 md:space-y-0 space-y-12">
                 <div className="">
-                    <div className="min-w-[340px] px-6 py-8 rounded-2xl bg-Arambo-White flex flex-col items-center space-y-4">
+                    <div className="md:min-w-[340px] min-w-full px-6 py-8 rounded-2xl bg-Arambo-White flex flex-col items-center space-y-4">
                         <img src="/agent/Agent.png" className="h-[112px] w-[112px] rounded-full object-cover object-top" alt="" />
                         <div className="flex justify-center text-center items-center ">
                             <AgentProfile />
@@ -74,7 +74,7 @@ const page = () => {
                             } />
                         </div>
                     </div>
-                    <div className="space-y-5">
+                    <div className="space-y-5  overflow-scroll">
                         <h4 className="h4 !font-bold">Sold (12)</h4>
                         <table className="w-full text-left  bg-Arambo-White rounded-xl">
                             <thead className="">
