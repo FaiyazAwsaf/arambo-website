@@ -115,7 +115,7 @@ const BlogPage = () => {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 mt-10">
           {blogs.slice(0, visibleCount).map((blog) => (
-            <BlogDetails key={blog.id} {...blog} />
+            <BlogDetails key={blog.id} {...blog} href={blog.id.toString()} />
           ))}
         </div>
 
