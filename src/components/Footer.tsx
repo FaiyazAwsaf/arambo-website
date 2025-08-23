@@ -64,8 +64,9 @@ const Footer: React.FC = () => {
             Ready to Move Forward?
           </h2>
           <p className="p-lg text-Arambo-Border max-w-lg mb-8 mx-auto">
-            Whether you're buying, renting, or listing — we're here to guide you
-            every step of the way.
+            {
+              "Whether you're buying, renting, or listing — we're here to guide you every step of the way."
+            }
           </p>
 
           {/* Buttons */}
