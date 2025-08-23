@@ -51,7 +51,7 @@ const ResidentialPage = () => {
           <div className="absolute inset-0 bg-black/30 rounded-2xl"></div>
 
           <div className="relative z-10 font-sans flex flex-col items-center gap-2 justify-center h-full text-center px-6">
-            <h1 className="text-[56px]  font-semibold text-white">
+            <h1 className="h1 font-semibold text-white">
               Residential Properties
             </h1>
             <p className=" text-[17px] text-lg text-white/80">
