@@ -1,8 +1,6 @@
 import BlogDetails from "@/components/BlogDetails";
 import KnowYourProperty from "@/components/homepageComponents/KnowYourProperty";
-import { stat } from "fs";
 import { notFound } from "next/navigation";
-import { useMemo } from "react";
 
 const blogs = [
   {
@@ -37,16 +35,13 @@ const blogs = [
   },
 ];
 
-export default function BlogDetailsPage({
-  params,
-}: {
-  params: { id: string };
-}) {
-  const blog = useMemo(
-    () => blogs.find((b) => b.id === Number(params.id)),
-    [params.id]
-  );
+type Props = {
+  params: Promise<{ id: string }>;
+};
 
+const BlogDetailsPage = async ({ params }: Props) => {
+  const { id } = await params;
+  const blog = blogs.find((b) => b.id === Number(id));
   if (!blog) return notFound();
 
   return (
@@ -106,4 +101,6 @@ export default function BlogDetailsPage({
       </section>
     </div>
   );
-}
+};
+
+export default BlogDetailsPage;
