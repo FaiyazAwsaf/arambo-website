@@ -23,7 +23,7 @@ const PropertySinglePage = () => (
                 For Sale
               </div>
             </div>
-            <h3 className="">The Crytal Hatt Place</h3>
+            <h3 className="h3">The Crytal Hatt Place</h3>
             <p className="p-base text-black/64">
               Plot No. 522 (Old) 2 (New), Road No-8 (Old), 9 (New), Dhanmondi,
               Dhaka 1205
@@ -44,7 +44,7 @@ const PropertySinglePage = () => (
               </button>
             </div>
             <p className="caption-12 text-Arambo-Text">Best price at</p>
-            <h3 className="text-Arambo-Accent">৳48,000,000</h3>
+            <h3 className="text-Arambo-Accent h3">৳48,000,000</h3>
           </div>
         </div>
         <div></div>
@@ -105,7 +105,7 @@ const PropertySinglePage = () => (
             />
           </div>
           <div>
-            <h4 className="mb-4 text-Arambo-Black">Overview</h4>
+            <h4 className="mb-4 h4 text-Arambo-Black">Overview</h4>
             <p className="p-base text-Arambo-Text mb-4">
               A studio apartment in strategic location in Malang. Located nearby
               Univ Muhammadiyah Malang, Univ Negeri Matang and Univ Brawijaya,
@@ -123,7 +123,7 @@ const PropertySinglePage = () => (
 
           {/* Amenities Section */}
           <div className="">
-            <h4 className="mb-4 text-Arambo-Black">Amenities</h4>
+            <h4 className="mb-4 h4 text-Arambo-Black">Amenities</h4>
 
             <div className="flex justify-between gap-2.5">
               <div className="flex-1">
@@ -153,7 +153,7 @@ const PropertySinglePage = () => (
                 <div className="flex flex-col gap-4">
                   <div>
                     <div>
-                      <h3 className=" label-16">Security</h3>
+                      <h3 className="label-16">Security</h3>
                       <ul className="space-y-2 list-disc list-inside label-16">
                         <li>Controlled access</li>
                       </ul>
@@ -182,7 +182,7 @@ const PropertySinglePage = () => (
           {/* Location Section */}
           <div>
             <div className="flex justify-between items-center text-sm font-medium cursor-pointer">
-              <h4 className="mb-4 text-Arambo-Black">Location</h4>
+              <h4 className="mb-4 text-Arambo-Black h4">Location</h4>
               <button className="underline text-Arambo-Accent">
                 View on maps
               </button>
@@ -200,11 +200,11 @@ const PropertySinglePage = () => (
             </div>
           </div>
           <div>
-            <h4 className="mb-4 text-Arambo-Black">Estimate History</h4>
+            <h4 className="mb-4 text-Arambo-Black h4">Estimate History</h4>
             <EstimateHistory />
           </div>
           <div>
-            <h4 className="mb-4 text-Arambo-Black">Valuation Factor</h4>
+            <h4 className="mb-4 text-Arambo-Black h4">Valuation Factor</h4>
             <NeighbourhoodAmenities />
           </div>
         </div>
@@ -213,12 +213,12 @@ const PropertySinglePage = () => (
             {/* Agent Profile */}
             <div className="flex items-center gap-3 mb-4">
               <img
-                src="/property-single/agent.png" 
+                src="/property-single/agent.png"
                 alt="Agent"
                 className="w-12 h-12 rounded-full object-cover object-top"
               />
               <div>
-                <h4 className="font-semibold text-gray-900">Zama Fox</h4>
+                <h4 className="font-semibold h4 text-gray-900">Zama Fox</h4>
                 <p className="text-sm text-gray-500">Real Broker, LLC</p>
                 <p className="text-yellow-500 text-sm">⭐ 5.0</p>
               </div>
@@ -226,7 +226,9 @@ const PropertySinglePage = () => (
 
             {/* Message */}
             <div className="mb-4">
-              <h5 className="font-semibold text-Arambo-Black mb-1">Message</h5>
+              <h5 className="font-semibold h5 text-Arambo-Black mb-1">
+                Message
+              </h5>
               <p className="text-sm text-Arambo-Text leading-relaxed">
                 Hello from Arambo! Thanks for viewing this property. If you feel
                 like this property is what you need or you have a similar
@@ -250,7 +252,7 @@ const PropertySinglePage = () => (
     <section className="mt-20 py-28  bg-Arambo-White">
       <div className="max-w-[1280px] mx-auto">
         <div className="flex items-center justify-between">
-          <h2>View Similar Properties</h2>
+          <h2 className="h2">View Similar Properties</h2>
           <Link
             href={"/residential"}
             className="py-4 px-10 bg-Arambo-Accent text-white rounded-lg"

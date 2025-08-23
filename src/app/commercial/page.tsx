@@ -51,7 +51,7 @@ const CommercialPage = () => {
           <div className="absolute inset-0 bg-black/30 rounded-2xl"></div>
 
           <div className="relative z-10 font-sans flex flex-col items-center gap-2 justify-center h-full text-center px-6">
-            <h1 className="text-[56px]  font-semibold text-white">
+            <h1 className=" h1 font-semibold text-white">
               Commercial Properties
             </h1>
             <p className=" text-[17px] text-lg text-white/80">
@@ -104,7 +104,7 @@ const CommercialPage = () => {
                   {properties.map((property) => (
                     <PropertyCard key={property.id} property={property} />
                   ))}
-                  
+
                   {/* properties 2 just to show the not verified design */}
                   {properties2.map((property) => (
                     <PropertyCard key={property.id} property={property} />
@@ -115,11 +115,10 @@ const CommercialPage = () => {
           </div>
         </div>
       </section>
-      
+
       <section className="py-20 w-full bg-white">
         <ServiceCards />
       </section>
-
     </>
   );
 };
