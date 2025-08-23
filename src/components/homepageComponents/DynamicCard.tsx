@@ -34,7 +34,7 @@ const DynamicCard: React.FC<DynamicCardProps> = ({ index }) => {
           tailored to your space and schedule.
         </p>
 
-        <a href="">
+        <a href="/furniture">
           <button className="border-b-2 border-Arambo-Accent">
             Request furniture solution
           </button>

@@ -13,7 +13,6 @@ import NewsCarousel from "@/components/homepageComponents/NewsCarousel";
 
 import KnowYourProperty from "@/components/homepageComponents/KnowYourProperty";
 
-// import banner from "@/app/"
 const page = () => {
   return (
     <div>

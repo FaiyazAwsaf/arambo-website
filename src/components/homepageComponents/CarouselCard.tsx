@@ -1,29 +1,37 @@
-// CarouselCard.tsx
-"use client"
-import React, { useState, useEffect } from 'react'
-import ImageCarousel from './ImageCarousel'
-import DynamicCard from './DynamicCard'
+"use client";
+import React, { useState, useEffect } from "react";
+import ImageCarousel from "./ImageCarousel";
+import DynamicCard from "./DynamicCard";
 
 const CarouselCard = () => {
-    const [currentIndex, setCurrentIndex] = useState(0);
-    const srcArray = ["/homepageAssets/Office.jpg", "/homepageAssets/Indoors.png", "/homepageAssets/Trucks.png"];
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const srcArray = [
+    "/homepageAssets/Office.jpg",
+    "/homepageAssets/Indoors.png",
+    "/homepageAssets/Trucks.png",
+  ];
 
-    useEffect(() => {
-        const intervalId = setInterval(() => {
-            setCurrentIndex(prev => (prev + 1) % srcArray.length);
-        }, 3000);
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % srcArray.length);
+    }, 3000);
 
-        return () => clearInterval(intervalId);
-    }, []);
+    return () => clearInterval(intervalId);
+  }, []);
 
-    return (
-        <div className='flex flex-col space-y-12'>
-            <div><ImageCarousel imgSrc={srcArray[currentIndex]} currentIndex={currentIndex} /></div>
-            <div>
-                <DynamicCard index={currentIndex} />
-            </div>
-        </div>
-    )
-}
+  return (
+    <div className="flex flex-col space-y-12">
+      <div>
+        <ImageCarousel
+          imgSrc={srcArray[currentIndex]}
+          currentIndex={currentIndex}
+        />
+      </div>
+      <div>
+        <DynamicCard index={currentIndex} />
+      </div>
+    </div>
+  );
+};
 
-export default CarouselCard
+export default CarouselCard;
