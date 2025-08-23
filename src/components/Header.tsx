@@ -13,20 +13,20 @@ const navigation = [
     dropdown: [
       { name: "Buy", href: "/residential/buy" },
       { name: "Rent", href: "/residential/rent" },
-      { name: "For Woman", href: "/residential/woman" },
-      { name: "For Bachelor", href: "/residential/bachelor" },
-      { name: "For Family", href: "/residential/family" },
+      { name: "For Woman", href: "/residential" },
+      { name: "For Bachelor", href: "/residential" },
+      { name: "For Family", href: "/residential" },
     ],
   },
   {
     name: "Commercial",
     href: "/commercial",
     dropdown: [
-      { name: "Sell", href: "/commercial/sell" },
+      { name: "Sell", href: "/list-property" },
       { name: "Buy", href: "/commercial/buy" },
       { name: "Rent", href: "/commercial/rent" },
-      { name: "Furnished", href: "/commercial/furnished" },
-      { name: "Non-Furnished", href: "/commercial/non-furnished" },
+      { name: "Furnished", href: "/commercial" },
+      { name: "Non-Furnished", href: "/commercial" },
     ],
   },
   { name: "About Us", href: "/about" },
@@ -90,10 +90,9 @@ export default function Header() {
                     <span>{item.name}</span>
                   </Link>
 
-                  {/* Dropdown Menu */}
                   {hasDropdown && (
                     <div
-                      className={`fixed right-0 left-0 mt-1 top-[80px] w-screen bg-Arambo-White rounded-lg shadow-lg border border-gray-200 py-8 z-50 transition-all duration-500 ease-in-out
+                      className={`fixed right-0 left-0 top-[80px] w-screen bg-Arambo-White rounded-lg shadow-lg border border-gray-200 py-8 z-50 transition-all duration-500 ease-in-out
                         ${
                           activeDropdown === item.name
                             ? "opacity-100 translate-y-0 pointer-events-auto"
@@ -159,11 +158,12 @@ export default function Header() {
             })}
           </div>
 
-          {/* List Property Button */}
           <div className="flex items-center">
-            <button className="flex items-center justify-center gap-2 w-[131px] h-[41px] text-Arambo-White bg-Arambo-Accent text-sm leading-[150%] border-[2px] rounded-[6px] flex-none order-1 grow-0 span-14-1-4">
-              List Property
-            </button>
+            <Link href="/list-property">
+              <button className="flex items-center justify-center gap-2 w-36 h-12 text-Arambo-White bg-Arambo-Accent text-sm leading-[150%] border-[2px] rounded-[6px] flex-none order-1 grow-0 span-14-1-4">
+                List Property
+              </button>
+            </Link>
           </div>
         </div>
 
