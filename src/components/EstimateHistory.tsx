@@ -24,11 +24,11 @@ export default function EstimateHistory() {
   const [selected, setSelected] = useState("Jul 2025");
 
   return (
-    <div className="mt-8 bg-Arambo-White rounded-xl">
-      <div className=" rounded-xl ">
+    <div className="mt-6 sm:mt-8 bg-Arambo-White rounded-xl">
+      <div className="rounded-xl">
         {/* Header */}
-        <div className="flex items-center py-4 px-6 border-b border-Arambo-Border justify-end ">
-          <select className="flex cursor-pointer items-center outline-none gap-2 bg-white px-4 py-2 rounded-lg transition-colors">
+        <div className="flex items-center py-3 sm:py-4 px-4 sm:px-6 border-b border-Arambo-Border justify-end">
+          <select className="flex cursor-pointer items-center outline-none gap-2 bg-white px-3 sm:px-4 py-2 rounded-lg transition-colors text-sm sm:text-base">
             <option value="Jul 2025" className="label-16">
               Jul 2025
             </option>
@@ -47,10 +47,10 @@ export default function EstimateHistory() {
           </select>
         </div>
 
-        <div className="grid grid-cols-1 p-3  lg:grid-cols-3 ">
+        <div className="grid grid-cols-1 lg:grid-cols-3 p-2 sm:p-3">
           {/* Left Side - Monthly Estimates */}
-          <div className="flex px-5 pt-5 rounded-xl min-w-[250px] pb-2 bg-Arambo-Background flex-col">
-            <p className="text-base text-center font-medium mb-5">
+          <div className="flex px-3 sm:px-5 pt-3 sm:pt-5 rounded-xl min-w-[250px] pb-2 bg-Arambo-Background flex-col mb-4 lg:mb-0">
+            <p className="text-sm sm:text-base text-center font-medium mb-3 sm:mb-5">
               Home value:
             </p>
 
@@ -58,12 +58,12 @@ export default function EstimateHistory() {
               {monthlyEstimates.map((estimate, index) => (
                 <div
                   key={index}
-                  className="flex items-center justify-between py-3 border-b border-Arambo-Border"
+                  className="flex items-center justify-between py-2 sm:py-3 border-b border-Arambo-Border"
                 >
-                  <span className="text-gray-900 font-medium">
+                  <span className="text-gray-900 font-medium text-sm sm:text-base">
                     {estimate.month}
                   </span>
-                  <span className="text-Arambo-Accent font-semibold">
+                  <span className="text-Arambo-Accent font-semibold text-sm sm:text-base">
                     {estimate.value}
                   </span>
                 </div>
@@ -71,26 +71,40 @@ export default function EstimateHistory() {
             </div>
 
             {/* Navigation */}
-            <div className="flex items-center justify-center px-3 py-4 rounded-lg gap-4 bg-Arambo-White">
-              <button className="p-2 hover:bg-gray-200 rounded-full transition-colors">
-                <img src="/property-single/arrowleft.svg" alt="" />
+            <div className="flex items-center justify-center px-2 sm:px-3 py-3 sm:py-4 rounded-lg gap-3 sm:gap-4 bg-Arambo-White">
+              <button className="p-1.5 sm:p-2 hover:bg-gray-200 rounded-full transition-colors">
+                <img
+                  src="/property-single/arrowleft.svg"
+                  alt=""
+                  className="w-4 h-4 sm:w-5 sm:h-5"
+                />
               </button>
-              <div className="flex items-center gap-2">
-                <button className="text-sm text-Arambo-Text">01</button>
-                <button className=" text-xs font-bold text-white bg-Arambo-Accent p-1 rounded-sm">
+              <div className="flex items-center gap-1.5 sm:gap-2">
+                <button className="text-xs sm:text-sm text-Arambo-Text">
+                  01
+                </button>
+                <button className="text-xs font-bold text-white bg-Arambo-Accent p-1 rounded-sm">
                   02
                 </button>
-                <button className="text-sm text-Arambo-Text">03</button>
-                <button className="text-sm text-Arambo-Text">04</button>
+                <button className="text-xs sm:text-sm text-Arambo-Text">
+                  03
+                </button>
+                <button className="text-xs sm:text-sm text-Arambo-Text">
+                  04
+                </button>
               </div>
-              <button className="p-2 hover:bg-gray-200 rounded-full transition-colors">
-                <img src="/property-single/arrowright.svg" alt="" />
+              <button className="p-1.5 sm:p-2 hover:bg-gray-200 rounded-full transition-colors">
+                <img
+                  src="/property-single/arrowright.svg"
+                  alt=""
+                  className="w-4 h-4 sm:w-5 sm:h-5"
+                />
               </button>
             </div>
           </div>
 
           {/* Right Side - Bar Chart */}
-          <div className="bg-Arambo-white col-span-2  rounded-lg p-2">
+          <div className="bg-Arambo-white col-span-1 lg:col-span-2 rounded-lg p-2 h-64 sm:h-80 lg:h-auto">
             <div className="h-full">
               <ResponsiveContainer width="100%" height="100%">
                 <BarChart
