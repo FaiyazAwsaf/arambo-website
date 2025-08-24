@@ -30,7 +30,7 @@ const FurnitureCard = () => {
                         ${isCommercial ? "translate-x-0 opacity-100" : "-translate-x-full opacity-0"}
                     `}
                 >
-                    <div className="space-y-6">
+                    <div className=" grid grid-cols-1 gap-6">
                         <BigButton label='EMI Plan' content='Pay over time with easy monthly installments.' bg='Arambo-Accent' />
                         <BigButton label='Lease' content='Rent for a flexible term, no ownership needed.' bg='Arambo-Background' />
                         <BigButton label='Instant Pay' content='Pay upfront and get everything delivered.' bg='Arambo-Background' />

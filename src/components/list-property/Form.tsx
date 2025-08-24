@@ -186,7 +186,7 @@ const Form = () => {
                             </div>
                         </div>
                     </div>
-                    <div className='grid md:grid-cols-2 grid-cols-1 gap-x-8 mt-6'>
+                    <div className='grid md:grid-cols-2 grid-cols-1 gap-8 mt-6'>
                         <div className='space-y-3'>
                             <label className='label-18' htmlFor="baranda">Baranda</label><br />
                             <input

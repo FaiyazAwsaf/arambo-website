@@ -1,9 +1,9 @@
 "use client";
 
 import { useState, useRef } from "react";
+import { Menu, X } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Home, Building2, ChevronDown } from "lucide-react";
 
 const navigation = [
   { name: "Home", href: "/" },
@@ -31,10 +31,10 @@ const navigation = [
   },
   { name: "About Us", href: "/about" },
 ];
-
-export default function Header() {
+const Header = () => {
   const pathname = usePathname();
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const [mobileOpen, setMobileOpen] = useState(false);
   const hideTimeout = useRef<NodeJS.Timeout | null>(null);
 
   return (
@@ -158,7 +158,20 @@ export default function Header() {
             })}
           </div>
 
-          <div className="flex items-center">
+          <div className="flex items-center md:hidden">
+            <button
+              className="p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+              aria-label={mobileOpen ? "Close menu" : "Open menu"}
+              onClick={() => setMobileOpen((v) => !v)}
+            >
+              {mobileOpen ? (
+                <X className="w-7 h-7" />
+              ) : (
+                <Menu className="w-7 h-7" />
+              )}
+            </button>
+          </div>
+          <div className="hidden md:flex items-center">
             <Link href="/list-property">
               <button className="flex items-center justify-center gap-2 w-36 h-12 text-Arambo-White bg-Arambo-Accent text-sm leading-[150%] border-[2px] rounded-[6px] flex-none order-1 grow-0 span-14-1-4">
                 List Property
@@ -168,8 +181,25 @@ export default function Header() {
         </div>
 
         {/* Mobile Navigation */}
-        <div className="md:hidden">
-          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+        <div
+          className={`fixed left-0 top-0 w-screen z-50 bg-white shadow-lg transition-transform duration-300 ease-in-out md:hidden ${
+            mobileOpen
+              ? "translate-y-0"
+              : "-translate-y-full pointer-events-none"
+          }`}
+          style={{ willChange: "transform" }}
+        >
+          <div className="p-6 flex flex-col gap-4">
+            <div className="flex items-center justify-between mb-6">
+              <img src="/Logo.svg" alt="Arambo Logo" className="h-8 w-auto" />
+              <button
+                className="p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                aria-label="Close menu"
+                onClick={() => setMobileOpen(false)}
+              >
+                <X className="w-7 h-7" />
+              </button>
+            </div>
             {navigation.map((item) => {
               const isActive = pathname === item.href;
               return (
@@ -181,14 +211,26 @@ export default function Header() {
                       ? "text-blue-600 bg-blue-50"
                       : "text-gray-700 hover:text-gray-900 hover:bg-gray-50"
                   }`}
+                  onClick={() => setMobileOpen(false)}
                 >
                   {item.name}
                 </Link>
               );
             })}
+            <Link
+              href="/list-property"
+              className="mt-6"
+              onClick={() => setMobileOpen(false)}
+            >
+              <button className="w-full flex items-center justify-center gap-2 h-12 text-Arambo-White bg-Arambo-Accent text-sm leading-[150%] border-[2px] rounded-[6px]">
+                List Property
+              </button>
+            </Link>
           </div>
         </div>
       </nav>
     </header>
   );
-}
+};
+
+export default Header;
