@@ -17,10 +17,13 @@ const page = () => {
       <section className="px-2 w-full">
         <div
           style={{
-            background:
-              "linear-gradient(180deg, #000B26 0%, #00123C 19.69%, #032471 70.33%, #0C39A3 86.64%, #0041D9 100%)",
+            backgroundImage: `url('/homepageAssets/background.png')`,
+            backgroundPosition: "center",
+            backgroundRepeat: "no-repeat",
+            // background:
+            //   "linear-gradient(180deg, #000B26 0%, #00123C 19.69%, #032471 70.33%, #0C39A3 86.64%, #0041D9 100%)",
           }}
-          className="py-10 px-4 min-h-[400px] md:h-[627px] flex flex-col justify-center items-center rounded-2xl text-Arambo-White p-2 md:p-5"
+          className="py-10 bg-cover px-4 min-h-[400px] md:h-[627px] flex flex-col justify-center items-center rounded-2xl text-Arambo-White p-2 md:p-5"
         >
           <div className="w-full max-w-[1200px] grid grid-cols-1 md:grid-cols-[60%_40%] gap-8">
             <div className="space-y-6">
