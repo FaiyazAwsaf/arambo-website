@@ -101,9 +101,9 @@ const BlogPage = () => {
           background:
             "linear-gradient(180deg, #000B26 0%, #00123C 19.69%, #032471 70.33%, #0C39A3 86.64%, #0041D9 100%)",
         }}
-        className="relative h-60 flex flex-col justify-center items-center rounded-2xl text-Arambo-White p-5 mb-5"
+        className="relative h-94 flex flex-col justify-center items-start rounded-2xl text-Arambo-White p-5 mb-5"
       >
-        <h1 className="text-center h1 mb-8">
+        <h1 className="h1 mb-8 text-left">
           Stay Informed With <br /> Our Real Estate Blog
         </h1>
       </div>
