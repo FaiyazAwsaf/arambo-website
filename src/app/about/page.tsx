@@ -61,7 +61,7 @@ const AboutPage = () => {
   return (
     <>
       <section className="px-2 sm:px-4 w-full bg-Arambo-Background">
-        <div className="relative h-[60vh] sm:h-[70vh] lg:h-[80vh] w-full overflow-hidden rounded-lg">
+        <div className="relative h-fit sm:h-[70vh] lg:h-[80vh] w-full overflow-hidden rounded-lg">
           {/* Background Image */}
           <div
             className="absolute inset-0 bg-cover bg-center bg-no-repeat"
