@@ -91,16 +91,15 @@ const Footer: React.FC = () => {
 
               <div className="hidden md:block"></div>
 
-              {footerData.map((section, idx) => (
-                <div key={idx} className="text-left mt-6 md:mt-0">
+              {footerData.map((section, sectionIdx) => (
+                <div key={sectionIdx} className="text-left mt-6 md:mt-0">
                   <h4 className="label-18 mb-4 text-Arambo-Black">
                     {section.title}
                   </h4>
                   <ul className="flex flex-col gap-2 label-16 text-Arambo-Text">
-                    {section.links.map((link, idx) => (
-                      <li>
+                    {section.links.map((link, linkIdx) => (
+                      <li key={linkIdx}>
                         <Link
-                          key={idx}
                           href={link.href}
                           className="text-Arambo-Text hover:underline hover:text-Arambo-Accent transition-colors"
                         >
