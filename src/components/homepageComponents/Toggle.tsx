@@ -155,7 +155,7 @@ const Toggle = () => {
             ))}
       </div>
       <div className="flex justify-center">
-        <Link href="/#" className="flex space-x-2">
+        <Link href="/residential" className="flex space-x-2">
           <span>See all listings</span>
           <svg
             width="25"
