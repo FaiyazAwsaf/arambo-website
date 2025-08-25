@@ -52,7 +52,6 @@ export function PropertyFilter({ CategoryOptions }: PropertyFilterProps) {
     }
   };
 
-  // Category toggle logic
   const handleCategoryToggle = (category: string) => {
     setForm((prev) => {
       const isSelected = prev.categories.includes(category);
@@ -66,26 +65,26 @@ export function PropertyFilter({ CategoryOptions }: PropertyFilterProps) {
   };
 
   return (
-    <div className="bg-white rounded-lg p-6 text-Arambo-Black shadow-sm border border-gray-200">
-      <p className="font-semibold text-lg mb-4">Search by Location</p>
-      <div className="bg-Arambo-Background rounded-lg flex items-center w-full max-w-md p-4">
-        <Search className="text-Arambo-Black" size={20} />
+    <div className="bg-white rounded-lg p-4 sm:p-6 text-Arambo-Black shadow-sm border border-gray-200">
+      <p className="font-semibold h6 sm:h5 mb-3 sm:mb-4">Search by Location</p>
+      <div className="bg-Arambo-Background rounded-lg flex items-center w-full p-3 sm:p-4">
+        <Search className="text-Arambo-Black flex-shrink-0" size={18} />
         <input
           type="text"
           name="location"
           value={form.location}
           onChange={handleChange}
           placeholder="Search by location..."
-          className="flex-1 pl-2 bg-transparent text-Arambo-Black placeholder-Arambo-Text outline-none"
+          className="flex-1 pl-2 bg-transparent text-Arambo-Black placeholder-Arambo-Text outline-none text-sm sm:text-base min-w-0"
         />
       </div>
 
-      <hr className="text-Arambo-Border my-4" />
+      <hr className="text-Arambo-Border my-3 sm:my-4" />
 
       {/* Filter by Rent */}
-      <div className="flex flex-col space-y-4">
-        <p className="font-semibold text-lg mb-4">Filter by rent</p>
-        <div className="flex justify-between">
+      <div className="flex flex-col space-y-3 sm:space-y-4">
+        <p className="font-semibold h6 sm:h5">Filter by rent</p>
+        <div className="grid grid-cols-2 gap-3 sm:gap-4">
           <input
             type="text"
             name="minRent"
@@ -116,7 +115,7 @@ export function PropertyFilter({ CategoryOptions }: PropertyFilterProps) {
           className="text-Arambo-Accent"
         />
 
-        <hr className="text-Arambo-Background my-4" />
+        <hr className="text-Arambo-Background my-3 sm:my-4" />
       </div>
       {/* Select Category by Rent */}
       <div className="flex flex-col space-y-4">
@@ -143,10 +142,10 @@ export function PropertyFilter({ CategoryOptions }: PropertyFilterProps) {
         <hr className="text-Arambo-Background my-4" />
       </div>
       <div>
-        <p className="font-semibold text-lg mb-4">Filter by rent</p>
-        <div className="space-y-5">
+        <p className="font-semibold h6 sm:h5 mb-3 sm:mb-4">Filter by rent</p>
+        <div className="space-y-4 sm:space-y-5">
           {/* Property Type & Area */}
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
             <FormSelect
               label="Property Type"
               name="propertyType"
@@ -175,7 +174,7 @@ export function PropertyFilter({ CategoryOptions }: PropertyFilterProps) {
           </div>
 
           {/* Beds & Bathroom */}
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
             <FormSelect
               label="Beds"
               name="beds"
@@ -205,7 +204,7 @@ export function PropertyFilter({ CategoryOptions }: PropertyFilterProps) {
           </div>
 
           {/* Apt. Type & Bathroom */}
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
             <FormSelect
               label="Apt. Type"
               name="aptType"
