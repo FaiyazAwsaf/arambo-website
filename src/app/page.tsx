@@ -3,6 +3,7 @@ import {
   faCircleArrowRight,
   faCircleCheck,
 } from "@fortawesome/free-solid-svg-icons";
+import Link from "next/link";
 import AutoScrollCarousel from "@/components/homepageComponents/AutoScrollCarousel";
 import Toggle from "@/components/homepageComponents/Toggle";
 import CarouselCard from "@/components/homepageComponents/CarouselCard";
@@ -17,10 +18,13 @@ const page = () => {
       <section className="px-2 w-full">
         <div
           style={{
-            background:
-              "linear-gradient(180deg, #000B26 0%, #00123C 19.69%, #032471 70.33%, #0C39A3 86.64%, #0041D9 100%)",
+            backgroundImage: `url('/homepageAssets/background.png')`,
+            backgroundPosition: "center",
+            backgroundRepeat: "no-repeat",
+            // background:
+            //   "linear-gradient(180deg, #000B26 0%, #00123C 19.69%, #032471 70.33%, #0C39A3 86.64%, #0041D9 100%)",
           }}
-          className="py-10 px-4 min-h-[400px] md:h-[627px] flex flex-col justify-center items-center rounded-2xl text-Arambo-White p-2 md:p-5"
+          className="py-10 bg-cover px-4 min-h-[400px] md:h-[627px] flex flex-col justify-center items-center rounded-2xl text-Arambo-White p-2 md:p-5"
         >
           <div className="w-full max-w-[1200px] grid grid-cols-1 md:grid-cols-[60%_40%] gap-8">
             <div className="space-y-6">
@@ -35,12 +39,12 @@ const page = () => {
                 Dhaka—explore, buy, or list with confidence.
               </p>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-                <button className="bg-Arambo-White  text-Arambo-Black rounded-lg px-10 py-4">
+                <Link href="/#" className="bg-Arambo-White  text-Arambo-Black rounded-lg px-10 py-4">
                   Get offers to Sell
-                </button>
-                <button className="bg-Arambo-White/12 border-[1.5px] border-[#AFE4FF47]/28 rounded-lg px-10 py-4">
+                </Link>
+                <Link href="/#" className="bg-Arambo-White/12 border-[1.5px] border-[#AFE4FF47]/28 rounded-lg px-10 py-4">
                   Browse Properties
-                </button>
+                </Link>
               </div>
             </div>
           </div>
@@ -84,13 +88,13 @@ const page = () => {
               backgroundSize: "cover",
             }}
           >
-            <button className="w-2/3 flex justify-center items-center rounded-full space-x-4 py-4 px-8 bg-Arambo-White text-Arambo-Black">
+            <Link href="/#" className="w-2/3 flex justify-center items-center rounded-full space-x-4 py-4 px-8 bg-Arambo-White text-Arambo-Black">
               <span>Learn More</span>{" "}
               <FontAwesomeIcon
                 icon={faCircleArrowRight}
                 className="text-Arambo-Accent"
               />
-            </button>
+            </Link>
           </div>
           <div className="w-full flex flex-col justify-center items-center space-y-8 mt-8 md:mt-0">
             <div className="space-y-6 w-full md:w-[70%] ">
@@ -231,9 +235,9 @@ const page = () => {
                 </li>
               </ul>
             </div>
-            <button className="mt-5 py-4 px-10 text-Arambo-White bg-Arambo-Accent rounded-lg">
+            <Link href="/#" className="mt-5 py-4 px-10 text-Arambo-White bg-Arambo-Accent rounded-lg">
               Verify a Tenant Now
-            </button>
+            </Link>
           </div>
         </div>
       </section>
@@ -246,9 +250,9 @@ const page = () => {
               professionals who can review contracts, handle documentation, and
               guide you through every legal step of your real estate journey.
             </div>
-            <button className="mt-7 py-4 px-10 text-Arambo-White bg-Arambo-Accent rounded-lg">
+            <Link href={`tel:${"0"}`} className="mt-7 py-4 px-10 text-Arambo-White bg-Arambo-Accent rounded-lg">
               Talk to an Advocate
-            </button>
+            </Link>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mt-6 md:mt-0">

@@ -70,7 +70,6 @@ const ResidentialPage = () => {
               />
             </div>
           </div>
-
           {/* Action Buttons */}
           <div className="relative z-20 sm:absolute left-1/2 sm:-bottom-12 lg:-bottom-16 items-center -translate-x-1/2 flex flex-col sm:flex-row gap-3 sm:gap-4 w-full sm:w-4/5 md:w-2/3 justify-center p-3 sm:p-4">
             <ActionButtonContainer defaultSelected="rent" />
@@ -83,8 +82,10 @@ const ResidentialPage = () => {
           <div className="max-w-7xl mx-auto">
             <div className="flex flex-col lg:flex-row gap-4 lg:gap-6">
               {/* Left Sidebar - Filters */}
-              <div className="w-full lg:w-80 lg:flex-shrink-0">
-                <PropertyFilter />
+              <div className="w-80 flex-shrink-0">
+                <PropertyFilter
+                  CategoryOptions={["Women", "Family", "Bachelor"]}
+                />
               </div>
 
               {/* Right Content - Property Cards */}

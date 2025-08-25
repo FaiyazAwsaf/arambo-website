@@ -1,20 +1,67 @@
 "use client";
 
-import type React from "react";
-import { useState } from "react";
+import React, { useState } from "react";
 import { Search } from "lucide-react";
 import { Slider } from "@mui/material";
 import FormSelect from "./FormSelect";
 
-export function PropertyFilter() {
-  const [value, setValue] = useState<number[]>([10000, 32000]);
-  const [minValue, setMinValue] = useState<number>(value[0]);
-  const [maxValue, setMaxValue] = useState<number>(value[1]);
 
+interface PropertyFilterProps {
+  CategoryOptions: string[];
+}
+
+export function PropertyFilter({ CategoryOptions }: PropertyFilterProps) {
+  const CATEGORY_OPTIONS = CategoryOptions;
+  const [form, setForm] = useState({
+    location: "",
+    minRent: 10000,
+    maxRent: 32000,
+    categories: [] as string[],
+    propertyType: "",
+    area: "",
+    beds: "",
+    bathroom: "",
+    aptType: "",
+    bathroom2: "",
+  });
+
+  const [sliderValue, setSliderValue] = useState<number[]>([form.minRent, form.maxRent]);
+
+  // Generic handleChange for text/select inputs
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
+    const { name, value } = e.target;
+    setForm((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+    //console.log(form);
+
+    // ATTENTION!!!
+    // Axios request can be made here for filtering
+  };
+
+  // Handle slider change
   const handleSliderChange = (event: Event, newValue: number | number[]) => {
     if (Array.isArray(newValue)) {
-      setValue(newValue);
+      setSliderValue(newValue);
+      setForm((prev) => ({
+        ...prev,
+        minRent: newValue[0],
+        maxRent: newValue[1],
+      }));
     }
+  };
+
+  const handleCategoryToggle = (category: string) => {
+    setForm((prev) => {
+      const isSelected = prev.categories.includes(category);
+      return {
+        ...prev,
+        categories: isSelected
+          ? prev.categories.filter((c) => c !== category)
+          : [...prev.categories, category],
+      };
+    });
   };
 
   return (
@@ -24,6 +71,9 @@ export function PropertyFilter() {
         <Search className="text-Arambo-Black flex-shrink-0" size={18} />
         <input
           type="text"
+          name="location"
+          value={form.location}
+          onChange={handleChange}
           placeholder="Search by location..."
           className="flex-1 pl-2 bg-transparent text-Arambo-Black placeholder-Arambo-Text outline-none text-sm sm:text-base min-w-0"
         />
@@ -37,37 +87,60 @@ export function PropertyFilter() {
         <div className="grid grid-cols-2 gap-3 sm:gap-4">
           <input
             type="text"
+            name="minRent"
             placeholder="Min"
-            value={minValue}
-            onChange={(e) => setMinValue(Number(e.target.value))}
-            className=" py-2 px-3 sm:px-4 rounded-lg bg-Arambo-Background text-Arambo-Black placeholder-Arambo-Text text-sm sm:text-base"
+            value={form.minRent}
+            onChange={handleChange}
+            className="w-20 py-2 px-4 rounded-lg bg-Arambo-Background text-Arambo-Black placeholder-Arambo-Text"
           />
           <input
             type="text"
+            name="maxRent"
             placeholder="Max"
-            value={maxValue}
-            onChange={(e) => setMaxValue(Number(e.target.value))}
-            className=" py-2 px-3 sm:px-4 rounded-lg bg-Arambo-Background text-Arambo-Black placeholder-Arambo-Text text-sm sm:text-base"
+            value={form.maxRent}
+            onChange={handleChange}
+            className="w-20 py-2 px-4 rounded-lg bg-Arambo-Background text-Arambo-Black placeholder-Arambo-Text"
           />
         </div>
 
         {/* Slider */}
-        <div className="px-2">
-          <Slider
-            getAriaLabel={() => "Price range"}
-            value={value}
-            onChange={handleSliderChange}
-            valueLabelDisplay="off"
-            min={0}
-            max={32000}
-            step={1}
-            className="text-Arambo-Accent"
-          />
-        </div>
+        <Slider
+          getAriaLabel={() => "Price range"}
+          value={sliderValue}
+          onChange={handleSliderChange}
+          valueLabelDisplay="off"
+          min={0}
+          max={32000}
+          step={1}
+          className="text-Arambo-Accent"
+        />
 
         <hr className="text-Arambo-Background my-3 sm:my-4" />
       </div>
+      {/* Select Category by Rent */}
+      <div className="flex flex-col space-y-4">
+        <p className="font-semibold text-lg mb-4">Category</p>
+        <div className="flex flex-wrap gap-2">
+          {CATEGORY_OPTIONS.map((cat) => {
+            const isSelected = form.categories.includes(cat);
+            return (
+              <button
+                key={cat}
+                type="button"
+                onClick={() => handleCategoryToggle(cat)}
+                className={`py-3 px-6 rounded-full duration-400 ${isSelected
+                  ? "bg-Arambo-Accent text-Arambo-White"
+                  : "bg-Arambo-Background text-Arambo-Black hover:bg-Arambo-Accent hover:text-Arambo-White"
+                  }`}
+              >
+                {cat}
+              </button>
+            );
+          })}
+        </div>
 
+        <hr className="text-Arambo-Background my-4" />
+      </div>
       <div>
         <p className="font-semibold h6 sm:h5 mb-3 sm:mb-4">Filter by rent</p>
         <div className="space-y-4 sm:space-y-5">
@@ -76,6 +149,8 @@ export function PropertyFilter() {
             <FormSelect
               label="Property Type"
               name="propertyType"
+              value={form.propertyType}
+              onChange={handleChange}
               options={[
                 { value: "", label: "Any" },
                 { value: "apartment", label: "Apartment" },
@@ -87,6 +162,8 @@ export function PropertyFilter() {
             <FormSelect
               label="Area"
               name="area"
+              value={form.area}
+              onChange={handleChange}
               options={[
                 { value: "", label: "Any" },
                 { value: "gulshan", label: "Gulshan" },
@@ -101,6 +178,8 @@ export function PropertyFilter() {
             <FormSelect
               label="Beds"
               name="beds"
+              value={form.beds}
+              onChange={handleChange}
               options={[
                 { value: "", label: "Any" },
                 { value: "1", label: "1 Bed" },
@@ -113,6 +192,8 @@ export function PropertyFilter() {
             <FormSelect
               label="Bathroom"
               name="bathroom"
+              value={form.bathroom}
+              onChange={handleChange}
               options={[
                 { value: "", label: "Any" },
                 { value: "1", label: "1 Bath" },
@@ -127,10 +208,12 @@ export function PropertyFilter() {
             <FormSelect
               label="Apt. Type"
               name="aptType"
+              value={form.aptType}
+              onChange={handleChange}
               options={[
                 { value: "", label: "Any" },
                 { value: "studio", label: "Studio" },
-                { value: "duplex", label: "Duplex" },
+                { value: "dupl  ex", label: "Duplex" },
                 { value: "penthouse", label: "Penthouse" },
               ]}
             />
@@ -138,6 +221,8 @@ export function PropertyFilter() {
             <FormSelect
               label="Bathroom"
               name="bathroom2"
+              value={form.bathroom2}
+              onChange={handleChange}
               options={[
                 { value: "", label: "Any" },
                 { value: "1", label: "1 Bath" },

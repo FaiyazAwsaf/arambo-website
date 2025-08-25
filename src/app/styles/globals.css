@@ -36,9 +36,7 @@
 
 /* Heading classes */
 .h1 {
-  font-size: 56px;
-  font-weight: 500;
-  line-height: normal;
+  @apply md:text-[56px] text-[32px] font-[500] leading-[normal];
 }
 
 .h2 {
