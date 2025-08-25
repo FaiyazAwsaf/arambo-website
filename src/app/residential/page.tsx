@@ -72,7 +72,6 @@ const ResidentialPage = () => {
           <div className="absolute left-1/2 -bottom-15 -translate-x-1/2 rounded-xl overflow-hidden flex w-full md:w-2/3 justify-center space-x-4 p-4">
             {/* RENT button */}
             <ActionButton
-              color="bg-Arambo-Accent"
               label="RENT"
               GoToActionIcon
               startIcon={<Home size={24} />}
@@ -81,7 +80,6 @@ const ResidentialPage = () => {
 
             {/* BUY button */}
             <ActionButton
-              color="bg-white"
               label="BUY"
               startIcon={<Home size={24} />}
               isActive={false}
@@ -95,7 +93,9 @@ const ResidentialPage = () => {
             <div className="flex gap-6">
               {/* Left Sidebar - Filters */}
               <div className="w-80 flex-shrink-0">
-                <PropertyFilter CategoryOptions={["Women", "Family", "Bachelor"]} />
+                <PropertyFilter
+                  CategoryOptions={["Women", "Family", "Bachelor"]}
+                />
               </div>
 
               {/* Right Content - Property Cards */}
