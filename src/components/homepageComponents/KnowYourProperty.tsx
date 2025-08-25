@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 const KnowYourProperty = () => {
@@ -16,9 +17,9 @@ const KnowYourProperty = () => {
               contracts, handle documentation, and guide you through every legal
               step of your real estate journey.
             </p>
-            <button className="px-6 sm:px-8 lg:px-10 py-3 sm:py-4 bg-Arambo-Accent text-Arambo-White button-label rounded-lg w-full sm:w-auto">
+            <Link href={'/'} className="px-6 sm:px-8 lg:px-10 py-3 sm:py-4 bg-Arambo-Accent text-Arambo-White button-label rounded-lg w-full sm:w-auto">
               Know property worth
-            </button>
+            </Link>
           </div>
         </div>
         <div className="flex flex-col md:flex-row justify-center gap-4 md:gap-4 lg:gap-6">

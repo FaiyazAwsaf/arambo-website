@@ -1,4 +1,5 @@
 import { Check, MessageCircle } from "lucide-react";
+import Link from "next/link";
 
 const legalDetails = [
   "National ID & background checks",
@@ -54,7 +55,10 @@ export default function ServiceCards() {
             ))}
           </div>
 
-          <button className="bg-white text-[#191D25] px-6 sm:px-8 py-3 sm:py-4 gap-2 rounded-lg font-medium text-base sm:text-lg cursor-pointer flex items-center hover:bg-gray-50 transition-colors relative z-20">
+          <Link
+            href={"/"}
+            className="bg-white w-fit text-[#191D25] px-6 sm:px-8 py-3 sm:py-4 gap-2 rounded-lg font-medium text-base sm:text-lg cursor-pointer flex items-center hover:bg-gray-50 transition-colors relative z-20"
+          >
             <img
               src="/common/call.svg"
               alt=""
@@ -63,7 +67,7 @@ export default function ServiceCards() {
             <span className="text-sm sm:text-base lg:text-lg">
               Talk to a Legal Expert
             </span>
-          </button>
+          </Link>
         </div>
 
         {/* Right Side - Two Distinct Service Cards */}
@@ -73,13 +77,16 @@ export default function ServiceCards() {
               <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-2 sm:mb-3">
                 Furniture Leasing Made Easy
               </h3>
-              <p className="text-Arambo-Text text-base sm:text-lg mb-4 sm:mb-4">
+              <p className="text-Arambo-Text text-base sm:text-lg mb-4 sm:mb-6">
                 Lease high-quality furniture for your apartment — flexible
                 plans, modern styles, and zero stress.
               </p>
-              <button className="bg-Arambo-Accent cursor-pointer text-white px-4 sm:px-6 py-3 sm:py-4 text-sm sm:text-base rounded-md font-medium mt-auto w-full sm:w-auto">
+              <Link
+                href={"/furniture"}
+                className="bg-Arambo-Accent  cursor-pointer text-white px-4 sm:px-6 py-3 sm:py-4 text-sm sm:text-base rounded-md font-medium w-full sm:w-auto"
+              >
                 Explore Leasing Plans
-              </button>
+              </Link>
             </div>
             <div className="w-full sm:w-fit flex items-center justify-center sm:justify-end sm:-mr-6 lg:-mr-30 overflow-hidden">
               <img
@@ -113,9 +120,9 @@ export default function ServiceCards() {
           </div>
 
           <div className="w-full flex justify-end mt-4 sm:mt-6">
-            <button className="bg-Arambo-White cursor-pointer text-Arambo-Black px-4 sm:px-6 py-3 sm:py-4 text-sm sm:text-base rounded-md font-medium mt-auto">
+            <Link href={'/book-a-truck'} className="bg-Arambo-White cursor-pointer text-Arambo-Black px-4 sm:px-6 py-3 sm:py-4 text-sm sm:text-base rounded-md font-medium mt-auto">
               Book Moving Help
-            </button>
+            </Link>
           </div>
         </div>
       </div>
