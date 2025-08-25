@@ -116,8 +116,11 @@ const ResidentialPage = () => {
         <div className="min-h-screen bg-gray-50 p-3 sm:p-4 lg:p-6">
           <div className="max-w-7xl mx-auto">
             <div className="flex flex-col lg:flex-row gap-4 lg:gap-6">
-              <div className="w-full lg:w-80 lg:flex-shrink-0">
-                <PropertyFilter />
+              {/* Left Sidebar - Filters */}
+              <div className="w-80 flex-shrink-0">
+                <PropertyFilter
+                  CategoryOptions={["Women", "Family", "Bachelor"]}
+                />
               </div>
 
               <div className="flex-1">

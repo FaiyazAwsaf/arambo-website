@@ -42,11 +42,11 @@ const HyperFiltering = () => {
     },
   ];
   const categories = [
-    { value: "Family", link: "/family" },
-    { value: "Women", link: "/women" },
-    { value: "Bachelor", link: "/bachelor" },
-    { value: "Furnished", link: "/furnished" },
-    { value: "Non-Furnished", link: "/non-furnished" },
+    { value: "Family", link: "/residential" },
+    { value: "Women", link: "/residential" },
+    { value: "Bachelor", link: "/residential" },
+    { value: "Furnished", link: "/commercial" },
+    { value: "Non-Furnished", link: "/commercial" },
   ];
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-[1200px] items-stretch align-middle rounded-3xl px-2 md:px-0">
