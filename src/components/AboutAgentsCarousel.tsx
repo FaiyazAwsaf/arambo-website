@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 import "swiper/css";
 import "swiper/css/navigation";
 import { Navigation } from "swiper/modules";
@@ -50,7 +51,7 @@ const AGENT_DATA = [
 
 const AboutAgentCarousel = () => {
   return (
-    <div className="px-4 sm:px-6 lg:px-0">
+    <Link href={'/agent-details'} className="px-4 sm:px-6 lg:px-0">
       <div className="flex flex-col lg:flex-row items-start justify-between mb-8 sm:mb-12 max-w-[1280px] mx-auto gap-6 lg:gap-8">
         <h2 className="h2 text-Arambo-Black">
           Local Experts. Real <br /> Guidance
@@ -188,7 +189,7 @@ const AboutAgentCarousel = () => {
           </Swiper>
         </div>
       </div>
-    </div>
+    </Link>
   );
 };
 

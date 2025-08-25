@@ -94,9 +94,9 @@ const AboutPage = () => {
                     thoughtful planning, open spaces, and timeless architecture.
                   </p>
 
-                  <button className="bg-Arambo-White text-gray-900 px-6 sm:px-8 lg:px-10 py-3 sm:py-4 rounded-lg font-semibold text-base hover:bg-gray-100 duration-300 shadow-lg hover:shadow-xl transform transition-all w-full sm:w-auto">
+                  <Link href={'/list-property'} className="bg-Arambo-White text-gray-900 px-6 sm:px-8 lg:px-10 py-3 sm:py-4 rounded-lg font-semibold text-base hover:bg-gray-100 duration-300 shadow-lg hover:shadow-xl transform transition-all w-full sm:w-auto">
                     List a Property
-                  </button>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -205,7 +205,7 @@ const AboutPage = () => {
             <h2 className="h2">32+</h2>
             <div className="flex justify-between items-end ">
               <p className="">Residential Properties</p>
-              <Link href={"/about"}>
+              <Link href={"/residential"}>
                 <img src="/about/arrow-accent.svg" alt="" />
               </Link>
             </div>
@@ -214,7 +214,7 @@ const AboutPage = () => {
             <h2 className="h2">100+</h2>
             <div className="flex justify-between items-end ">
               <p className="text-Arambo-Text">Commercial Properties</p>
-              <Link href={"/about"}>
+              <Link href={"/commercial"}>
                 <img src="/about/arrow-white.svg" alt="" />
               </Link>
             </div>
