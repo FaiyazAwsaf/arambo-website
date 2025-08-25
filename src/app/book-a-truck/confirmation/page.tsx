@@ -31,7 +31,6 @@ export default function ConfirmationPage() {
             </p>
             <div className="mt-8 w-60">
               <ActionButton
-                color="bg-Arambo-Accent"
                 label="Go Back to home"
                 GoToActionIcon
                 startIcon

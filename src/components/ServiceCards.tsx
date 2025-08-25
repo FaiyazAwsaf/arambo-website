@@ -10,88 +10,110 @@ const legalDetails = [
 
 export default function ServiceCards() {
   return (
-    <div className="max-w-[1280px] px-4 mx-auto  bg-white rounded-lg">
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-5">
+    <div className="max-w-[1280px] px-3 sm:px-4 mx-auto bg-white rounded-lg">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-5">
         {/* Left Side - Legal Support Card */}
-        <div className="bg-[#8AA2E1] overflow-hidden relative rounded-2xl row-span-2 px-10 py-11 text-white">
+        <div className="bg-[#8AA2E1] overflow-hidden relative rounded-2xl row-span-1 lg:row-span-2 px-6 sm:px-8 lg:px-10 py-8 sm:py-9 lg:py-11 text-white">
           <div className="mb-2">
-            <span className="text-sm uppercase font-medium tracking-wide">
+            <span className="text-xs sm:text-sm uppercase font-medium tracking-wide">
               LEGAL SUPPORT
             </span>
           </div>
 
-          <h2 className="text-3xl font-bold mb-16 leading-tight">
+          <h2 className="text-2xl sm:text-3xl font-bold mb-8 sm:mb-12 lg:mb-16 leading-tight">
             Property Legal
             <br />
             Support, Simplified
           </h2>
-          <div className="absolute z-10 bottom-16 -right-12  opacity-80">
-            <img src="/common/Vector.svg" alt="" />
+
+          {/* Background vectors - responsive positioning */}
+          <div className="absolute z-10 bottom-12 sm:bottom-16 -right-8 sm:-right-12 opacity-80">
+            <img
+              src="/common/Vector.svg"
+              alt=""
+              className="w-16 sm:w-20 lg:w-auto"
+            />
           </div>
-          <div className="absolute bottom-0 z-10 -right-4  opacity-80">
-            <img src="/common/Vector.svg" alt="" />
+          <div className="absolute bottom-0 z-10 -right-2 sm:-right-4 opacity-80">
+            <img
+              src="/common/Vector.svg"
+              alt=""
+              className="w-16 sm:w-20 lg:w-auto"
+            />
           </div>
 
-          <div className="space-y-4 mb-12">
+          <div className="space-y-3 sm:space-y-4 mb-8 sm:mb-10 lg:mb-12 relative z-20">
             {legalDetails.map((details, idx) => (
               <div key={idx} className="flex items-center gap-2">
-                <img src={"/common/tick.svg"} />
-                <span className="text-base">{details}</span>
+                <img
+                  src={"/common/tick.svg"}
+                  className="w-4 h-4 sm:w-5 sm:h-5 flex-shrink-0"
+                />
+                <span className="text-sm sm:text-base">{details}</span>
               </div>
             ))}
           </div>
 
-          <button className="bg-white text-[#191D25] px-8 py-4 gap-2 rounded-lg font-medium text-lg cursor-pointer flex items-center hover:bg-gray-50 transition-colors">
-            <img src="/common/call.svg" alt="" />
-            Talk to a Legal Expert
+          <button className="bg-white text-[#191D25] px-6 sm:px-8 py-3 sm:py-4 gap-2 rounded-lg font-medium text-base sm:text-lg cursor-pointer flex items-center hover:bg-gray-50 transition-colors relative z-20">
+            <img
+              src="/common/call.svg"
+              alt=""
+              className="w-4 h-4 sm:w-5 sm:h-5"
+            />
+            <span className="text-sm sm:text-base lg:text-lg">
+              Talk to a Legal Expert
+            </span>
           </button>
         </div>
 
         {/* Right Side - Two Distinct Service Cards */}
-        <div className="bg-white overflow-hidden rounded-xl px-6 py-8 shadow-sm border border-gray-100">
-          <div className="flex gap-6 ">
+        <div className="bg-white overflow-hidden rounded-xl px-4 sm:px-6 py-6 sm:py-8 shadow-sm border border-gray-100">
+          <div className="flex flex-col sm:flex-row gap-4 sm:gap-6">
             <div className="flex-1">
-              <h3 className="text-2xl font-bold text-gray-900 mb-3">
+              <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-2 sm:mb-3">
                 Furniture Leasing Made Easy
               </h3>
-              <p className="text-Arambo-Text text-lg mb-4">
+              <p className="text-Arambo-Text text-base sm:text-lg mb-4 sm:mb-4">
                 Lease high-quality furniture for your apartment — flexible
                 plans, modern styles, and zero stress.
               </p>
-              <button className="bg-Arambo-Accent cursor-pointer text-white px-6 py-4 text-base rounded-md  font-medium mt-auto">
+              <button className="bg-Arambo-Accent cursor-pointer text-white px-4 sm:px-6 py-3 sm:py-4 text-sm sm:text-base rounded-md font-medium mt-auto w-full sm:w-auto">
                 Explore Leasing Plans
               </button>
             </div>
-            <div className="w-fit -mr-30 overflow-hidden flex items-center justify-center">
+            <div className="w-full sm:w-fit flex items-center justify-center sm:justify-end sm:-mr-6 lg:-mr-30 overflow-hidden">
               <img
                 src="/common/sofa.png"
                 alt="Modern furniture chair"
-                className="w-full object-contain"
+                className="w-32 sm:w-40 lg:w-full object-contain"
               />
             </div>
           </div>
         </div>
 
         {/* Moving Support Section */}
-        <div className="bg-[#FCEDE9] rounded-xl p-6 shadow-sm border border-gray-100 relative">
-          <div className="flex items-start gap-4 justify-between ">
-            <h4 className="text-2xl min-w-fit font-bold text-gray-900 mb-3">
+        <div className="bg-[#FCEDE9] rounded-xl p-4 sm:p-6 shadow-sm border border-gray-100 relative min-h-[200px] sm:min-h-[220px]">
+          <div className="flex flex-col sm:flex-row sm:items-start gap-2 sm:gap-4 justify-between mb-4 sm:mb-0">
+            <h4 className="text-xl sm:text-2xl font-bold text-gray-900 mb-2 sm:mb-3 flex-shrink-0">
               Moving Support, Handled
             </h4>
-            <p className="text-Arambo-Text text-base mb-4">
+            <p className="text-Arambo-Text text-sm sm:text-base mb-4">
               From packing to setup, our relocation partners help you move in
               without the headache. Timely, secure, and hassle-free.
             </p>
           </div>
-          <div className="absolute bottom-4 left-4 w-48">
+
+          {/* Truck image - responsive positioning */}
+          <div className="absolute bottom-2 sm:bottom-4 left-2 sm:left-4 w-24 sm:w-32 lg:w-48">
             <img
               src="/common/truck.png"
               alt="Moving truck"
               className="w-full h-full object-contain"
             />
           </div>
-          <div className="w-full flex justify-end mt-6">
-            <button className="bg-Arambo-White cursor-pointer text-Arambo-Black px-6 py-4 text-base rounded-md  font-medium mt-auto">
+
+          <div className="w-full flex justify-end mt-4 sm:mt-6">
+            <button className="bg-Arambo-White cursor-pointer text-Arambo-Black px-4 sm:px-6 py-3 sm:py-4 text-sm sm:text-base rounded-md font-medium mt-auto">
               Book Moving Help
             </button>
           </div>
