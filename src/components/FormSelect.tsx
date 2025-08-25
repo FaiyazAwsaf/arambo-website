@@ -9,10 +9,12 @@ interface Option {
 interface FormSelectProps {
   label: string;
   name?: string;
+  value: string;
   options: Option[];
+  onChange: (e: React.ChangeEvent<HTMLSelectElement>) => void;
 }
 
-const FormSelect: React.FC<FormSelectProps> = ({ label, name, options }) => {
+const FormSelect: React.FC<FormSelectProps> = ({ label, name, options, value, onChange }) => {
   return (
     <div>
       <label className="block text-sm font-medium text-black mb-2">
@@ -20,6 +22,8 @@ const FormSelect: React.FC<FormSelectProps> = ({ label, name, options }) => {
       </label>
       <select
         name={name}
+        value={value}
+        onChange={onChange}
         className="w-full text-Arambo-Text appearance-none bg-Arambo-Border px-3 py-2 border border-gray-200 rounded-md text-sm"
       >
         {options.map((option, i) => (

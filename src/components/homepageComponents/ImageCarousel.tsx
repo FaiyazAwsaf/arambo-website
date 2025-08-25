@@ -9,7 +9,7 @@ type ImageCarouselProps = {
 
 const ImageCarousel: React.FC<ImageCarouselProps> = ({ imgSrc, currentIndex }) => {
     return (
-        <div className=' overflow-hidden relative bg-Arambo-White md:w-[1200px] md:h-[600px] rounded-2xl'>
+        <div className=' overflow-hidden relative bg-Arambo-White md:w-[1200px] md:h-[600px] h-[200px] w-full rounded-2xl'>
             <img
                 className="object-cover absolute"
                 src={imgSrc}

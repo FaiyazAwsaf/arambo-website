@@ -29,12 +29,31 @@ const navigation = [
       { name: "Non-Furnished", href: "/commercial" },
     ],
   },
+  {
+    name: "Services",
+    href: "/services",
+    dropdown: [
+      { name: "Truck moving", href: "/book-a-truck" },
+      { name: "Legal consultancy", href: "" },
+      { name: "Property management", href: "" },
+      { name: "Property valuation", href: "" },
+      { name: "Real-estate blog", href: "/blog" },
+    ],
+  },
   { name: "About Us", href: "/about" },
 ];
+
+const languageOptions = [
+  { code: "en", label: "English", flag: "/flags/en.svg" },
+  { code: "bn", label: "বাংলা", flag: "/flags/bd.svg" },
+];
+
 const Header = () => {
   const pathname = usePathname();
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [showLang, setShowLang] = useState(false);
+  const [selectedLang, setSelectedLang] = useState(languageOptions[0]);
   const hideTimeout = useRef<NodeJS.Timeout | null>(null);
 
   return (
@@ -171,7 +190,56 @@ const Header = () => {
               )}
             </button>
           </div>
-          <div className="hidden md:flex items-center">
+          <div className="hidden md:flex items-center gap-2">
+            {/* Language Dropdown beside List Property */}
+            <div className="relative">
+              <button
+                className="flex items-center px-3 py-2 text-sm font-medium body-base text-Arambo-Text hover:text-Arambo-Accent focus:outline-none border border-gray-200 rounded-md bg-white"
+                onClick={() => setShowLang((v) => !v)}
+                onBlur={() => setTimeout(() => setShowLang(false), 200)}
+              >
+                <img
+                  src={selectedLang.flag}
+                  alt={selectedLang.label}
+                  className="w-5 h-5 mr-2 rounded-full object-cover"
+                />
+                {selectedLang.label}
+                <svg
+                  className="ml-1 w-4 h-4"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M19 9l-7 7-7-7"
+                  />
+                </svg>
+              </button>
+              {showLang && (
+                <div className="absolute right-0 mt-2 w-32 bg-white border border-gray-200 rounded-lg shadow-lg z-50">
+                  {languageOptions.map((lang) => (
+                    <button
+                      key={lang.code}
+                      className="w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 flex items-center"
+                      onClick={() => {
+                        setSelectedLang(lang);
+                        setShowLang(false);
+                      }}
+                    >
+                      <img
+                        src={lang.flag}
+                        alt={lang.label}
+                        className="w-5 h-5 mr-2 rounded-full object-cover"
+                      />
+                      {lang.label}
+                    </button>
+                  ))}
+                </div>
+              )}
+            </div>
             <Link href="/list-property">
               <button className="flex items-center justify-center gap-2 w-36 h-12 text-Arambo-White bg-Arambo-Accent text-sm leading-[150%] border-[2px] rounded-[6px] flex-none order-1 grow-0 span-14-1-4">
                 List Property
@@ -226,6 +294,55 @@ const Header = () => {
                 List Property
               </button>
             </Link>
+            {/* Language Dropdown for mobile */}
+            <div className="relative mt-4">
+              <button
+                className="flex items-center px-3 py-2 w-full text-sm font-medium body-base text-Arambo-Text hover:text-Arambo-Accent focus:outline-none border border-gray-200 rounded-md bg-white"
+                onClick={() => setShowLang((v) => !v)}
+                onBlur={() => setTimeout(() => setShowLang(false), 200)}
+              >
+                <img
+                  src={selectedLang.flag}
+                  alt={selectedLang.label}
+                  className="w-5 h-5 mr-2 rounded-full object-cover"
+                />
+                {selectedLang.label}
+                <svg
+                  className="ml-1 w-4 h-4"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M19 9l-7 7-7-7"
+                  />
+                </svg>
+              </button>
+              {showLang && (
+                <div className="absolute left-0 mt-2 w-full bg-white border border-gray-200 rounded-lg shadow-lg z-50">
+                  {languageOptions.map((lang) => (
+                    <button
+                      key={lang.code}
+                      className="w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 flex items-center"
+                      onClick={() => {
+                        setSelectedLang(lang);
+                        setShowLang(false);
+                      }}
+                    >
+                      <img
+                        src={lang.flag}
+                        alt={lang.label}
+                        className="w-5 h-5 mr-2 rounded-full object-cover"
+                      />
+                      {lang.label}
+                    </button>
+                  ))}
+                </div>
+              )}
+            </div>
           </div>
         </div>
       </nav>

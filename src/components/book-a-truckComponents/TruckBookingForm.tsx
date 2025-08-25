@@ -1,17 +1,17 @@
-'use client'; 
+"use client";
 
-import React, { useState, FormEvent } from 'react';
+import React, { useState, FormEvent } from "react";
 
 const TruckForm = () => {
-  const [name, setName] = useState<string>('');
-  const [phoneNumber, setPhoneNumber] = useState<string>('');
-  const [email, setEmail] = useState<string>('');
-  const [productType, setProductType] = useState<string>('');
-  const [pickupLocation, setPickupLocation] = useState<string>('');
-  const [dropoffLocation, setDropoffLocation] = useState<string>('');
-  const [preferredDate, setPreferredDate] = useState<string>('');
-  const [preferredTimeSlot, setPreferredTimeSlot] = useState<string>('');
-  const [additionalNotes, setAdditionalNotes] = useState<string>('');
+  const [name, setName] = useState<string>("");
+  const [phoneNumber, setPhoneNumber] = useState<string>("");
+  const [email, setEmail] = useState<string>("");
+  const [productType, setProductType] = useState<string>("");
+  const [pickupLocation, setPickupLocation] = useState<string>("");
+  const [dropoffLocation, setDropoffLocation] = useState<string>("");
+  const [preferredDate, setPreferredDate] = useState<string>("");
+  const [preferredTimeSlot, setPreferredTimeSlot] = useState<string>("");
+  const [additionalNotes, setAdditionalNotes] = useState<string>("");
 
   // Explicit type for the event parameter in handleSubmit
   const handleSubmit = (e: FormEvent) => {
@@ -28,7 +28,7 @@ const TruckForm = () => {
       preferredTimeSlot,
       additionalNotes,
     });
-    alert('Form submitted! You will receive a confirmation call shortly.');
+    alert("Form submitted! You will receive a confirmation call shortly.");
   };
 
   return (
@@ -46,7 +46,10 @@ const TruckForm = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-6 mb-8">
             {/* Name */}
             <div>
-              <label htmlFor="name" className="block label-18 text-Arambo-Black mb-2">
+              <label
+                htmlFor="name"
+                className="block label-18 text-Arambo-Black mb-2"
+              >
                 Name<span className="text-red-500">*</span>
               </label>
               <input
@@ -61,7 +64,10 @@ const TruckForm = () => {
             </div>
             {/* Phone Number */}
             <div>
-              <label htmlFor="phoneNumber" className="block label-18 text-Arambo-Black mb-2">
+              <label
+                htmlFor="phoneNumber"
+                className="block label-18 text-Arambo-Black mb-2"
+              >
                 Phone Number<span className="text-red-500">*</span>
               </label>
               <input
@@ -76,7 +82,10 @@ const TruckForm = () => {
             </div>
             {/* Email Address */}
             <div>
-              <label htmlFor="email" className="block label-18 text-Arambo-Black mb-2">
+              <label
+                htmlFor="email"
+                className="block label-18 text-Arambo-Black mb-2"
+              >
                 Email Address
               </label>
               <input
@@ -90,7 +99,10 @@ const TruckForm = () => {
             </div>
             {/* Product Type */}
             <div>
-              <label htmlFor="productType" className="block label-18 text-Arambo-Black mb-2">
+              <label
+                htmlFor="productType"
+                className="block label-18 text-Arambo-Black mb-2"
+              >
                 Product type<span className="text-red-500">*</span>
               </label>
               <div className="relative">
@@ -101,15 +113,21 @@ const TruckForm = () => {
                   onChange={(e) => setProductType(e.target.value)}
                   required
                 >
-                  <option value="" disabled>Select</option>
+                  <option value="" disabled>
+                    Select
+                  </option>
                   <option value="perishable">Perishable Goods</option>
                   <option value="non-perishable">Non-Perishable Goods</option>
                   <option value="fragile">Fragile Items</option>
                   <option value="other">Other</option>
                 </select>
                 <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
-                  <svg className="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-                    <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/>
+                  <svg
+                    className="fill-current h-4 w-4"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                  >
+                    <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
                   </svg>
                 </div>
               </div>
@@ -121,7 +139,10 @@ const TruckForm = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-6 mb-8">
             {/* Pickup Location */}
             <div>
-              <label htmlFor="pickupLocation" className="block label-18 text-Arambo-Black mb-2">
+              <label
+                htmlFor="pickupLocation"
+                className="block label-18 text-Arambo-Black mb-2"
+              >
                 Pickup Location<span className="text-red-500">*</span>
               </label>
               <input
@@ -136,7 +157,10 @@ const TruckForm = () => {
             </div>
             {/* Drop-off Location */}
             <div>
-              <label htmlFor="dropoffLocation" className="block label-18 text-Arambo-Black mb-2">
+              <label
+                htmlFor="dropoffLocation"
+                className="block label-18 text-Arambo-Black mb-2"
+              >
                 Drop-off Location<span className="text-red-500">*</span>
               </label>
               <input
@@ -151,7 +175,10 @@ const TruckForm = () => {
             </div>
             {/* Preferred Date */}
             <div>
-              <label htmlFor="preferredDate" className="block label-18 text-Arambo-Black mb-2">
+              <label
+                htmlFor="preferredDate"
+                className="block label-18 text-Arambo-Black mb-2"
+              >
                 Preferred Date<span className="text-red-500">*</span>
               </label>
               <input
@@ -166,7 +193,10 @@ const TruckForm = () => {
             </div>
             {/* Preferred Time Slot */}
             <div>
-              <label htmlFor="preferredTimeSlot" className="block label-18 text-Arambo-Black mb-2">
+              <label
+                htmlFor="preferredTimeSlot"
+                className="block label-18 text-Arambo-Black mb-2"
+              >
                 Preferred Time Slot<span className="text-red-500">*</span>
               </label>
               <div className="relative">
@@ -177,14 +207,20 @@ const TruckForm = () => {
                   onChange={(e) => setPreferredTimeSlot(e.target.value)}
                   required
                 >
-                  <option value="" disabled>Select</option>
+                  <option value="" disabled>
+                    Select
+                  </option>
                   <option value="morning">Morning (8 AM – 12 PM)</option>
                   <option value="afternoon">Afternoon (12 PM – 4 PM)</option>
                   <option value="evening">Evening (4 PM – 8 PM)</option>
                 </select>
                 <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
-                  <svg className="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-                    <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/>
+                  <svg
+                    className="fill-current h-4 w-4"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                  >
+                    <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
                   </svg>
                 </div>
               </div>
@@ -193,7 +229,10 @@ const TruckForm = () => {
 
           {/* Additional Notes */}
           <div className="mb-8">
-            <label htmlFor="additionalNotes" className="block label-18 text-Arambo-Black mb-2">
+            <label
+              htmlFor="additionalNotes"
+              className="block label-18 text-Arambo-Black mb-2"
+            >
               Additional Notes
             </label>
             <textarea
@@ -213,8 +252,19 @@ const TruckForm = () => {
                          transition duration-300 ease-in-out transform hover:scale-105 flex items-center gap-2"
             >
               Book My Truck
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+              <svg
+                className="w-4 h-4"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M14 5l7 7m0 0l-7 7m7-7H3"
+                ></path>
               </svg>
             </button>
             <p className="text-gray-600 text-sm mt-2 sm:mt-0">
@@ -228,4 +278,3 @@ const TruckForm = () => {
 };
 
 export default TruckForm;
-
