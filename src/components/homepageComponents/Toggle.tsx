@@ -123,19 +123,21 @@ const Toggle = () => {
         <div className="bg-Arambo-Border rounded-full p-1 space-x-1 flex items-center justify-center h-fit">
           <button
             onClick={() => setIsResidential(true)}
-            className={`${isResidential
-              ? "bg-Arambo-Accent text-Arambo-White "
-              : "text-Arambo-Black bg-Arambo-Border"
-              } py-3 px-5 rounded-full`}
+            className={`${
+              isResidential
+                ? "bg-Arambo-Accent text-Arambo-White "
+                : "text-Arambo-Black bg-Arambo-Border"
+            } py-3 px-5 rounded-full`}
           >
             Residential
           </button>
           <button
             onClick={() => setIsResidential(false)}
-            className={`${!isResidential
-              ? "bg-Arambo-Accent text-Arambo-White "
-              : "text-Arambo-Black bg-Arambo-Border"
-              } py-3 px-5 rounded-full`}
+            className={`${
+              !isResidential
+                ? "bg-Arambo-Accent text-Arambo-White "
+                : "text-Arambo-Black bg-Arambo-Border"
+            } py-3 px-5 rounded-full`}
           >
             Commercial
           </button>
@@ -144,18 +146,18 @@ const Toggle = () => {
       <div className="grid md:grid-cols-3 grid-cols-1 gap-5">
         {isResidential
           ? residentialProperties
-            .slice(0, 6)
-            .map((property, i) => (
-              <PropertyCard key={i} property={property} />
-            ))
+              .slice(0, 6)
+              .map((property, i) => (
+                <PropertyCard key={i} property={property} />
+              ))
           : commercialProperties
-            .slice(0, 6)
-            .map((property, i) => (
-              <PropertyCard key={i} property={property} />
-            ))}
+              .slice(0, 6)
+              .map((property, i) => (
+                <PropertyCard key={i} property={property} />
+              ))}
       </div>
       <div className="flex justify-center">
-        <Link href="/#" className="flex space-x-2">
+        <Link href="/residential" className="flex space-x-2">
           <span>See all listings</span>
           <svg
             width="25"
