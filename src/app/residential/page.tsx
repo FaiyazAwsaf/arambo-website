@@ -95,7 +95,7 @@ const ResidentialPage = () => {
             <div className="flex gap-6">
               {/* Left Sidebar - Filters */}
               <div className="w-80 flex-shrink-0">
-                <PropertyFilter />
+                <PropertyFilter CategoryOptions={["Women", "Family", "Bachelor"]} />
               </div>
 
               {/* Right Content - Property Cards */}

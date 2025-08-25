@@ -95,7 +95,7 @@ const CommercialPage = () => {
             <div className="flex gap-6">
               {/* Left Sidebar - Filters */}
               <div className="w-80 flex-shrink-0">
-                <PropertyFilter />
+                <PropertyFilter CategoryOptions={["Furnished", "Non Furnished"]} />
               </div>
 
               {/* Right Content - Property Cards */}

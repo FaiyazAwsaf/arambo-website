@@ -1,4 +1,5 @@
 import React from 'react'
+import Link from 'next/link'
 
 const KnowYourProperty = () => {
     return (
@@ -11,7 +12,7 @@ const KnowYourProperty = () => {
                     </div>
                     <div className='space-y-8'>
                         <p className='p-base text-Arambo-Text'>You get access to verified legal professionals who can review contracts, handle documentation, and guide you through every legal step of your real estate journey.</p>
-                        <button className='px-10 py-4 bg-Arambo-Accent text-Arambo-White button-label rounded-lg'>Know property worth</button>
+                        <Link href="/#" className='px-10 py-4 bg-Arambo-Accent text-Arambo-White button-label rounded-lg'>Know property worth</Link >
                     </div>
                 </div>
                 <div className='flex md:flex-row flex-col justify-center space-x-4 '>
