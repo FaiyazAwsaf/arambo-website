@@ -95,10 +95,14 @@ const AboutPage = () => {
                     thoughtful planning, open spaces, and timeless architecture.
                   </p>
 
+<<<<<<< HEAD
                   <Link
                     href={"/list-property"}
                     className="bg-Arambo-White text-gray-900 px-6 sm:px-8 lg:px-10 py-3 sm:py-4 rounded-lg font-semibold text-base hover:bg-gray-100 duration-300 shadow-lg hover:shadow-xl transform transition-all w-full sm:w-auto"
                   >
+=======
+                  <Link href={'/list-property'} className="bg-Arambo-White text-gray-900 px-6 sm:px-8 lg:px-10 py-3 sm:py-4 rounded-lg font-semibold text-base hover:bg-gray-100 duration-300 shadow-lg hover:shadow-xl transform transition-all w-full sm:w-auto">
+>>>>>>> 799479f66e82094591321ccaa8eda0c8dc980169
                     List a Property
                   </Link>
                 </div>
