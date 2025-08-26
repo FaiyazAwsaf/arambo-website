@@ -9,7 +9,7 @@ const blogs = [
     title: "Explore Verified Listings",
     status: "Recent",
     date: "August 1, 2025",
-    timeago: "5min",
+    timeago: "5 min",
     href: "/blog-details",
     src: "/common/buildings.jpg",
   },
@@ -18,7 +18,7 @@ const blogs = [
     title: "Explore Verified Listings",
     status: "Recent",
     date: "August 10, 2025",
-    timeago: "2hours",
+    timeago: "2 hours",
     href: "/blog-details",
     src: "/common/workers.jpg",
   },
@@ -27,7 +27,7 @@ const blogs = [
     title: "Explore Verified Listings",
     status: "Recent",
     date: "August 22, 2025",
-    timeago: "8min",
+    timeago: "8 min",
     href: "/blog-details",
     src: "/common/structure.jpg",
   },
@@ -36,7 +36,7 @@ const blogs = [
     title: "Explore Verified Listings",
     status: "Recent",
     date: "August 1, 2025",
-    timeago: "5min",
+    timeago: "5 min",
     href: "/blog-details",
     src: "/common/buildings.jpg",
   },
@@ -45,7 +45,7 @@ const blogs = [
     title: "Explore Verified Listings",
     status: "Recent",
     date: "August 10, 2025",
-    timeago: "2hours",
+    timeago: "2 hours",
     href: "/blog-details",
     src: "/common/workers.jpg",
   },
@@ -54,7 +54,7 @@ const blogs = [
     title: "Explore Verified Listings",
     status: "Recent",
     date: "August 22, 2025",
-    timeago: "8min",
+    timeago: "8 min",
     href: "/blog-details",
     src: "/common/structure.jpg",
   },
@@ -63,7 +63,7 @@ const blogs = [
     title: "Explore Verified Listings",
     status: "Recent",
     date: "August 1, 2025",
-    timeago: "5min",
+    timeago: "5 min",
     href: "/blog-details",
     src: "/common/buildings.jpg",
   },
@@ -72,7 +72,7 @@ const blogs = [
     title: "Explore Verified Listings",
     status: "Recent",
     date: "August 10, 2025",
-    timeago: "2hours",
+    timeago: "2 hours",
     href: "/blog-details",
     src: "/common/workers.jpg",
   },
@@ -81,7 +81,7 @@ const blogs = [
     title: "Explore Verified Listings",
     status: "Recent",
     date: "August 22, 2025",
-    timeago: "8min",
+    timeago: "8 min",
     href: "/blog-details",
     src: "/common/structure.jpg",
   },
@@ -95,7 +95,7 @@ const BlogPage = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-100 p-4">
+    <div className="min-h-screen bg-white p-4">
       <div
         style={{
           background:
@@ -103,7 +103,7 @@ const BlogPage = () => {
         }}
         className="relative h-94 flex flex-col justify-center items-start rounded-2xl text-Arambo-White p-5 mb-5"
       >
-        <h1 className="h1 mb-8 text-left">
+        <h1 className="h1 mb-8 text-left ml-0 md:ml-24">
           Stay Informed With <br /> Our Real Estate Blog
         </h1>
       </div>
