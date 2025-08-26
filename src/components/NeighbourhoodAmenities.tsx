@@ -1,5 +1,7 @@
 "use client";
 import { ChevronDown } from "lucide-react";
+import Link from "next/link";
+import { useRef, useState } from "react";
 import { BarChart, Bar, XAxis, YAxis, ResponsiveContainer } from "recharts";
 
 const chartData = [
@@ -12,9 +14,40 @@ const chartData = [
 ];
 
 const NeighbourhoodAmenities = () => {
+  const tabsRef = useRef<HTMLDivElement>(null);
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  // Drag scroll states
+  const [isDragging, setIsDragging] = useState(false);
+  const [startX, setStartX] = useState(0);
+  const [scrollLeft, setScrollLeft] = useState(0);
+
+  const onMouseDown = (e: React.MouseEvent) => {
+    setIsDragging(true);
+    setStartX(e.pageX - (tabsRef.current?.offsetLeft || 0));
+    setScrollLeft(tabsRef.current?.scrollLeft || 0);
+  };
+  const onMouseLeave = () => setIsDragging(false);
+  const onMouseUp = () => setIsDragging(false);
+  const onMouseMove = (e: React.MouseEvent) => {
+    if (!isDragging || !tabsRef.current) return;
+    e.preventDefault();
+    const x = e.pageX - tabsRef.current.offsetLeft;
+    const walk = (x - startX) * 2; // scroll speed
+    tabsRef.current.scrollLeft = scrollLeft - walk;
+  };
+
+  const tabs = [
+    "Neighborhood Trends",
+    "Location Quality",
+    "Transportation Links",
+    "Energy Efficiency",
+    "Future Developments",
+    "Community & Safety",
+  ];
   return (
     <div className="w-full">
-      <div className="bg-white rounded-xl border border-gray-200 overflow-hidden">
+      <div className="bg-white rounded-xl border border-gray-200 overflow-auto">
         {/* Header */}
         <div className="flex items-center justify-between px-4 sm:px-6 py-4 border-b border-gray-200">
           <p className="label-16">Neighborhood Amenities</p>
@@ -25,25 +58,27 @@ const NeighbourhoodAmenities = () => {
 
         {/* Tab Navigation */}
         <div className="p-3">
-          <div className="flex items-center gap-2 py-1 px-2 sm:gap-3 sm:px-4 bg-Arambo-Background rounded-lg w-full overflow-x-auto scrollbar-hide">
-            <button className="px-3 py-2 text-sm text-Arambo-Text whitespace-nowrap flex-shrink-0">
-              Neighborhood Trends
-            </button>
-            <button className="px-3 py-2 text-sm bg-Arambo-Accent text-white rounded-lg whitespace-nowrap flex-shrink-0">
-              Location Quality
-            </button>
-            <button className="px-3 py-2 text-sm text-gray-600 whitespace-nowrap flex-shrink-0">
-              Transportation Links
-            </button>
-            <button className="px-3 py-2 text-sm text-Arambo-Text whitespace-nowrap flex-shrink-0">
-              Energy Efficiency
-            </button>
-            <button className="px-3 py-2 text-sm text-Arambo-Text whitespace-nowrap flex-shrink-0">
-              Future Developments
-            </button>
-            <button className="px-3 py-2 text-sm text-Arambo-Text whitespace-nowrap flex-shrink-0">
-              Community & Safety
-            </button>
+          <div
+            ref={tabsRef}
+            className="flex items-center gap-2 py-1 px-2 sm:gap-3 sm:px-4 bg-Arambo-Background rounded-lg w-full overflow-x-hidden scrollbar-hide"
+            onMouseDown={onMouseDown}
+            onMouseLeave={onMouseLeave}
+            onMouseUp={onMouseUp}
+            onMouseMove={onMouseMove}
+          >
+            {tabs.map((tab, i) => (
+              <button
+                key={i}
+                onClick={() => setActiveIndex(i)}
+                className={`px-3 py-2 text-sm whitespace-nowrap flex-shrink-0 rounded-lg transition-colors ${
+                  activeIndex === i
+                    ? "bg-Arambo-Accent text-white"
+                    : "text-Arambo-Text bg-transparent"
+                }`}
+              >
+                {tab}
+              </button>
+            ))}
           </div>
         </div>
 
@@ -60,9 +95,12 @@ const NeighbourhoodAmenities = () => {
                 </p>
               </div>
               <button className="flex items-center gap-2 text-Arambo-Black transition-colors">
-                <span className="text-[12px] font-medium underline">
+                <Link
+                  href={"/property-details"}
+                  className="text-[12px] font-medium underline"
+                >
                   View direction
-                </span>
+                </Link>
                 <img src="/property-single/uparrow.svg" alt="" />
               </button>
             </div>
@@ -77,9 +115,12 @@ const NeighbourhoodAmenities = () => {
                 </p>
               </div>
               <button className="flex items-center gap-2 text-Arambo-Black transition-colors">
-                <span className="text-[12px] font-medium underline">
+                <Link
+                  href={"/property-details"}
+                  className="text-[12px] font-medium underline"
+                >
                   View direction
-                </span>
+                </Link>
                 <img src="/property-single/uparrow.svg" alt="" />
               </button>
             </div>
@@ -94,9 +135,12 @@ const NeighbourhoodAmenities = () => {
                 </p>
               </div>
               <button className="flex items-center gap-2 text-Arambo-Black transition-colors">
-                <span className="text-[12px] font-medium underline">
+                <Link
+                  href={"/property-details"}
+                  className="text-[12px] font-medium underline"
+                >
                   View direction
-                </span>
+                </Link>
                 <img src="/property-single/uparrow.svg" alt="" />
               </button>
             </div>
@@ -111,9 +155,12 @@ const NeighbourhoodAmenities = () => {
                 </p>
               </div>
               <button className="flex items-center gap-2 text-Arambo-Black transition-colors">
-                <span className="text-[12px] font-medium underline">
+                <Link
+                  href={"/property-details"}
+                  className="text-[12px] font-medium underline"
+                >
                   View direction
-                </span>
+                </Link>
                 <img src="/property-single/uparrow.svg" alt="" />
               </button>
             </div>

@@ -41,9 +41,9 @@ const SelectUserType = () => {
                 <path
                   d="M1 1.5L7 7.5L1 13.5"
                   stroke={userIndex === index ? "white" : "black"}
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                 />
               </svg>
             </button>

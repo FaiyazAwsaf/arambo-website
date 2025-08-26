@@ -51,8 +51,8 @@ const AGENT_DATA = [
 
 const AboutAgentCarousel = () => {
   return (
-    <Link href={'/agent-details'} className="px-4 sm:px-6 lg:px-0">
-      <div className="flex flex-col lg:flex-row items-start justify-between mb-8 sm:mb-12 max-w-[1280px] mx-auto gap-6 lg:gap-8">
+    <div className="px-4 sm:px-6 lg:px-0">
+      <div className="flex flex-col lg:flex-row items-start justify-between mb-8 sm:mb-12 max-w-[1200px] mx-auto gap-6 lg:gap-8">
         <h2 className="h2 text-Arambo-Black">
           Local Experts. Real <br /> Guidance
         </h2>
@@ -74,7 +74,7 @@ const AboutAgentCarousel = () => {
 
       <div className="overflow-hidden">
         {/* Mobile and Tablet */}
-        <div className="block lg:hidden px-4 sm:px-6">
+        <div className="block lg:hidden px-4 sm:px-6 lg:px-0">
           <Swiper
             slidesPerView={1.2}
             spaceBetween={15}
@@ -103,7 +103,7 @@ const AboutAgentCarousel = () => {
             {AGENT_DATA.map((agent) => (
               <SwiperSlide key={agent.id}>
                 {/* Agent Card */}
-                <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden bg-gray-100 transition-shadow duration-300">
+                <Link href={'/agent-details'} className="relative rounded-2xl sm:rounded-3xl overflow-hidden bg-gray-100 transition-shadow duration-300">
                   {/* Agent Image Container */}
                   <div className="w-full h-64 sm:h-80">
                     <img
@@ -133,14 +133,14 @@ const AboutAgentCarousel = () => {
                       {agent.testimonial}
                     </p>
                   </div>
-                </div>
+                </Link>
               </SwiperSlide>
             ))}
           </Swiper>
         </div>
 
         {/* Desktop */}
-        <div className="hidden lg:block pl-[calc(50vw-640px)]">
+        <div className="hidden lg:block pl-[calc(50vw-600px)]">
           <Swiper
             slidesPerView={4.2}
             spaceBetween={30}
@@ -189,7 +189,7 @@ const AboutAgentCarousel = () => {
           </Swiper>
         </div>
       </div>
-    </Link>
+    </div>
   );
 };
 

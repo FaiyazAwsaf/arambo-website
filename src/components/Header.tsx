@@ -59,7 +59,7 @@ const Header = () => {
   return (
     <header className="sticky top-0 z-50 bg-white shadow-sm border-b border-gray-100">
       <nav
-        className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
+        className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8"
         aria-label="Main navigation"
       >
         <div className="flex h-20 items-center justify-between">
@@ -128,7 +128,7 @@ const Header = () => {
                         }, 200);
                       }}
                     >
-                      <div className="max-w-7xl mx-auto grid grid-cols-3 gap-8 px-8">
+                      <div className="max-w-[1200px] mx-auto grid grid-cols-3 gap-8 px-8">
                         <div className="col-span-1 grid grid-rows-4 grid-cols-2 gap-2">
                           {item.dropdown && item.dropdown.length > 0 && (
                             <>
