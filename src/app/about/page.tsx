@@ -97,7 +97,7 @@ const AboutPage = () => {
 
                   <Link
                     href={"/list-property"}
-                    className="bg-Arambo-White text-Arambo-black px-6 sm:px-8 lg:px-10 py-3 sm:py-4 rounded-lg font-semibold text-base hover:bg-gray-100 duration-300 shadow-lg hover:shadow-xl transform transition-all w-full sm:w-auto"
+                    className="bg-Arambo-White text-Arambo-Black px-6 sm:px-8 lg:px-10 py-3 sm:py-4 rounded-lg font-semibold text-base hover:bg-gray-100 duration-300 shadow-lg hover:shadow-xl transform transition-all w-full sm:w-auto"
                   >
                     List a Property
                   </Link>
@@ -108,65 +108,6 @@ const AboutPage = () => {
 
           {/* Subtle gradient overlay at bottom */}
           <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-black to-transparent opacity-30" />
-        </div>
-      </section>
-
-      <section className="py-10 sm:py-16 lg:py-20 max-w-[1200px] px-4 lg:px-0 mx-auto grid grid-cols-1 lg:grid-cols-3 gap-4 sm:gap-6">
-        {/* Left Card */}
-        <div className="bg-Arambo-Accent relative flex flex-col justify-between p-6 sm:p-8 rounded-2xl min-h-[300px] sm:min-h-[350px]">
-          <p className="label-16 text-[#D7E2FA]">
-            Find your space — faster, <br className="hidden sm:block" />{" "}
-            smarter, simpler.
-          </p>
-          <div className="absolute right-0 top-0">
-            <img src="/about/design.svg" alt="" />
-          </div>
-          <div>
-            <h1 className="h1 text-Arambo-White mb-3">150+</h1>
-            <p className="label-16 text-Arambo-Border">Premium properties</p>
-          </div>
-          <div className="mt-6 absolute bottom-6 sm:bottom-8 right-6 sm:right-8 self-end">
-            <Link href={"/about"}>
-              <img src="/about/rightarrow.svg" alt="" />
-            </Link>
-          </div>
-        </div>
-
-        {/* Right Card */}
-        <div className="bg-Arambo-White col-span-1 lg:col-span-2 rounded-2xl grid grid-cols-1 md:grid-cols-3 overflow-hidden">
-          {/* Text */}
-          <div className="p-6 sm:p-8 flex flex-col col-span-1 md:col-span-2 justify-between gap-4 sm:gap-6">
-            <div className="space-y-4">
-              <h3 className="h3 text-Arambo-Black">Who We Are</h3>
-              <p className="p-base text-Arambo-Text">
-                Arambo is a smart, all-in-one real estate platform where people
-                can seamlessly rent or buy both residential and commercial
-                properties.
-              </p>
-              <p className="p-base text-Arambo-Text">
-                We are here to simplify the property journey — whether you are
-                looking for a cozy apartment, a family home, a retail space, or
-                an office that fits your brand. Arambo connects property seekers
-                with verified listings, real-time insights, and trusted agents
-                to make better decisions, faster.
-              </p>
-            </div>
-            <Link
-              href={"/about"}
-              className="flex gap-2 items-center text-Arambo-Black"
-            >
-              <img src="/about/rightarrowblack.svg" alt="" />
-              <span>Learn More</span>
-            </Link>
-          </div>
-          {/* Image */}
-          <div className="order-first md:order-none h-48 md:h-auto">
-            <img
-              src="/about/building.png"
-              className="w-full h-full object-cover"
-              alt="Building"
-            />
-          </div>
         </div>
       </section>
 
@@ -190,8 +131,69 @@ const AboutPage = () => {
         </div>
       </section>
 
-      <section className="py-12 sm:py-18 lg:py-24 max-w-[1200px] px-4 lg:px-0 mx-auto bg-Arambo-Background">
-        <div className="cubes grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5">
+      <section className="py-10 sm:py-16 lg:py-20  px-4 lg:px-0 mx-auto  bg-Arambo-Background ">
+        <div className="max-w-[1200px] mx-auto grid grid-cols-1 lg:grid-cols-3 gap-4 sm:gap-6">
+          {/* Left Card */}
+          <div className="bg-Arambo-Accent relative flex flex-col justify-between p-6 sm:p-8 rounded-2xl min-h-[300px] sm:min-h-[350px]">
+            <p className="label-16 text-[#D7E2FA]">
+              Find your space — faster, <br className="hidden sm:block" />{" "}
+              smarter, simpler.
+            </p>
+            <div className="absolute right-0 top-0">
+              <img src="/about/design.svg" alt="" />
+            </div>
+            <div>
+              <h1 className="h1 text-Arambo-White mb-3">150+</h1>
+              <p className="label-16 text-Arambo-Border">Premium properties</p>
+            </div>
+            <div className="mt-6 absolute bottom-6 sm:bottom-8 right-6 sm:right-8 self-end">
+              <Link href={"/about"}>
+                <img src="/about/rightarrow.svg" alt="" />
+              </Link>
+            </div>
+          </div>
+
+          {/* Right Card */}
+          <div className="bg-Arambo-White col-span-1 lg:col-span-2 rounded-2xl grid grid-cols-1 md:grid-cols-3 overflow-hidden">
+            {/* Text */}
+            <div className="p-6 sm:p-8 flex flex-col col-span-1 md:col-span-2 justify-between gap-4 sm:gap-6">
+              <div className="space-y-4">
+                <h3 className="h3 text-Arambo-Black">Who We Are</h3>
+                <p className="p-base text-Arambo-Text">
+                  Arambo is a smart, all-in-one real estate platform where
+                  people can seamlessly rent or buy both residential and
+                  commercial properties.
+                </p>
+                <p className="p-base text-Arambo-Text">
+                  We are here to simplify the property journey — whether you are
+                  looking for a cozy apartment, a family home, a retail space,
+                  or an office that fits your brand. Arambo connects property
+                  seekers with verified listings, real-time insights, and
+                  trusted agents to make better decisions, faster.
+                </p>
+              </div>
+              <Link
+                href={"/about"}
+                className="flex gap-2 items-center text-Arambo-Black"
+              >
+                <img src="/about/rightarrowblack.svg" alt="" />
+                <span>Learn More</span>
+              </Link>
+            </div>
+            {/* Image */}
+            <div className="order-first md:order-none h-48 md:h-auto">
+              <img
+                src="/about/building.png"
+                className="w-full h-full object-cover"
+                alt="Building"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-12 sm:py-18 lg:py-24 w-full px-4 lg:px-0 mx-auto bg-Arambo-Background">
+        <div className="cubes grid grid-cols-1 mx-auto max-w-[1200px] sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5">
           <div
             className=" flex flex-col sm:flex-row sm:items-center justify-between rounded-2xl text-Arambo-White p-4 sm:p-5"
             style={{
@@ -227,7 +229,7 @@ const AboutPage = () => {
       </section>
 
       <section className=" py-12 sm:py-18 lg:py-24 bg-Arambo-White">
-        <div className="grid max-w-[1200px] mx-auto px-4 lg:px-0 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 grid-rows-none sm:grid-rows-2 gap-4 sm:gap-6">
+        <div className="grid max-w-[1200px] mx-auto px-4 lg:px-0 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 grid-rows-none sm:grid-rows-2 gap-4 sm:gap-5">
           {/* Top Left Card */}
           <div className="bg-[#0A0A0A] relative rounded-2xl p-6 sm:p-8 flex flex-col justify-between text-Arambo-White min-h-[200px]">
             <h3 className="h5">Smart Tools & Insights</h3>
@@ -242,7 +244,7 @@ const AboutPage = () => {
           </div>
 
           {/* Top Middle Card */}
-          <div className="rounded-2xl relative p-6 sm:p-8 text-Arambo-White overflow-hidden min-h-[200px]">
+          <div className="rounded-2xl relative p-6 sm:p-8 text-Arambo-White overflow-hidden bg-Arambo-Black min-h-[200px]">
             <div className="absolute inset-0">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -299,7 +301,9 @@ const AboutPage = () => {
                 Find only genuine, up-to-date properties — no surprises, no
                 scams.
               </p>
-              <h3 className="h3 mt-8 sm:mt-20">Expert Support & Services</h3>
+              <h3 className="h3 mt-8 sm:mt-20 mix-blend-overlay">
+                Expert Support & Services
+              </h3>
             </div>
           </div>
 

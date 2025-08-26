@@ -2,16 +2,6 @@
 import { ChevronDown } from "lucide-react";
 import Link from "next/link";
 import { useRef, useState } from "react";
-import { BarChart, Bar, XAxis, YAxis, ResponsiveContainer } from "recharts";
-
-const chartData = [
-  { period: "5y", value: 15, label: "5y" },
-  { period: "3y", value: 25, label: "3y" },
-  { period: "1y", value: 35, label: "1y" },
-  { period: "6m", value: 45, label: "6m" },
-  { period: "1m", value: 50, label: "1m" },
-  { period: "current", value: 65, label: "Current" },
-];
 
 const NeighbourhoodAmenities = () => {
   const tabsRef = useRef<HTMLDivElement>(null);
@@ -216,46 +206,6 @@ const NeighbourhoodAmenities = () => {
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
                 ></iframe>
-              </div>
-            </div>
-          </div>
-
-          <div className="mt-4 px-3 pt-5 pb-2 sm:px-5 bg-Arambo-Background rounded-xl">
-            <p className="text-sm font-medium text-Arambo-Black">
-              Neighborhood Trends
-            </p>
-            <p className="text-[12px] text-Arambo-Text">
-              Calculate the time and distance from 107 Torbarrie Road to your
-              preferred destination.
-            </p>
-            <div className="bg-Arambo-white mt-5 rounded-lg p-2">
-              <div className="h-80">
-                <ResponsiveContainer width="100%" height="100%">
-                  <BarChart
-                    data={chartData}
-                    margin={{ top: 20, right: 30, left: 20, bottom: 5 }}
-                  >
-                    <XAxis
-                      dataKey="label"
-                      axisLine={false}
-                      tickLine={false}
-                      tick={{ fontSize: 12, fill: "#6B7280" }}
-                    />
-                    <YAxis
-                      axisLine={false}
-                      tickLine={false}
-                      tick={{ fontSize: 12, fill: "#6B7280" }}
-                      domain={[0, 75]}
-                      tickFormatter={(value) => `${value}M`}
-                    />
-                    <Bar
-                      dataKey="value"
-                      fill="#1946BB"
-                      radius={[4, 4, 0, 0]}
-                      maxBarSize={40}
-                    />
-                  </BarChart>
-                </ResponsiveContainer>
               </div>
             </div>
           </div>

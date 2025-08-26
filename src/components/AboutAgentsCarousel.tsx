@@ -53,7 +53,6 @@ const AboutAgentCarousel = () => {
   return (
     <div className="px-4 sm:px-6 lg:px-0">
       <div className="flex flex-col lg:flex-row items-start justify-between mb-8 sm:mb-12 max-w-[1200px] mx-auto gap-6 lg:gap-8">
-        =======
         <h2 className="h2 text-Arambo-Black">
           Local Experts. Real <br /> Guidance
         </h2>

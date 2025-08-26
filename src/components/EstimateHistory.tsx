@@ -13,11 +13,10 @@ const chartData = [
 ];
 
 const monthlyEstimates = [
-  { month: "Aug 2025", value: "৳52,000,000" },
-  { month: "Sep 2025", value: "৳52,000,000" },
-  { month: "Oct 2025", value: "৳52,000,000" },
-  { month: "Nov 2025", value: "৳52,000,000" },
-  { month: "Dec 2025", value: "৳52,000,000" },
+  { month: "Q1", value: "৳52,000,000" },
+  { month: "Q2", value: "৳52,000,000" },
+  { month: "Q3", value: "৳52,000,000" },
+  { month: "Q4", value: "৳52,000,000" },
 ];
 
 export default function EstimateHistory() {
@@ -47,9 +46,9 @@ export default function EstimateHistory() {
           </select>
         </div>
 
-        <div className="flex flex-col lg:flex-row items-start justify-between p-2 sm:p-3 gap-4">
+        <div className="flex flex-col lg:flex-row items-stretch justify-between p-2 sm:p-3 gap-4">
           {/* Left Side - Monthly Estimates */}
-          <div className="flex flex-col px-3 sm:px-5 pt-3 sm:pt-5 rounded-xl min-w-[285px] pb-2 bg-Arambo-Background mb-4 lg:mb-0">
+          <div className="flex  flex-col px-3 sm:px-5 pt-3 sm:pt-5 rounded-xl min-w-[285px] pb-2 bg-Arambo-Background mb-4 lg:mb-0">
             <p className="text-sm sm:text-base text-center font-medium mb-3 sm:mb-5">
               Home value:
             </p>
@@ -71,7 +70,7 @@ export default function EstimateHistory() {
             </div>
 
             {/* Navigation */}
-            <div className="flex items-center justify-center px-2 sm:px-3 py-3 sm:py-4 rounded-lg gap-3 sm:gap-4 bg-Arambo-White mt-3">
+            <div className="flex items-center mt-auto justify-center px-2 sm:px-3 py-3 sm:py-4 rounded-lg gap-3 sm:gap-4 bg-Arambo-White mb-4">
               <button className="p-1.5 sm:p-2 hover:bg-gray-200 rounded-full transition-colors">
                 <img
                   src="/property-single/arrowleft.svg"
@@ -81,16 +80,16 @@ export default function EstimateHistory() {
               </button>
               <div className="flex items-center gap-1.5 sm:gap-2">
                 <button className="text-xs sm:text-sm text-Arambo-Text">
-                  01
+                  22
                 </button>
                 <button className="text-xs font-bold text-white bg-Arambo-Accent p-1 rounded-sm">
-                  02
+                  23
                 </button>
                 <button className="text-xs sm:text-sm text-Arambo-Text">
-                  03
+                  24
                 </button>
                 <button className="text-xs sm:text-sm text-Arambo-Text">
-                  04
+                  25
                 </button>
               </div>
               <button className="p-1.5 sm:p-2 hover:bg-gray-200 rounded-full transition-colors">
