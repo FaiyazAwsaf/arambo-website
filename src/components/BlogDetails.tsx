@@ -34,7 +34,7 @@ const BlogDetails = ({
           <p className="text-Arambo-Text text-base font-medium">{date}</p>
         </div>
         <h5 className="h5 py-2 sm:py-5">{title}</h5>
-        <div className="flex w-full justify-between items-center">
+        <div className="flex w-full justify-between items-center mb-6">
           <p className="text-Arambo-Text text-base font-medium">{timeago}</p>
           <Link
             className="text-Arambo-Accent text-base font-medium"
