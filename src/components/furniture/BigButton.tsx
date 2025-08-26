@@ -4,10 +4,9 @@ import Link from 'next/link'
 interface BigButtonProps {
     label: string;
     content: string;
-    bg: string;
 }
 
-const BigButton = ({ label, content, bg }: BigButtonProps) => {
+const BigButton = ({ label, content }: BigButtonProps) => {
     return (
         <div>
             <Link href={'/furniture-form'}>
@@ -18,7 +17,7 @@ const BigButton = ({ label, content, bg }: BigButtonProps) => {
                     </div>
                     <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g clipPath="url(#clip0_2598_157)">
-                            <path d="M5.5 12H19.5M19.5 12L15.5 16M19.5 12L15.5 8" stroke={`${bg === "Arambo-Accent" ? "#fff" : "#6F7176"}`} strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                            <path d="M5.5 12H19.5M19.5 12L15.5 16M19.5 12L15.5 8" stroke={"currentColor"} strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                         </g>
                         <defs>
                             <clipPath id="clip0_2598_157">

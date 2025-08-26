@@ -6,6 +6,7 @@ const SelectUserType = () => {
   const [userIndex, setUserIndex] = React.useState<number>(0);
 
   const buttonLabels = ["For Buyers", "For Sellers", "For Renters"];
+  const LinkRoutes = ["/residential", "/list-property", "/residential"];
 
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-[1200px] px-2 md:px-0">
@@ -22,11 +23,10 @@ const SelectUserType = () => {
               key={index}
               onClick={() => setUserIndex(index)}
               className={`
-                                ${
-                                  userIndex === index
-                                    ? "bg-Arambo-Accent text-Arambo-White"
-                                    : "bg-Arambo-Border text-Arambo-Black hover:bg-Arambo-Accent hover:text-Arambo-White"
-                                }
+                                ${userIndex === index
+                  ? "bg-Arambo-Accent text-Arambo-White"
+                  : "bg-Arambo-Border text-Arambo-Black hover:bg-Arambo-Accent hover:text-Arambo-White"
+                }
                                 duration-200 rounded-full flex justify-between items-center w-full py-6 px-8
                             `}
             >
@@ -70,8 +70,8 @@ const SelectUserType = () => {
             </div>
           ))}
         </div>
-        <Link href="/residential" className="space-x-2 flex items-center pt-8">
-          <span className="text-lg font-bold">Start Browsing Properties</span>
+        <Link href={LinkRoutes[userIndex]} className="space-x-2 flex items-center pt-8">
+          <span className="text-lg font-bold">{userIndex === 1 ? "Get an offer" : "Start Browsing Properties"}</span>
           <svg
             width="24"
             height="24"

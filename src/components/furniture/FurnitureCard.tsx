@@ -31,9 +31,9 @@ const FurnitureCard = () => {
                     `}
                 >
                     <div className=" grid grid-cols-1 gap-6">
-                        <BigButton label='EMI Plan' content='Pay over time with easy monthly installments.' bg='Arambo-Accent' />
-                        <BigButton label='Lease' content='Rent for a flexible term, no ownership needed.' bg='Arambo-Background' />
-                        <BigButton label='Instant Pay' content='Pay upfront and get everything delivered.' bg='Arambo-Background' />
+                        <BigButton label='EMI Plan' content='Pay over time with easy monthly installments.' />
+                        <BigButton label='Lease' content='Rent for a flexible term, no ownership needed.' />
+                        <BigButton label='Instant Pay' content='Pay upfront and get everything delivered.' />
                     </div>
                 </div>
 
@@ -44,9 +44,9 @@ const FurnitureCard = () => {
                     `}
                 >
                     <div className="space-y-6">
-                        <BigButton label='EMI Plan' content='Pay over time with easy monthly installments.' bg='Arambo-Accent' />
-                        <BigButton label='New Furniture' content='Rent for a flexible term, no ownership needed.' bg='Arambo-Background' />
-                        <BigButton label='Used/2nd Hand Furniture' content='Pay upfront and get everything delivered.' bg='Arambo-Background' />
+                        <BigButton label='EMI Plan' content='Pay over time with easy monthly installments.' />
+                        <BigButton label='New Furniture' content='Rent for a flexible term, no ownership needed.' />
+                        <BigButton label='Used/2nd Hand Furniture' content='Pay upfront and get everything delivered.' />
                     </div>
                 </div>
             </div>
