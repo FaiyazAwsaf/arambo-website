@@ -11,21 +11,17 @@ const PropertySinglePage = () => (
       <PropertySingleSwiper />
     </section>
 
-    <section className="mt-6 sm:mt-8 lg:mt-10 max-w-[1400px] mx-auto px-3 sm:px-4 lg:px-6">
+    <section className="mt-6 sm:mt-8 lg:mt-10 max-w-[1222px] mx-auto px-3 sm:px-4 lg:px-6">
       {/* Property Heading Section */}
       <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-8 sm:mb-10 lg:mb-12">
         <div className="flex flex-col lg:flex-row gap-3 lg:gap-3 w-full">
           <div className="flex-1 flex flex-col gap-3">
             <div className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-5">
               <div className="flex items-center gap-2">
-                <img
-                  src="/commercial/location.svg"
-                  alt=""
-                  className="w-4 h-4 flex-shrink-0"
-                />
+                <img src="/about/location.svg" alt="" />
                 <p className="p-base text-Arambo-Text">Gulshan 2, Dhaka</p>
               </div>
-              <div className="py-2 sm:py-2.5 px-3 sm:px-4 rounded-full bg-Arambo-Accent/10 text-Arambo-Accent caption-14 w-fit">
+              <div className="py-2 sm:py-2.5 px-3 sm:px-[15px] rounded-full bg-Arambo-Accent/10 text-Arambo-Accent caption-14 font-medium w-fit">
                 For Sale
               </div>
             </div>
@@ -37,19 +33,15 @@ const PropertySinglePage = () => (
           </div>
           <div className="flex flex-row lg:flex-col gap-4 lg:gap-2 items-center lg:items-end justify-between lg:justify-start">
             <div className="flex items-center gap-3 lg:mb-3 order-2 lg:order-1">
-              <button>
+              <button className="border border-Arambo-Border rounded-full">
                 <img
-                  className="rounded-full p-2 bg-Arambo-White w-10 h-10 sm:w-12 sm:h-12"
+                  className="rounded-full p-2  bg-Arambo-White"
                   src="/property-single/heart.svg"
                   alt=""
                 />
               </button>
-              <button className="cursor-pointer flex py-2 px-3 rounded-full bg-Arambo-White gap-2.5">
-                <img
-                  src="/property-single/share.svg"
-                  alt=""
-                  className="w-4 h-4"
-                />
+              <button className="cursor-pointer flex py-2 px-3 rounded-[10px] border border-Arambo-Border bg-Arambo-White gap-2.5">
+                <img src="/property-single/share.svg" alt="" />
                 <p className="text-sm text-Arambo-Black font-semibold">Share</p>
               </button>
             </div>
@@ -75,7 +67,7 @@ const PropertySinglePage = () => (
                   src="/property-single/area.svg"
                   alt=""
                 />
-                <select className="text-Arambo-Accent font-semibold text-lg sm:text-xl border border-Arambo-Border rounded-md px-1 py-1 sm:py-2 w-full min-w-0">
+                <select className="text-Arambo-Accent font-semibold w-fit text-lg sm:text-xl border border-Arambo-Border rounded-md px-1 py-1 sm:py-2 outline-none min-w-0">
                   <option value="2500">2500 sqft</option>
                   <option value="2000">2000 sqft</option>
                   <option value="1800">1800 sqft</option>
@@ -144,7 +136,7 @@ const PropertySinglePage = () => (
               <div className="flex-1">
                 <div className="flex flex-col gap-3 sm:gap-4">
                   <div>
-                    <h3 className="label-16 mb-2">Community rooms</h3>
+                    <h3 className="label-16 mb-2 font-medium">Community rooms</h3>
                     <ul className="space-y-1 sm:space-y-2 list-disc list-inside label-16">
                       <li>Clubhouse</li>
                       <li>Fitness center</li>
@@ -234,25 +226,28 @@ const PropertySinglePage = () => (
         </div>
 
         {/* Right Agent Card */}
-        <div className="w-full mx-auto max-w-[500px] lg:flex-shrink-0">
-          <div className="bg-Arambo-White rounded-xl shadow border p-4 sm:p-6 flex flex-col justify-between h-full lg:sticky lg:top-8">
+        <div className="w-full mx-auto max-w-[386px] lg:flex-shrink-0">
+          <div className="bg-Arambo-White rounded-xl shadow border flex flex-col gap-8 border-Arambo-Border p-4 sm:px-6 sm:py-8 justify-between h-full">
             {/* Agent Profile */}
-            <div className="flex items-center gap-3 mb-4">
+            <div className="flex items-center gap-5">
               <img
                 src="/property-single/agent.png"
                 alt="Agent"
-                className="w-10 h-10 sm:w-12 sm:h-12 rounded-full object-cover object-top"
+                className="w-22 h-22 rounded-full object-cover object-top"
               />
               <div>
-                <h4 className="font-semibold h4 text-gray-900">Zama Fox</h4>
-                <p className="text-sm text-gray-500">Real Broker, LLC</p>
-                <p className="text-yellow-500 text-sm">⭐ 5.0</p>
+                <h4 className="font-semibold h4 text-Arambo-Black mb-2">
+                  Zendia Fox
+                </h4>
+                <p className="text-base font-medium text-Arambo-Text">
+                  Real Broker, LLC | ⭐ 5.0
+                </p>
               </div>
             </div>
 
             {/* Message */}
-            <div className="mb-4">
-              <h5 className="font-semibold h5 text-Arambo-Black mb-1">
+            <div className="">
+              <h5 className="font-semibold h5 text-Arambo-Black mb-2">
                 Message
               </h5>
               <p className="text-sm text-Arambo-Text leading-relaxed">
@@ -264,12 +259,12 @@ const PropertySinglePage = () => (
 
             {/* Actions */}
             <div className="flex flex-col sm:flex-row gap-3 mt-auto">
-              <button className="bg-Arambo-Accent text-white max-w-[172px] px-4 py-2 rounded-md font-medium hover:bg-blue-700 transition flex-1">
+              <Link href={'/agent-details'} className="bg-Arambo-Accent text-white max-w-[172px] px-4 py-3 rounded-md font-medium  transition">
                 Book a Free Visit
-              </button>
-              <button className="bg-gray-100 text-gray-800 px-4 py-2 rounded-md font-medium hover:bg-gray-200 transition flex-1 sm:flex-initial">
+              </Link>
+              <Link href={'/agent-details'} className="bg-Arambo-Background flex justify-center items-center flex-1 text-gray-800 px-4 py-3 rounded-md font-medium transition">
                 View
-              </button>
+              </Link>
             </div>
           </div>
         </div>
@@ -278,7 +273,7 @@ const PropertySinglePage = () => (
 
     {/* Similar Properties */}
     <section className="mt-12 sm:mt-16 lg:mt-20 py-16 sm:py-20  lg:py-28 bg-Arambo-White">
-      <div className="max-w-[1400px] mx-auto px-3 sm:px-4 lg:px-6">
+      <div className="max-w-[1222px] mx-auto px-3 sm:px-4 lg:px-6">
         <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 sm:gap-6">
           <h2 className="h2">View Similar Properties</h2>
           <Link

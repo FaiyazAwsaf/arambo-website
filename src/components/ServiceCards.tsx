@@ -11,7 +11,7 @@ const legalDetails = [
 
 export default function ServiceCards() {
   return (
-    <div className="max-w-[1280px] px-3 sm:px-4 mx-auto bg-white rounded-lg">
+    <div className="max-w-[1200px] px-3 sm:px-4 mx-auto bg-white rounded-lg">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-5">
         {/* Left Side - Legal Support Card */}
         <div className="bg-[#8AA2E1] overflow-hidden relative rounded-2xl row-span-1 lg:row-span-2 px-6 sm:px-8 lg:px-10 py-8 sm:py-9 lg:py-11 text-white">

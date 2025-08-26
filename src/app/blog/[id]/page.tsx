@@ -136,7 +136,7 @@ const BlogDetailsPage = async ({ params }: Props) => {
       </div>
       {/* Share options */}
       <section className="py-24 bg-Arambo-White">
-        <div className="mx-auto max-w-[1280px]">
+        <div className="mx-auto max-w-[1200px]">
           <h2 className="h2 text-Arambo-Black mb-12">
             Explore More Blogs <br /> and Insights
           </h2>
