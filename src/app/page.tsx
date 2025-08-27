@@ -4,6 +4,7 @@ import {
   faCircleCheck,
 } from "@fortawesome/free-solid-svg-icons";
 import Link from "next/link";
+import BannerCards from "@/components/homepageComponents/BannerCards";
 import AutoScrollCarousel from "@/components/homepageComponents/AutoScrollCarousel";
 import Toggle from "@/components/homepageComponents/Toggle";
 import CarouselCard from "@/components/homepageComponents/CarouselCard";
@@ -60,26 +61,9 @@ const page = () => {
         </div>
       </section>
 
-      <section className="px-2 pt-16 md:pt-32 flex flex-col items-center justify-center space-y-10 relative">
-        <div className="md:absolute -top-20   w-full max-w-[1200px] grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-5 px-0 mt-8 md:mt-0 z-10">
-          <div className="bg-Arambo-White px-6 py-8 space-y-5 text-Arambo-Black rounded-lg">
-            <img src="/homepageAssets/houseIcon.svg" alt="" />
-            <h6 className=" text-lg">Elegant modern designs</h6>
-          </div>
-          <div className="bg-Arambo-White px-6 py-8 space-y-5 text-Arambo-Black rounded-lg">
-            <img src="/homepageAssets/verifiedIcon.svg" alt="" />
-            <h6 className=" text-lg">Verified listings</h6>
-          </div>
-          <div className="bg-Arambo-White px-6 py-8 space-y-5 text-Arambo-Black rounded-lg">
-            <img src="/homepageAssets/buildingIcon.svg" alt="" />
-            <h6 className="text-lg">Commercial & residential</h6>
-          </div>
-          <div className="bg-Arambo-White px-6 py-8 space-y-5 text-Arambo-Black rounded-lg">
-            <img src="/homepageAssets/percentIcon.svg" alt="" />
-            <h6 className=" text-lg">Easy listing & selling process</h6>
-          </div>
-        </div>
-        <div className="w-full max-w-[1200px] overflow-hidden px-2 md:px-0">
+      <section className="px-2  pt-16 md:pt-32 flex flex-col items-center justify-center space-y-10 relative">
+        <BannerCards />
+        <div className="w-full my-8 max-w-[1200px] overflow-hidden px-2 md:px-0">
           <AutoScrollCarousel />
         </div>
       </section>

@@ -23,7 +23,7 @@ const KnowYourProperty = () => {
             </Link>
           </div>
         </div>
-        <div className="flex md:flex-row flex-col justify-center space-x-4 ">
+        <div className="grid md:grid-cols-3 grid-cols-1 gap-5">
           <div className="rounded-xl bg-Arambo-White py-8 px-6 space-y-8">
             <div>
               <img src="/homepageAssets/HouseIcon2.svg" alt="Icon" />
