@@ -26,7 +26,7 @@ const KnowYourProperty = () => {
         <div className="grid md:grid-cols-3 grid-cols-1 gap-5">
           <div className="rounded-xl bg-Arambo-White py-8 px-6 space-y-8">
             <div>
-              <img src="/homepageAssets/HouseIcon2.svg" alt="Icon" />
+              <img src="/homepageAssets/HouseIcon2.png" alt="Icon" />
             </div>
             <div className="space-y-3 mt-7">
               <h5 className="h5">Submit property details</h5>
@@ -38,7 +38,7 @@ const KnowYourProperty = () => {
           </div>
           <div className="rounded-xl bg-Arambo-White py-8 px-6 space-y-8">
             <div>
-              <img src="/homepageAssets/VerifiedIcon2.svg" alt="Icon" />
+              <img src="/homepageAssets/VerifiedIcon2.png" alt="Icon" />
             </div>
             <div className="space-y-3 mt-7">
               <h5 className="h5">Submit property details</h5>
@@ -50,7 +50,7 @@ const KnowYourProperty = () => {
           </div>
           <div className="rounded-xl bg-Arambo-White py-8 px-6 space-y-8">
             <div>
-              <img src="/homepageAssets/CheckBoardIcon.svg" alt="Icon" />
+              <img src="/homepageAssets/CheckBoardIcon.png" alt="Icon" />
             </div>
             <div className="space-y-3 mt-7">
               <h5 className="h5">Submit property details</h5>

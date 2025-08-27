@@ -58,7 +58,7 @@ export function PropertyCard({ property }: PropertyCardProps) {
         <div className="mb-3 sm:mb-4">
           <div className="flex justify-between items-start mb-2 sm:mb-3 gap-2">
             <div className="h4 font-bold text-Arambo-Accent min-w-0 flex-1">
-              {property.price}
+              <span className="font-bold">৳ </span>{property.price}
             </div>
             <div className="text-xs sm:text-sm border border-Arambo-Border rounded-full text-Arambo-Text bg-gray-50 px-2 sm:px-3 py-1 whitespace-nowrap">
               {property.type}
