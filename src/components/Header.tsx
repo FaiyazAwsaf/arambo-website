@@ -194,7 +194,7 @@ const Header = () => {
             {/* Language Dropdown beside List Property */}
             <div className="relative">
               <button
-                className="flex items-center px-3 py-2 text-sm font-medium body-base text-Arambo-Text hover:text-Arambo-Accent focus:outline-none border border-gray-200 rounded-md bg-white"
+                className="flex items-center px-3 py-2 text-sm font-medium body-base text-Arambo-Text hover:text-Arambo-Accent focus:outline-none bg-white"
                 onClick={() => setShowLang((v) => !v)}
                 onBlur={() => setTimeout(() => setShowLang(false), 200)}
               >
@@ -219,24 +219,43 @@ const Header = () => {
                 </svg>
               </button>
               {showLang && (
-                <div className="absolute right-0 mt-2 w-32 bg-white border border-gray-200 rounded-lg shadow-lg z-50">
-                  {languageOptions.map((lang) => (
-                    <button
-                      key={lang.code}
-                      className="w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 flex items-center"
-                      onClick={() => {
-                        setSelectedLang(lang);
-                        setShowLang(false);
-                      }}
-                    >
-                      <img
-                        src={lang.flag}
-                        alt={lang.label}
-                        className="w-5 h-5 mr-2 rounded-full object-cover"
-                      />
-                      {lang.label}
-                    </button>
-                  ))}
+                <div className="absolute right-0 mt-2 w-60 px-6 py-8 bg-white rounded-2xl inline-flex flex-col justify-start items-start gap-6 overflow-hidden shadow-lg z-50">
+                  <div className="self-stretch flex flex-col justify-start items-start gap-8">
+                    <div className="self-stretch justify-start text-Arambo-Black label-16 leading-relaxed">
+                      Select your language
+                    </div>
+                    <div className="self-stretch pb-3 flex flex-col justify-start items-start gap-6">
+                      {languageOptions.map((lang) => (
+                        <button
+                          key={lang.code}
+                          className={`self-stretch p-3 bg-neutral-100 rounded-xl outline-1 outline-offset-[-0.5px] outline-gray-200 inline-flex justify-start items-center gap-2.5 transition-all ${
+                            selectedLang.code === lang.code
+                              ? "ring-2 ring-blue-800"
+                              : ""
+                          }`}
+                          onClick={() => {
+                            setSelectedLang(lang);
+                            setShowLang(false);
+                          }}
+                        >
+                          <img
+                            className="w-5 h-5 relative rounded-[99px]"
+                            src={lang.flag}
+                            alt={lang.label}
+                          />
+                          <div className="flex-1 justify-start text-Arambo-Black label-16">
+                            {lang.label}
+                          </div>
+                          {selectedLang.code === lang.code && (
+                            <div className="w-5 h-5 relative overflow-hidden flex items-center justify-center">
+                              <div className="w-4 h-4 bg-blue-800 rounded-full" />
+                            </div>
+                          )}
+                        </button>
+                      ))}
+                    </div>
+                  </div>
+                  <div className="self-stretch h-0 outline-1 outline-offset-[-0.5px] outline-gray-200" />
                 </div>
               )}
             </div>
