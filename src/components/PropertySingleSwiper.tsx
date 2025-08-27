@@ -90,7 +90,7 @@ const PropertySingleSwiper = () => {
               )}
               <img
                 src={image.image || "/placeholder.svg"}
-                className="w-full max-h-[450px] object-cover"
+                className="w-full max-h-[416px] object-cover"
               />
             </div>
           </SwiperSlide>

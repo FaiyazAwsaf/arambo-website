@@ -114,7 +114,7 @@ const CommercialPage = () => {
       {/* Properties */}
       <section className="min-h-screen my-12 sm:my-16 lg:my-20">
         <div className="min-h-screen bg-gray-50 p-3 sm:p-4 lg:p-6">
-          <div className="max-w-7xl mx-auto">
+          <div className="max-w-[1200px] mx-auto">
             <div className="flex flex-col lg:flex-row gap-4 lg:gap-6">
               {/* Left Sidebar - Filters */}
               <div className="w-80 flex-shrink-0">

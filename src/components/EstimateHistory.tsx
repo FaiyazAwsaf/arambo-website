@@ -13,11 +13,10 @@ const chartData = [
 ];
 
 const monthlyEstimates = [
-  { month: "Aug 2025", value: "৳52,000,000" },
-  { month: "Sep 2025", value: "৳52,000,000" },
-  { month: "Oct 2025", value: "৳52,000,000" },
-  { month: "Nov 2025", value: "৳52,000,000" },
-  { month: "Dec 2025", value: "৳52,000,000" },
+  { month: "Q1", value: "৳52,000,000" },
+  { month: "Q2", value: "৳52,000,000" },
+  { month: "Q3", value: "৳52,000,000" },
+  { month: "Q4", value: "৳52,000,000" },
 ];
 
 export default function EstimateHistory() {
@@ -47,14 +46,14 @@ export default function EstimateHistory() {
           </select>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 p-2 sm:p-3">
+        <div className="flex flex-col lg:flex-row items-stretch justify-between p-2 sm:p-3 gap-4">
           {/* Left Side - Monthly Estimates */}
-          <div className="flex px-3 sm:px-5 pt-3 sm:pt-5 rounded-xl min-w-[250px] pb-2 bg-Arambo-Background flex-col mb-4 lg:mb-0">
+          <div className="flex  flex-col px-3 sm:px-5 pt-3 sm:pt-5 rounded-xl min-w-[285px] pb-2 bg-Arambo-Background mb-4 lg:mb-0">
             <p className="text-sm sm:text-base text-center font-medium mb-3 sm:mb-5">
               Home value:
             </p>
 
-            <div className="">
+            <div className="flex flex-col">
               {monthlyEstimates.map((estimate, index) => (
                 <div
                   key={index}
@@ -71,7 +70,7 @@ export default function EstimateHistory() {
             </div>
 
             {/* Navigation */}
-            <div className="flex items-center justify-center px-2 sm:px-3 py-3 sm:py-4 rounded-lg gap-3 sm:gap-4 bg-Arambo-White">
+            <div className="flex items-center mt-auto justify-center px-2 sm:px-3 py-3 sm:py-4 rounded-lg gap-3 sm:gap-4 bg-Arambo-White mb-4">
               <button className="p-1.5 sm:p-2 hover:bg-gray-200 rounded-full transition-colors">
                 <img
                   src="/property-single/arrowleft.svg"
@@ -81,16 +80,16 @@ export default function EstimateHistory() {
               </button>
               <div className="flex items-center gap-1.5 sm:gap-2">
                 <button className="text-xs sm:text-sm text-Arambo-Text">
-                  01
+                  22
                 </button>
                 <button className="text-xs font-bold text-white bg-Arambo-Accent p-1 rounded-sm">
-                  02
+                  23
                 </button>
                 <button className="text-xs sm:text-sm text-Arambo-Text">
-                  03
+                  24
                 </button>
                 <button className="text-xs sm:text-sm text-Arambo-Text">
-                  04
+                  25
                 </button>
               </div>
               <button className="p-1.5 sm:p-2 hover:bg-gray-200 rounded-full transition-colors">
@@ -104,35 +103,33 @@ export default function EstimateHistory() {
           </div>
 
           {/* Right Side - Bar Chart */}
-          <div className="bg-Arambo-white col-span-1 lg:col-span-2 rounded-lg p-2 h-64 sm:h-80 lg:h-auto">
-            <div className="h-full">
-              <ResponsiveContainer width="100%" height="100%">
-                <BarChart
-                  data={chartData}
-                  margin={{ top: 20, right: 30, left: 20, bottom: 5 }}
-                >
-                  <XAxis
-                    dataKey="label"
-                    axisLine={false}
-                    tickLine={false}
-                    tick={{ fontSize: 12, fill: "#6B7280" }}
-                  />
-                  <YAxis
-                    axisLine={false}
-                    tickLine={false}
-                    tick={{ fontSize: 12, fill: "#6B7280" }}
-                    domain={[0, 75]}
-                    tickFormatter={(value) => `${value}M`}
-                  />
-                  <Bar
-                    dataKey="value"
-                    fill="#1946BB"
-                    radius={[4, 4, 0, 0]}
-                    maxBarSize={40}
-                  />
-                </BarChart>
-              </ResponsiveContainer>
-            </div>
+          <div className="bg-Arambo-White rounded-lg p-2 flex-1 h-64 sm:h-80 lg:h-100">
+            <ResponsiveContainer width="100%" height="100%">
+              <BarChart
+                data={chartData}
+                margin={{ top: 20, right: 30, left: 20, bottom: 5 }}
+              >
+                <XAxis
+                  dataKey="label"
+                  axisLine={false}
+                  tickLine={false}
+                  tick={{ fontSize: 12, fill: "#6B7280" }}
+                />
+                <YAxis
+                  axisLine={false}
+                  tickLine={false}
+                  tick={{ fontSize: 12, fill: "#6B7280" }}
+                  domain={[0, 75]}
+                  tickFormatter={(value) => `${value}M`}
+                />
+                <Bar
+                  dataKey="value"
+                  fill="#1946BB"
+                  radius={[4, 4, 0, 0]}
+                  maxBarSize={40}
+                />
+              </BarChart>
+            </ResponsiveContainer>
           </div>
         </div>
       </div>

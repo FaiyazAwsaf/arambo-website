@@ -108,7 +108,7 @@ const BlogPage = () => {
         </h1>
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 mt-16">
+      <div className="max-w-[1200px] mx-auto px-4 mt-16">
         <h2 className="h3 mb-4 text-left">
           <span className="text-Arambo-Accent">Latest </span> News
         </h2>
