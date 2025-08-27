@@ -34,7 +34,7 @@ const Toggle = () => {
     {
       id: 1,
       image: "/commercial/commercial-bg.png",
-      price: "$1,200,000",
+      price: "1,200,000",
       type: "Office Space",
       location: "Dhaka, Bangladesh",
       forSale: true,
@@ -46,7 +46,7 @@ const Toggle = () => {
     {
       id: 2,
       image: "/commercial/commercial-house.png",
-      price: "$900,000",
+      price: "900,000",
       type: "Retail Store",
       location: "Sylhet, Bangladesh",
       forSale: true,
@@ -58,7 +58,7 @@ const Toggle = () => {
     {
       id: 3,
       image: "/commercial/commercial-house.png",
-      price: "$900,000",
+      price: "900,000",
       type: "Retail Store",
       location: "Sylhet, Bangladesh",
       forSale: true,
@@ -70,7 +70,7 @@ const Toggle = () => {
     {
       id: 4,
       image: "/commercial/commercial-house.png",
-      price: "$900,000",
+      price: "900,000",
       type: "Retail Store",
       location: "Sylhet, Bangladesh",
       forSale: true,
@@ -82,7 +82,7 @@ const Toggle = () => {
     {
       id: 5,
       image: "/commercial/commercial-house.png",
-      price: "$900,000",
+      price: "900,000",
       type: "Retail Store",
       location: "Sylhet, Bangladesh",
       forSale: true,
@@ -94,7 +94,7 @@ const Toggle = () => {
     {
       id: 6,
       image: "/commercial/commercial-house.png",
-      price: "$900,000",
+      price: "900,000",
       type: "Retail Store",
       location: "Sylhet, Bangladesh",
       forSale: true,
@@ -106,7 +106,7 @@ const Toggle = () => {
     {
       id: 7,
       image: "/commercial/commercial-house.png",
-      price: "$900,000",
+      price: "900,000",
       type: "Retail Store",
       location: "Sylhet, Bangladesh",
       forSale: true,

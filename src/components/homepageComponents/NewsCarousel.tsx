@@ -13,10 +13,10 @@ const NewsCarousel = () => {
         "Digital Real Estate in Motion: Arambo’s New Tools for Buyers and Renters"
     ]
     return (
-        <div className='flex space-x-5 overflow-scroll md:flex-row flex-col'>
+        <div className='flex md:flex-row flex-col overflow-scroll gap-5 '>
             {
                 imgSrcArray.map((src, i) => (
-                    <div key={i} className='h-[264] w-[542px] bg-Arambo-Background flex flex-col justify-between p-8 rounded-2xl '>
+                    <div key={i} className='h-[264] md:min-w-[542px] w-full bg-Arambo-Background flex flex-col justify-between p-8 rounded-2xl shadow-lg '>
                         <img className='h-[24px] w-fit' src={src} alt="MediaLogo" />
                         <h5 className='h5'>{contentArray[i]}</h5>
                     </div>
