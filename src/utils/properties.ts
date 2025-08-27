@@ -2,7 +2,7 @@ export const properties = [
   {
     id: 1,
     image: "/commercial/commercial-house.png",
-    price: "৳48,000,000",
+    price: "48,000,000",
     type: "Apartment",
     location: "Gulshan 2, Dhaka",
     beds: 4,
@@ -14,7 +14,7 @@ export const properties = [
   {
     id: 2,
     image: "/commercial/commercial-house.png",
-    price: "৳35,000,000",
+    price: "35,000,000",
     type: "Duplex",
     location: "Banani, Dhaka",
     beds: 5,
@@ -26,7 +26,7 @@ export const properties = [
   {
     id: 3,
     image: "/commercial/commercial-house.png",
-    price: "৳22,500,000",
+    price: "22,500,000",
     type: "Condo",
     location: "Dhanmondi, Dhaka",
     beds: 3,
@@ -38,7 +38,7 @@ export const properties = [
   {
     id: 4,
     image: "/commercial/commercial-house.png",
-    price: "৳18,000,000",
+    price: "18,000,000",
     type: "Apartment",
     location: "Bashundhara, Dhaka",
     beds: 3,
@@ -50,7 +50,7 @@ export const properties = [
   {
     id: 5,
     image: "/commercial/commercial-house.png",
-    price: "৳28,500,000",
+    price: "28,500,000",
     type: "Penthouse",
     location: "Baridhara, Dhaka",
     beds: 4,
@@ -62,7 +62,7 @@ export const properties = [
   {
     id: 6,
     image: "/commercial/commercial-house.png",
-    price: "৳12,000,000",
+    price: "12,000,000",
     type: "Apartment",
     location: "Mirpur, Dhaka",
     beds: 2,
@@ -74,7 +74,7 @@ export const properties = [
   {
     id: 7,
     image: "/commercial/commercial-house.png",
-    price: "৳55,000,000",
+    price: "55,000,000",
     type: "Villa",
     location: "Uttara, Dhaka",
     beds: 6,
@@ -86,7 +86,7 @@ export const properties = [
   {
     id: 8,
     image: "/commercial/commercial-house.png",
-    price: "৳30,000,000",
+    price: "30,000,000",
     type: "Duplex",
     location: "Mohakhali DOHS, Dhaka",
     beds: 5,
@@ -98,7 +98,7 @@ export const properties = [
   {
     id: 9,
     image: "/commercial/commercial-house.png",
-    price: "৳14,800,000",
+    price: "14,800,000",
     type: "Apartment",
     location: "Khilgaon, Dhaka",
     beds: 3,
@@ -110,7 +110,7 @@ export const properties = [
   {
     id: 10,
     image: "/commercial/commercial-house.png",
-    price: "৳25,000,000",
+    price: "25,000,000",
     type: "Condo",
     location: "Shyamoli, Dhaka",
     beds: 4,
@@ -122,7 +122,7 @@ export const properties = [
   {
     id: 11,
     image: "/commercial/commercial-house.png",
-    price: "৳19,500,000",
+    price: "19,500,000",
     type: "Apartment",
     location: "Motijheel, Dhaka",
     beds: 3,
@@ -134,7 +134,7 @@ export const properties = [
   {
     id: 12,
     image: "/commercial/commercial-house.png",
-    price: "৳65,000,000",
+    price: "65,000,000",
     type: "Penthouse",
     location: "Gulshan 1, Dhaka",
     beds: 5,
@@ -146,7 +146,7 @@ export const properties = [
   {
     id: 13,
     image: "/commercial/commercial-house.png",
-    price: "৳17,000,000",
+    price: "17,000,000",
     type: "Apartment",
     location: "Malibagh, Dhaka",
     beds: 3,
@@ -158,7 +158,7 @@ export const properties = [
   {
     id: 14,
     image: "/commercial/commercial-house.png",
-    price: "৳20,000,000",
+    price: "20,000,000",
     type: "Condo",
     location: "Rampura, Dhaka",
     beds: 3,
@@ -170,7 +170,7 @@ export const properties = [
   {
     id: 15,
     image: "/commercial/commercial-house.png",
-    price: "৳42,000,000",
+    price: "42,000,000",
     type: "Villa",
     location: "Baridhara DOHS, Dhaka",
     beds: 6,
@@ -182,7 +182,7 @@ export const properties = [
   {
     id: 16,
     image: "/commercial/commercial-house.png",
-    price: "৳27,000,000",
+    price: "27,000,000",
     type: "Duplex",
     location: "Mohammadpur, Dhaka",
     beds: 4,
@@ -194,7 +194,7 @@ export const properties = [
   {
     id: 17,
     image: "/commercial/commercial-house.png",
-    price: "৳15,000,000",
+    price: "15,000,000",
     type: "Apartment",
     location: "Kazipara, Mirpur",
     beds: 3,
@@ -206,7 +206,7 @@ export const properties = [
   {
     id: 18,
     image: "/commercial/commercial-house.png",
-    price: "৳32,000,000",
+    price: "32,000,000",
     type: "Condo",
     location: "Paltan, Dhaka",
     beds: 4,
@@ -218,7 +218,7 @@ export const properties = [
   {
     id: 19,
     image: "/commercial/commercial-house.png",
-    price: "৳38,500,000",
+    price: "38,500,000",
     type: "Penthouse",
     location: "Tejgaon, Dhaka",
     beds: 4,
@@ -230,7 +230,7 @@ export const properties = [
   {
     id: 20,
     image: "/commercial/commercial-house.png",
-    price: "৳13,500,000",
+    price: "13,500,000",
     type: "Apartment",
     location: "Jatrabari, Dhaka",
     beds: 2,
