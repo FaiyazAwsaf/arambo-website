@@ -6,9 +6,9 @@ import DynamicCard from "./DynamicCard";
 const CarouselCard = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const srcArray = [
+    "/homepageAssets/Trucks.png",
     "/homepageAssets/Office.jpg",
     "/homepageAssets/Indoors.png",
-    "/homepageAssets/Trucks.png",
   ];
 
   useEffect(() => {
@@ -17,7 +17,7 @@ const CarouselCard = () => {
     }, 3000);
 
     return () => clearInterval(intervalId);
-  }, []);
+  });
 
   return (
     <div className="flex flex-col space-y-12">
@@ -28,7 +28,7 @@ const CarouselCard = () => {
         />
       </div>
       <div>
-        <DynamicCard index={currentIndex} />
+        <DynamicCard index={currentIndex} setCurrentIndex={setCurrentIndex} />
       </div>
     </div>
   );
