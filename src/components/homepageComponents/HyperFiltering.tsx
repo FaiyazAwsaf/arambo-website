@@ -7,7 +7,7 @@ const HyperFiltering = () => {
     {
       id: 1,
       image: "/commercial/commercial-bg.png",
-      price: "$1,200,000",
+      price: "1,200,000",
       type: "Office Space",
       location: "Dhaka, Bangladesh",
       forSale: true,
@@ -19,7 +19,7 @@ const HyperFiltering = () => {
     {
       id: 2,
       image: "/commercial/commercial-house.png",
-      price: "$900,000",
+      price: "900,000",
       type: "Retail Store",
       location: "Sylhet, Bangladesh",
       forSale: true,
@@ -31,7 +31,7 @@ const HyperFiltering = () => {
     {
       id: 3,
       image: "/residential/residential-bg.png",
-      price: "$500,000",
+      price: "500,000",
       type: "Apartment",
       location: "Dhaka, Bangladesh",
       forSale: true,

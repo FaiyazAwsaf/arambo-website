@@ -194,7 +194,7 @@ const Header = () => {
             {/* Language Dropdown beside List Property */}
             <div className="relative">
               <button
-                className="flex items-center px-3 py-2 text-sm font-medium body-base text-Arambo-Text hover:text-Arambo-Accent focus:outline-none bg-white"
+                className="flex items-center px-3 py-2 text-sm font-medium body-base text-Arambo-Text hover:text-Arambo-Accent focus:outline-none bg-white min-w-[120px] justify-center"
                 onClick={() => setShowLang((v) => !v)}
                 onBlur={() => setTimeout(() => setShowLang(false), 200)}
               >
@@ -203,7 +203,9 @@ const Header = () => {
                   alt={selectedLang.label}
                   className="w-5 h-5 mr-2 rounded-full object-cover"
                 />
-                {selectedLang.label}
+                <span className="truncate text-center block w-full">
+                  {selectedLang.label}
+                </span>
                 <svg
                   className="ml-1 w-4 h-4"
                   fill="none"
