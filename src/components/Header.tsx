@@ -192,7 +192,7 @@ const Header = () => {
           </div>
           <div className="hidden md:flex items-center gap-2">
             {/* Language Dropdown beside List Property */}
-            <div className="relative">
+            <div className="relative min-w-30">
               <button
                 className="flex items-center px-3 py-2 text-sm font-medium body-base text-Arambo-Text hover:text-Arambo-Accent focus:outline-none bg-white"
                 onClick={() => setShowLang((v) => !v)}

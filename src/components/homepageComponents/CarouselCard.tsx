@@ -5,6 +5,8 @@ import DynamicCard from "./DynamicCard";
 
 const CarouselCard = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [isHovering, setIsHovering] = useState(false);
+
   const srcArray = [
     "/homepageAssets/Office.jpg",
     "/homepageAssets/Indoors.png",
@@ -12,23 +14,32 @@ const CarouselCard = () => {
   ];
 
   useEffect(() => {
-    const intervalId = setInterval(() => {
-      setCurrentIndex((prev) => (prev + 1) % srcArray.length);
-    }, 3000);
+    // Only auto-advance if not hovering
+    if (!isHovering) {
+      const intervalId = setInterval(() => {
+        setCurrentIndex((prev) => (prev + 1) % srcArray.length);
+      }, 3000);
 
-    return () => clearInterval(intervalId);
-  }, []);
+      return () => clearInterval(intervalId);
+    }
+  }, [isHovering, srcArray.length]);
 
   return (
-    <div className="flex flex-col space-y-12">
+    <div className="flex flex-col space-y-12 p-6">
       <div>
         <ImageCarousel
           imgSrc={srcArray[currentIndex]}
           currentIndex={currentIndex}
         />
       </div>
-      <div>
-        <DynamicCard index={currentIndex} />
+      <div
+        onMouseEnter={() => setIsHovering(true)}
+        onMouseLeave={() => setIsHovering(false)}
+      >
+        <DynamicCard
+          index={currentIndex}
+          setIndex={(index: number) => setCurrentIndex(index)}
+        />
       </div>
     </div>
   );

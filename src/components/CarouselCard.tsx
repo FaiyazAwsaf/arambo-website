@@ -1,29 +1,46 @@
 // CarouselCard.tsx
-"use client"
-import React, { useState, useEffect } from 'react'
-import ImageCarousel from './ImageCarousel'
-import DynamicCard from './DynamicCard'
+"use client";
+import React, { useState, useEffect } from "react";
+import ImageCarousel from "./ImageCarousel";
+import DynamicCard from "./DynamicCard";
 
 const CarouselCard = () => {
-    const [currentIndex, setCurrentIndex] = useState(0);
-    const srcArray = ["/Office.jpg", "/Indoors.png", "/Trucks.png"];
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [isHovering, setIsHovering] = useState(false);
 
-    useEffect(() => {
-        const intervalId = setInterval(() => {
-            setCurrentIndex(prev => (prev + 1) % srcArray.length);
-        }, 3000);
+  // Using placeholder images for demo - replace with your actual images
+  const srcArray = ["/Office.jpg", "/Indoors.png", "/Trucks.png"];
 
-        return () => clearInterval(intervalId);
-    }, []);
+  useEffect(() => {
+    // Only auto-advance if not hovering
+    if (!isHovering) {
+      const intervalId = setInterval(() => {
+        setCurrentIndex((prev) => (prev + 1) % srcArray.length);
+      }, 3000);
 
-    return (
-        <div className='flex flex-col space-y-12'>
-            <div><ImageCarousel imgSrc={srcArray[currentIndex]} currentIndex={currentIndex} /></div>
-            <div>
-                <DynamicCard index={currentIndex} />
-            </div>
-        </div>
-    )
-}
+      return () => clearInterval(intervalId);
+    }
+  }, [isHovering, srcArray.length]);
 
-export default CarouselCard
+  return (
+    <div className="flex flex-col space-y-12 p-6">
+      <div>
+        <ImageCarousel
+          imgSrc={srcArray[currentIndex]}
+          currentIndex={currentIndex}
+        />
+      </div>
+      <div
+        onMouseEnter={() => setIsHovering(true)}
+        onMouseLeave={() => setIsHovering(false)}
+      >
+        <DynamicCard
+          index={currentIndex}
+          setIndex={(index) => setCurrentIndex(index)}
+        />
+      </div>
+    </div>
+  );
+};
+
+export default CarouselCard;
